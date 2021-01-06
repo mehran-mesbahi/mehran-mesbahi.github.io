@@ -1,5 +1,5 @@
 theme: jekyll-theme-slate
-title: Mehran Mesbahi
 github:
-  is\_project\_page:false
+is_project_page: false
+title: Mehran Mesbahi
 
