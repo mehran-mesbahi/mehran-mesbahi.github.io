@@ -2,24 +2,30 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href="https://www.aa.washington.edu/">Aeronautics & Astronautics, University of Washington</a>
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_cicular: false # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Guggenheim Hall 318E</p>
+    <p>University of Washington</p>
+    <p>Seattle, WA 98105</p>
+    <p><span style="color: orange;"> Email</span>: mesbahi@uw.edu</p>
 
 news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: false  # includes social icons at the bottom of the page
 ---
+I am a Professor of Aeronautics & Astronautics and an Adjunct Professor of Mathematics and Electrical & Computer Engineering at the University of Washington. I received my Ph.D. from USC in 1996. I was a member of the Guidance, Navigation, and Analysis group at 
+<a href="https://www.jpl.nasa.gov/">Jet Propulsion Laboratory</a>
+ from 1996-2000 and an Assistant Professor of Aerospace Engineering and Mechanics at the University of Minnesota from 2000-2002. I am currently the Director of the Robotics, Aerospace, and Information Networks 
+(<a href="http://depts.washington.edu/uwrainlab/">RAIN</a>) 
+Laboratory and the Executive Director of the Joint Center for Aerospace Technology Innovation (<a href="https://jcati.org/">JCATI</a>), a center supported by the State of Washington dedicated to promoting collaborations between academia and aerospace industry in the state. My research interests are distributed and networked systems, autonomous aerospace and robotic systems, and the intersection between learning, networks, autonomy, and control theory, with multi-disciplinary applications. 
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+See extended version of "about" in [<span style="color: orange;"> about+</span>](/al-folio/about+/)
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+[Google Scholar](https://scholar.google.com/citations?user=pdvYP-kAAAAJ&hl=en)/
+[LinkedIn](https://www.linkedin.com/in/mehran-mesbahi-345a7a83/)/[Wikipedia](https://en.wikipedia.org/wiki/Mehran_Mesbahi)/[Mathematics Genealogy](https://www.mathgenealogy.org/id.php?id=128192)
+
