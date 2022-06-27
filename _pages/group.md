@@ -24,11 +24,11 @@ Bijan Barzgaran, Ph.D. Candidate
 
 Aditya Deole, Ph.D. Candidate 
 
-Spencer Kraisler, Ph.D. Candidate 
+Spencer Kraisler, Ph.D. Candidate (<a href="https://spencerkraisler.github.io/">Githubpage</a>)
 
 Newsha, Rahmimi, Ph.D. Candidate  (<a href="https://www.linkedin.com/in/newsha-rahimi/">LinkedIn</a>)
 
-Shahriar Talebi, Ph.D. Candidate 
+Shahriar Talebi, Ph.D. Candidate (<a href="https://shahriarta.github.io/">Githubpage</a>)
 
 Mengyuan Wang, Ph.D. Candidate 
 
