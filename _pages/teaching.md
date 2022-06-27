@@ -4,9 +4,64 @@ permalink: /teaching/
 title: teaching
 description: Materials for courses you taught. Replace this text with your description.
 nav: true
-nav_order: 4
 ---
+<strong style="color: red;">Current Quarter (Winter 2022) </strong>
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+AA/EE/ME 598: Mathematical Foundations of Systems Theory: This course is the ``old'' AA/EE/ME 510 dealing with developing vector space machinery for systems analysis and optimization. In the Winter quarter of 2022, we will first re-examine finite dimensional vector spaces (linear algebra) and then move towards viewing system design issues thru the lens of the machinery that we develop.
 
-Organize your courses by years, topics, or universities, however you like!
+
+<strong style="color: red;">Courses taught at UW </strong>
+
+AA447: Control in Aerospace Systems
+
+AA310: Orbital and Spaceflight Mechanics
+
+AA528: Spacecraft Dynamics and Control
+
+AA/EE/ME 548: Linear Multivariable Control
+
+AA/EE/ME 578: Optimization and Systems Science
+
+AA/EE/ME 594: Robust Control
+
+AA/EE/ME 597: Networked Dynamic Systems
+
+AA/EE/ME 510: Mathematical Foundations of Systems Theory
+
+AA/EE/ME 598: Special Topics in Aero/Astro (510B)
+
+
+<strong style="color: red;">Courses taught at University of Minnesota (2000-2002) </strong>
+
+AEM 2301: Mechanics of Flight
+
+CDS 4324: Automatic Control Systems
+
+CDS 5321: Modern Feedback Control
+
+<strong style="color: red;">Courses taught at Caltech (1998-1999)</strong>
+
+
+CDS 110a: Introductory Control Theory
+
+CDS 110b: Introductory Control Theory
+
+CDS 270: Advanced Topics in Control Theory
+
+<strong style="color: red;">Courses taught at USC (1997-1998) (1998-1999)</strong>
+
+EE 247: Applied Linear Algebra for Engineering
+
+EE 447: Applied Linear Algebra for Engineering
+
+
+<strong style="color: orange;">Teaching Recognitions</strong>
+
+* Graduate Instructor of the Year, Aeronautics & Astronautics, 2015
+* Professor of the Year, Aeronautics and Astronautics, 2010
+* College of Engineering Innovator Award for Teaching, 2008
+* Keynote speaker, Graduation, Aeronautics and Astronautics, 2008
+* Professor of the Year, Aeronautics and Astronautics, 2006
+* University of Washington Distinguished Teaching Award, 2005
+* Member; University of Washington Teaching Academy (since 2005)
+* Professor of the Year, Aeronautics and Astronautics, 2004
