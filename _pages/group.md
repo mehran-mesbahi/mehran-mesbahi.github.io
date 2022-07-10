@@ -28,7 +28,7 @@ Spencer Kraisler, Ph.D. Candidate (<a href="https://spencerkraisler.github.io/">
 
 Newsha, Rahmimi, Ph.D. Candidate  (<a href="https://www.linkedin.com/in/newsha-rahimi/">LinkedIn</a>)
 
-Shahriar Talebi, Ph.D. Candidate (<a href="https://shahriarta.github.io/">Githubpage</a>)
+Shahriar Talebi, Ph.D. Candidate (<a href="http://students.washington.edu/shahriar/">Githubpage</a>)
 
 Mengyuan Wang, Ph.D. Candidate 
 
