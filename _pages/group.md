@@ -15,7 +15,9 @@ RAIN <a href="http://depts.washington.edu/uwrainlab/">website</a>
 
 If you are a prospective student interested in exploring joining the RAIN Lab, I highly recommend that you look at some of the work that has been done by the group and see if it aligns with what you aspire to do for your graduate work. Generally, the students who come to our group enjoy working on theoretical problems, coding, tinkering with hardware, and have a passion for aerospace control systems and robotics, as well as multi-disciplinary applications of systems, control, and optimization. 
 
-<strong style="color: red;">Current Students</strong>
+<strong style="color: red;">Current/Visiting Students</strong>
+
+Josh Holder, Ph.D. Candidate 
 
 Bijan Barzgaran, Ph.D. Candidate 
 
@@ -29,7 +31,8 @@ Shahriar Talebi, Ph.D. Candidate (<a href="http://students.washington.edu/shahri
 
 Mengyuan Wang, Ph.D. Candidate 
 
-Yifu Wang, Ph.D. Candidate 
+Beniamino Pozzan, Visiting Ph.D. student (<a href="https://sparcs.dei.unipd.it/">SPARCS/Padova</a>)
+
 
 <strong style="color: red;">Alumni</strong>
 
@@ -55,6 +58,7 @@ Nabi, Marzieh, Ph.D., 2012, Technology and Product Lead in AI, Amazon
 
 Hosseini, Saghar, Ph.D., 2016, Senior Researcher at Microsoft Research
 
+Wang, Yifu, M.S. 2021, Ph.D. Candidate at University of Washington
 
 Eddie, Ting, M.S., 2021, Ph.D. Candidate at University of Washington
 

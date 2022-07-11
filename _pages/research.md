@@ -15,6 +15,9 @@ see /writings/
 
 <strong style="color: red;">Current Projects</strong>
 
+<span style="color: orange;">NSF</span>: CPS: Medium: Autonomy of Origami-inspired Transformable Systems in Space Operations
+
+<span style="color: orange;">NSF</span>: EECS: Data-guided Control: Fundamental Limits in Presence of Nonlinearities, Streaming Data, and Networks
 
 <span style="color: orange;">NASA</span>: 6DOF guidance for planetary pinpoint landing
 
