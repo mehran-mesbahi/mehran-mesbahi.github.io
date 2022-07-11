@@ -42,6 +42,8 @@ Reynolds, Taylor, Ph.D. 2020, Research Scientist at Amazon Prime Air
 
 Bu, Jingjing, Ph.D., 2020, Software Engineer at Google
 
+van Waarde, Henk, Visiting Ph.D. Student, 2019-2020, Assistant Professor at University of Groningen
+
 Alemzadeh, Siavash, Ph.D., 2020, Data and Applied Scientist at Microsoft
 
 Vasisht, Soumya, Ph.D.  2020,  Research Scientist, PNNL; Intelligent Control and Optimization for Dynamical Aerosystems
@@ -64,11 +66,9 @@ Eddie, Ting, M.S., 2021, Ph.D. Candidate at University of Washington
 
 Zelazo, Dan, Ph.D. , 2009, Associate Professor at Technion
 
-
 Panyakeow, Prachya. Ph.D., 2015, Guidance, Navigation, and Control Engineer at Boeing
 
 Lee, Unsik, Ph.D. 2013, Sr. Controls Engineer at Robodub 
-
 
 Kim, Yoonsoo, Ph.D., 2003, Professor at Gyeongsang National University, South Korea
 
