@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: Courses and notes/lectures
 nav: true
 ---
 <strong style="color: red;">Current Quarter (Winter 2022) </strong>
