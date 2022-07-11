@@ -27,10 +27,10 @@ Spencer Kraisler, Ph.D. Candidate (<a href="https://spencerkraisler.github.io/">
 
 Newsha, Rahmimi, Ph.D. Candidate  (<a href="https://www.linkedin.com/in/newsha-rahimi/">LinkedIn</a>)
 
-Shahriar Talebi, Ph.D. Candidate (<a href="http://students.washington.edu/shahriar/">Githubpage</a>)
+Shahriar Talebi, Ph.D. Candidate  (<a href="http://students.washington.edu/shahriar/">Webpage</a>)
 
-Mengyuan Wang, Ph.D. Candidate 
-
+Mengyuan Wang, Ph.D. Candidate (<a href="https://mengyuanwanguw.github.io/">Githubpage</a>)
+ 
 Beniamino Pozzan, Visiting Ph.D. student (<a href="https://sparcs.dei.unipd.it/">SPARCS/Padova</a>)
 
 
