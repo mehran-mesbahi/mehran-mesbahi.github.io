@@ -11,10 +11,7 @@ nav: true
 The RAIN Lab is the research engine for our group; check out the
 RAIN <a href="http://depts.washington.edu/uwrainlab/">website</a>
 
-
-
 <strong style="color: red;">Prospective Students</strong>
-
 
 If you are a prospective student interested in exploring joining the RAIN Lab, I highly recommend that you look at some of the work that has been done by the group and see if it aligns with what you aspire to do for your graduate work. Generally, the students who come to our group enjoy working on theoretical problems, coding, tinkering with hardware, and have a passion for aerospace control systems and robotics, as well as multi-disciplinary applications of systems, control, and optimization. 
 
@@ -34,15 +31,23 @@ Mengyuan Wang, Ph.D. Candidate
 
 Yifu Wang, Ph.D. Candidate 
 
-Melville, Nic, M.S. Candidate
-
 <strong style="color: red;">Alumni</strong>
 
-Chapman, Airlie, Ph.D., 2016, Associate Professor (Senior Lecturer; tenured) at University of Melbourne
+Foight, Dillon, Ph.D., 2021, Lunar Gateway Spacecraft Systems Operation Analyst at NASA Johnson Space Center
+
+Reynolds, Taylor, Ph.D. 2020, Research Scientist at Amazon Prime Air
+
+Bu, Jingjing, Ph.D., 2020, Software Engineer at Google
+
+Alemzadeh, Siavash, Ph.D., 2020, Data and Applied Scientist at Microsoft
+
+Vasisht, Soumya, Ph.D.  2020,  Research Scientist, PNNL; Intelligent Control and Optimization for Dynamical Aerosystems
+
+Hudoba de Badyn, Mathias, Ph.D., 2019, Postdoctoral Scholar at Automatic Control Laboratory, ETH Zürich
 
 Schoof, Eric, Ph.D., 2017, Senior Research Engineer at University of Melbourne
 
-Hudoba de Badyn, Mathias, Ph.D., 2019, Postdoctoral Scholar at Automatic Control Laboratory, ETH Zürich
+Chapman, Airlie, Ph.D., 2016, Associate Professor (Senior Lecturer; tenured) at University of Melbourne
 
 Rahmani, Amirreza, Ph.D., 2009, Group Supervisor, NASA Jet Propulsion Laboratory, Caltech
 
@@ -50,27 +55,22 @@ Nabi, Marzieh, Ph.D., 2012, Technology and Product Lead in AI, Amazon
 
 Hosseini, Saghar, Ph.D., 2016, Senior Researcher at Microsoft Research
 
-Bu, Jingjing, Ph.D., 2020, Software Engineer at ByteDance (Tiktok)
-
-Alemzadeh, Siavash, Ph.D., 2020, Data and Applied Scientist at Microsoft
 
 Eddie, Ting, M.S., 2021, Ph.D. Candidate at University of Washington
 
-Reynolds, Taylor, Ph.D. 2020, Research Scientist @ Amazon Prime Air
-
 Zelazo, Dan, Ph.D. , 2009, Associate Professor at Technion
 
-Foight, Dillon, Ph.D., 2021, Lunar Gateway Spacecraft Systems Operation Analyst at NASA Johnson Space Center
 
 Panyakeow, Prachya. Ph.D., 2015, Guidance, Navigation, and Control Engineer at Boeing
 
 Lee, Unsik, Ph.D. 2013, Sr. Controls Engineer at Robodub 
 
-Vasisht, Soumya, Ph.D.  2020,  Research Scientist, PNNL; Intelligent Control and Optimization for Dynamical Systems
 
 Kim, Yoonsoo, Ph.D., 2003, Professor at Gyeongsang National University, South Korea
 
-Aurelie Heritier , M.S., 2008, Senior Astrodynamics Engineer at Advanced Space
+Melville, Nicholas, M.S., 2021, US Air Force
+
+Heritier, Aurelie, M.S., 2008, Senior Astrodynamics Engineer at Advanced Space
 
 Yuko Hatano, M.S., 2006, Servo Engineer at Western Digital
 
