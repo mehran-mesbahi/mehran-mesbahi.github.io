@@ -67,4 +67,19 @@ https://www.youtube.com/watch?v=eMXDgzpE-2Y
 * Cassini Attitude and Articulation Control Subsystem Award, JPL, Caltech, 1997
 
 
-<!-- <span style="color: orange;"> work outside of academia </span>: -->
+<span style="color: orange;"> videos about our work (some more historical </span>:
+
+<a href="https://www.youtube.com/watch?v=l89o7Ff6ItU">How to Land on a Planet</a>
+
+<a href="https://www.youtube.com/watch?v=stzQNjtDg0g">Controlling Robotic Swarms</a>
+
+<a href="https://www.youtube.com/watch?v=QEV8LBDz00g">What is JCATI?</a>
+
+<a href="https://www.youtube.com/watch?v=eMXDgzpE-2Y">Flying Smart with Autonomous Vehicles</a>
+
+
+
+
+
+
+
