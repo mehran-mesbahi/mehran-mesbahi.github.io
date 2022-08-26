@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /books/
-title: books
+title: books 
 description: Published books and book chapters; books in preparation; lecture notes
 nav: true
 ---
