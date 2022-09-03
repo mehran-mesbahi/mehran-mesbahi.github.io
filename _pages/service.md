@@ -23,7 +23,8 @@ Our department now has a degree program in integrated flight science and control
 Our department is currently looking for exceptional candidates in the broad area of space systems; apply <a href="https://apply.interfolio.com/112112">here</a>
 
 
-<span style="color: orange;">ControlX:</span> is an informal gather of enthusiasts to present and discuss broadly related to control, including applications such as flight control, autonomy, robotics, spacecraft GNC, biology, social science, neuroscience, as well as theory, including optimal and robust control, optimization, games, data-science/ML, and adaptation and learning. Here is ControlX meeting <a href="https://www.dropbox.com/scl/fi/q41sc4eb2zg3piieb8nyp/ControlX-Meetings.paper?dl=0&rlkey=uu36dldmyfs9wbzv7lf0ff1rn">schedule</a>; requires a password :-)
+<span style="color: orange;">ControlX:</span> is an informal gathering of 
+systems enthusiasts to present and discuss broad topics related to control (hence "ControlX" :-), including applications such as flight control, autonomy, robotics, spacecraft GNC, biology and social sciences, neuroscience, as well as theory, including optimal and robust control, estimation, optimization, games, optimal transport, data-science/ML, and adaptation and learning. Here is ControlX meeting <a href="https://www.dropbox.com/scl/fi/q41sc4eb2zg3piieb8nyp/ControlX-Meetings.paper?dl=0&rlkey=uu36dldmyfs9wbzv7lf0ff1rn">schedule</a>; requires a password :-)
 
 
 <strong style="color: red;">COE Strategic Planning Committee:</strong>
