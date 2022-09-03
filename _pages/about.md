@@ -14,7 +14,7 @@ profile:
     <p><span style="color: orange;"> Email</span>: mesbahi@uw.edu</p>
 
 news: true  # includes a list of news items
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 I am a Professor of Aeronautics & Astronautics and an Adjunct Professor of Mathematics and Electrical & Computer Engineering at the University of Washington. I received my Ph.D. from USC in 1996. I was a member of the Guidance, Navigation, and Analysis group at 
