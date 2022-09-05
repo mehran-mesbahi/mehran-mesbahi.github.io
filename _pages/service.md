@@ -14,8 +14,10 @@ Yes! Our department has an active Cubesat program; check out (<a href="https://w
 <span style="color: orange;">Graduate Committee:</span> member, in charge of graduate admissions and policies pertaining to graduate education in the department
 
 <span style="color: orange;">Integrated Flight Science and Control:</span>
-Our department now has a degree program in integrated flight science and control!
+Our department now has a degree program in integrated flight science and control;
+check <a href="https://www.aa.washington.edu/research/ifs">this</a> out!
 
+<span style="color: orange;">Chair of Faculty Search: </span> have been serving as the chair of the tenure-track faculty hiring in the department since 2020.
 
 <strong style="color: red;">College of Engineering</strong>
 
@@ -40,7 +42,4 @@ run by a group of dedicated staff and faculty.
 <span style="color: orange;">JCATI:</span> The Joint Center for Aerospace Technology Innovation 
 (<a href="https://jcati.org/">JCATI</a>)
 is an initiative to stimulate aerospace economic development and job creation in Washington State by funding collaborations between the aerospace industry and academic researchers at the State's public 4-year institutions of higher education. 
-
-
-
 

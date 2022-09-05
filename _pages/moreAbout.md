@@ -6,7 +6,7 @@ description: a bit more about MM ...
 nav: true
 ---
 
-<span style="color: orange;"> first the basics ...</span> 
+<span style="color: orange;"> in a nutshell ...</span> 
 
 * Professor of Aeronautics & Astronautics
 * J. Ray Bowen Endowed Professor in Engineering Education
@@ -67,7 +67,7 @@ https://www.youtube.com/watch?v=eMXDgzpE-2Y
 * Cassini Attitude and Articulation Control Subsystem Award, JPL, Caltech, 1997
 
 
-<span style="color: orange;"> videos about our work (some more historical </span>:
+<span style="color: orange;"> videos about our work (some more historical) </span>:
 
 <a href="https://www.youtube.com/watch?v=l89o7Ff6ItU">How to Land on a Planet</a>
 

@@ -37,4 +37,3 @@ D. Zelazo and M. Mesbahi, Graph-theoretic Methods for Networked Dynamic Systems:
 M. Mesbahi, M. G. Safonov, and G. P. Papavassilopoulos, Bilinearity and complementarity in robust control, in Advances in Linear Matrix Inequality Methods in Control, SIAM, 2000.
 
 M. Mesbahi and G. P. Papavassilopoulos, Least elements and minimal rank matrices, in Recent Advances in Complementarity Theory - State of the Art, SIAM, 1997.
-
