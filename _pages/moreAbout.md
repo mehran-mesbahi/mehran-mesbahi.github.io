@@ -41,13 +41,24 @@ Learning for feedback control and autonomy, data-guided network control, trade-o
 <span style="color: dodgerblue;"> Engineering Education</span>:
 Learning paradigms, effective teaching, social learning, write/code/build to-learn, online learning, inclusive teaching, teaching across disciplines and cultures; see  <a href="http://www.washington.edu/alumni/columns/june05/league_mesbahi.html">UW Columns article</a>, and 
 <a href="https://www.washington.edu/news/2009/05/21/three-award-winning-profs-provide-a-taste-of-their-teaching-in-showcase/">Teaching Showcase</a>
+
 <!-- 
 https://www.youtube.com/watch?v=stzQNjtDg0g&t=2s
 https://www.youtube.com/watch?v=l89o7Ff6ItU&t=1s
 https://www.youtube.com/watch?v=eMXDgzpE-2Y
  -->
 
-<span style="color: orange;"> some recognitions </span>:
+<span style="color: orange;"> at JPL I contributed to the following programs </span>:
+
+* <a href="https://www.jpl.nasa.gov/missions/cassini-huygens"> Cassini Mission to Saturn </a> : attitude estimation, guidance and control, Saturn orbit insertion, constrained monitor
+
+* <a href="https://www2.jpl.nasa.gov/srtm/"> Shuttle Radar Topography </a> : attitude control for synthetic aperture radar antenna at the end of a 60 m boom connected to the space shuttle bay
+
+* <a href="https://trs.jpl.nasa.gov/bitstream/handle/2014/9716/02-1884.pdf?sequence=1"> Starlight Mission </a> : formation control, geometry, fuel budget analysis, guidance maneuvers
+
+* <a href="https://en.wikipedia.org/wiki/Terrestrial_Planet_Finder"> Terrestrial Planet Finder </a> : formation control, guidance, estimation, network control
+
+<span style="color: orange;"> some recognitions </span>: 
 
 * Distinguished speaker, Chinese Control and Decision Conference, 2019
 * College of Engineering Faculty Appreciation for Career Education and Training Award, 2019
