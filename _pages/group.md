@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /group/
-title: group
+permalink: /RainLab/
+title: RainLab
 description: research group 
 nav: true
 ---
