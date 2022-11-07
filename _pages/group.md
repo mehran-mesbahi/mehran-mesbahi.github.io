@@ -29,7 +29,7 @@ Newsha, Rahmimi, Ph.D. Candidate  (<a href="https://www.linkedin.com/in/newsha-r
 
 Shahriar Talebi, Ph.D. Candidate  (<a href="http://students.washington.edu/shahriar/">Webpage</a>)
 
-Mengyuan Wang, Ph.D. Candidate (<a href="https://mengyuanwanguw.github.io/">Githubpage</a>)
+Mengyuan Wang, Ph.D. Candidate (<a href="http://students.washington.edu/mywang10/">Webpage</a>)
  
 Beniamino Pozzan, Visiting Ph.D. student (<a href="https://sparcs.dei.unipd.it/">SPARCS/Padova</a>)
 
