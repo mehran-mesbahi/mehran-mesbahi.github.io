@@ -25,6 +25,6 @@ Laboratory and the Executive Director of the Joint Center for Aerospace Technolo
 
 See extended version of "about" in [<span style="color: orange;"> about+</span>](https://mehran-mesbahi.github.io/about+/)
 
-[Google Scholar](https://scholar.google.com/citations?user=2X_c6rIAAAAJ&hl=en&authuser=2)/
+[Google Scholar](https://scholar.google.com/citations?user=pdvYP-kAAAAJ&hl=en&oi=ao)/
 [LinkedIn](https://www.linkedin.com/in/mehran-mesbahi-345a7a83/)/[Wikipedia](https://en.wikipedia.org/wiki/Mehran_Mesbahi)/[Mathematics Genealogy](https://www.mathgenealogy.org/id.php?id=128192)
 
