@@ -14,6 +14,7 @@ nav: true
 * Adjunct Professor of Electrical & Computer Engineering
 * Adjunct Professor of Mathematics
 * Director of the Robotics, Aerospace, and Information Networks (RAIN) Lab
+* Member of the Washington State Academy of Sciences
 * Executive Director of Joint Center for Aerospace Technology Innovation (JCATI)
 * Fellow, IEEE
 
