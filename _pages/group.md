@@ -25,7 +25,7 @@ Aditya Deole, Ph.D. Candidate
 
 Spencer Kraisler, Ph.D. Candidate (<a href="https://spencerkraisler.github.io/">Githubpage</a>)
 
-Newsha, Rahmimi, Ph.D. Candidate  (<a href="https://www.linkedin.com/in/newsha-rahimi/">LinkedIn</a>)
+Niyousha, Rahimi, Ph.D. Candidate  (<a href="https://students.washington.edu/nrahimi/">LinkedIn</a>)
 
 Shahriar Talebi, Ph.D. Candidate  (<a href="http://students.washington.edu/shahriar/">Webpage</a>)
 
