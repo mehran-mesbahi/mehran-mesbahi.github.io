@@ -36,7 +36,7 @@ and games over networks. Suggested prerequisite is Linear Systems (AA/EE/ME 547)
 <p><b>Grading:</b> Homework assignments will be 70% of the grade and 30% will be project</p>
 
 
-<p><b>Office Hours:</b> Thursdays 3:00-5:00 pm in Guggenheim Hall 305 (or instructor's office in Guggenheim Hall 311E)
+<p><b>Office Hours:</b> Thursdays 3:00-5:00 pm in AERB 130 (or instructor's office in Guggenheim Hall 311E)
 
 {% comment %}
 <p> You can find the syllabus <a href="{{ site.baseurl }}/assets/pdf/teach_network/syllabus-Sp2022.pdf" target="_blank">here</a>. </p>
@@ -86,8 +86,10 @@ table, th, td {
             <th></th>
             <th>
             <a href="https://www.algorithmsilluminated.org/">Algorithms Illuminated</a>;
+            <a href="https://cambridgeuniversitypress.github.io/FirstCourseNetworkScience/">A First Course in Network Science</a>;
+            
             <a href="https://www.nature.com/articles/s41586-020-2923-3.pdf" target="_blank">Superspreaders of Covid-19</a>;
-            <a href="https://www.nature.com/articles/ncomms9414.pdf" target="_blank">Controllability of brain network</a>; your personal homework this week (no need to turn anything in) is to become familiar with python/juypter notebook/networkx or something  similar, e.g., matlab/julia, to create, draw, and analyze networks/graphs, and be able to simulate dynamic systems described by differential equations.
+            <a href="https://www.nature.com/articles/ncomms9414.pdf" target="_blank">Controllability of brain network</a>; your personal homework this week (no need to turn anything in) is to become familiar with python/juypter notebook/networkx or something  similar, e.g., matlab/julia, to create, draw, and analyze networks/graphs, and be able to simulate dynamic systems described by differential equations
             </th>
         </tr>
         <tr>
