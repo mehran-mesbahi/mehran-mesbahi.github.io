@@ -8,7 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   address: >
-    <p>Guggenheim Hall 318E</p>
+    <p>Guggenheim Hall 311E</p>
     <p>University of Washington</p>
     <p>Seattle, WA 98105</p>
     <p><span style="color: orange;"> Email</span>: mesbahi@uw.edu</p>

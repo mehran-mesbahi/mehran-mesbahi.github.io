@@ -24,12 +24,11 @@ AA/EE/ME 578: Optimization and Systems Science
 
 AA/EE/ME 594: Robust Control
 
-AA/EE/ME 597: Networked Dynamic Systems
+AA/EE/ME 597: Networked Dynamic Systems; [<span style="color: orange;"> Winter 2024</span>](/597-course/)
 
 AA/EE/ME 510: Mathematical Foundations of Systems Theory
 
 AA/EE/ME 598: Special Topics in Aero/Astro (510B)
-
 
 <strong style="color: red;">Courses taught at University of Minnesota (2000-2002) </strong>
 
