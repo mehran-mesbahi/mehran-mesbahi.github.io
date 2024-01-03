@@ -87,11 +87,11 @@ table, th, td {
             <th>
             <a href="https://www.algorithmsilluminated.org/">Algorithms Illuminated</a>;
             <a href="https://www.nature.com/articles/s41586-020-2923-3.pdf" target="_blank">Superspreaders of Covid-19</a>;
-            <a href="https://www.nature.com/articles/ncomms9414.pdf" target="_blank">Controllability of brain network</a>;
+            <a href="https://www.nature.com/articles/ncomms9414.pdf" target="_blank">Controllability of brain network</a>; your personal homework this week (no need to turn anything in) is to become familiar with python/juypter notebook/networkx or something  similar, e.g., matlab/julia, to create, draw, and analyze networks/graphs, and be able to simulate dynamic systems described by differential equations.
             </th>
         </tr>
         <tr>
-            <th>January 5</th>
+            <th>Jan 5</th>
             <th>Euler's theorem, matrix representations, spectral graph theory</th>
             {%comment%}
             <th><a href="{{ site.baseurl }}/assets/pdf/AA597-lecture1-1.pdf" target="_blank">Algebraic Graph Theory Slides (updated)</a></th>
@@ -103,105 +103,105 @@ table, th, td {
             {% endcomment %}
         </tr>
         <tr>
-            <th>January 10</th>
+            <th>Jan 10</th>
             <th> consensus on undirected networks and consequences</th>
             <th></th>
             <th></th>
             <th></th>
         </tr>
         <tr>
-            <th>January 12</th>
+            <th>Jan 12</th>
             <th> consensus on directed networks and consequences</th>
             <th></th>
             <th></th>
             <th>HW#1 assigned</th>
         </tr>
         <tr>
-            <th>January 17</th>
+            <th>Jan 17</th>
             <th> </th>
             <th></th>
             <th></th>
             <th></th>
         </tr>
         <tr>
-            <th>January 19</th>
+            <th>Jan 19</th>
             <th> </th>
             <th></th>
             <th></th>
-            <th>HW#2 assigned</th>
+            <th>HW#2 assigned; HW#1 due</th>
         </tr>
         <tr>
-            <th>January 24</th>
-            <th> </th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr>
-            <th>January 26</th>
-            <th> </th>
-            <th></th>
-            <th></th>
-            <th>HW#3 assigned</th>
-        </tr>
-        <tr>
-            <th>January 31</th>
+            <th>Jan 24</th>
             <th> </th>
             <th></th>
             <th></th>
             <th></th>
         </tr>
         <tr>
-            <th>February 2</th>
+            <th>Jan 26</th>
             <th> </th>
             <th></th>
             <th></th>
-            <th>HW#4 assigned</th>
+            <th>HW#3 assigned; HW#2 due</th>
         </tr>
         <tr>
-            <th>February 7</th>
-            <th> </th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr>
-            <th>February 9</th>
-            <th> </th>
-            <th></th>
-            <th></th>
-            <th>HW#5 assigned</th>
-        </tr>
-        <tr>
-            <th>February 14</th>
+            <th>Jan 31</th>
             <th> </th>
             <th></th>
             <th></th>
             <th></th>
         </tr>
         <tr>
-            <th>February 16</th>
+            <th>Feb 2</th>
             <th> </th>
             <th></th>
             <th></th>
-            <th>HW#6 assigned</th>
+            <th>HW#4 assigned; HW#3 due</th>
         </tr>
         <tr>
-            <th>February 21</th>
+            <th>Feb 7</th>
             <th> </th>
             <th></th>
             <th></th>
             <th></th>
         </tr>
         <tr>
-            <th>February 23</th>
+            <th>Feb 9</th>
             <th> </th>
             <th></th>
             <th></th>
-            <th>HW#7 assigned</th>
+            <th>HW#5 assigned; HW#4 due</th>
         </tr>
         <tr>
-            <th>February 28</th>
+            <th>Feb 14</th>
+            <th> </th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th>Feb 16</th>
+            <th> </th>
+            <th></th>
+            <th></th>
+            <th>HW#6 assigned; HW#5 due</th>
+        </tr>
+        <tr>
+            <th>Feb 21</th>
+            <th> </th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th>Feb 23</th>
+            <th> </th>
+            <th></th>
+            <th></th>
+            <th>HW#7 assigned; HW#6 due</th>
+        </tr>
+        <tr>
+            <th>Feb 28</th>
             <th> </th>
             <th></th>
             <th></th>
@@ -209,17 +209,24 @@ table, th, td {
         </tr>
         <tr>
             <th>March 1</th>
+            <th> </th>
+            <th></th>
+            <th></th>
+            <th>HW#8 assigned; HW#7 due</th>
+        </tr>
+           <tr>
+            <th>March 6</th>
             <th> Project Presentations </th>
             <th></th>
             <th></th>
-            <th>HW#8 assigned</th>
+            <th></th>
         </tr>
         <tr>
             <th>March 8</th>
             <th> Project Presentations </th>
             <th></th>
             <th></th>
-            <th>Project reports due on March 13</th>
+            <th>HW#8 due; Project reports due on March 13</th>
         </tr>
 
 
