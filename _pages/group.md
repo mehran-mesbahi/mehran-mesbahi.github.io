@@ -17,15 +17,17 @@ If you are a prospective student interested in exploring joining the RAIN Lab, I
 
 <strong style="color: red;">Current/Visiting Students</strong>
 
-Josh Holder, Ph.D. Candidate 
+Spencer Kraisler, Ph.D. Candidate (<a href="https://spencerkraisler.github.io/">Githubpage</a>)
 
-Bijan Barzgaran, Ph.D. Candidate 
+Shiva Shakeri, Ph.D. Candidate (<a href="https://shivashakeri.com/">Webpage</a>) 
+
+Niyousha Rahimi, Ph.D. Candidate  (<a href="https://students.washington.edu/nrahimi/">Webpage</a>)
 
 Aditya Deole, Ph.D. Candidate 
 
-Spencer Kraisler, Ph.D. Candidate (<a href="https://spencerkraisler.github.io/">Githubpage</a>)
+Josh Holder, Ph.D. Candidate 
 
-Niyousha Rahimi, Ph.D. Candidate  (<a href="https://students.washington.edu/nrahimi/">Webpage</a>)
+Bijan Barzgaran, Ph.D. Candidate 
 
 Shahriar Talebi, Ph.D. Candidate  (<a href="http://students.washington.edu/shahriar/">Webpage</a>)
 
