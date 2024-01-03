@@ -28,6 +28,8 @@ Our department is currently looking for exceptional candidates in the broad area
 <span style="color: orange;">ControlX:</span> is an informal gathering of 
 systems enthusiasts to present and discuss broad topics related to control (hence "ControlX" :-), including applications such as flight control, autonomy, robotics, spacecraft GNC, biology and social sciences, neuroscience, as well as theory, including optimal and robust control, estimation, optimization, games, optimal transport, data-science/ML, and adaptation and learning. Here is ControlX meeting <a href="https://www.dropbox.com/scl/fi/q41sc4eb2zg3piieb8nyp/ControlX-Meetings.paper?dl=0&rlkey=uu36dldmyfs9wbzv7lf0ff1rn">schedule</a>; requires a password :-)
 
+also checkout: [<span style="color: orange;"> ControlX</span>](https://mehran-mesbahi.github.io/controlx/)
+
 
 <strong style="color: red;">COE Strategic Planning Committee:</strong>
 Check out the college of engineering <a href="https://www.engr.washington.edu/about/strategic-plan">strategic plan</a>
