@@ -6,6 +6,11 @@ description: Winter Quarter 2024
 nav: false
 ---
 
+<script
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  type="text/javascript">
+</script>
+
 A networked dynamic system is a set of dynamical units that interact over an information-exchange network for its coordinated operation and behavior. Such systems have found many applications in diverse areas of science and
 engineering, including multiple space, air, land, and underwater vehicles, energy and power systems, physiology, and
 medicine. Currently, there is an active research effort underway in control and systems community to formalize these
@@ -111,15 +116,15 @@ table, th, td {
         </tr>
         <tr>
             <th>Jan 17</th>
-            <th> </th>
-            <th></th>
-            <th></th>
+            <th> consensus protocol </th>
+            <th> Chapter 3 [MEBook2010]; <a href="{{ site.baseurl }}/assets/pdf/mehran-notes-597-W2024-Jan-17.pdf" target="_blank">Mehran Notes</a></th>
+            <th> Consensus protocol is a versatile distributed algorithm for achieving something that at the surface seems useless; but it is one of the most used module for devising a host of distributed algorithms for optimization, formation control, and estimation</th>
         </tr>
         <tr>
             <th>Jan 19</th>
             <th> </th>
             <th></th>
-            <th>HW#2 assigned; HW#1 due</th>
+            <th>HW#2 assigned (see course canvas page); HW#1 due</th>
         </tr>
         <tr>
             <th>Jan 24</th>
