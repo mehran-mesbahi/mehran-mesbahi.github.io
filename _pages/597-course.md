@@ -124,7 +124,7 @@ table, th, td {
             <th>Jan 19</th>
             <th> consensus on directed networks</th>
             <th> Chapter 3 [MEBook2010]; <a href="{{ site.baseurl }}/assets/pdf/mehran-notes-597-W2024-Jan-19.pdf" target="_blank">Mehran Notes</a></th>
-            <th>HW#2 assigned (see course canvas page); HW#1 due</th>
+            <th>HW#2 assigned (see course canvas page); HW#1 due; check out: <a href="https://www.incontrolpodcast.com/1632769/14297756-ep19-naomi-ehrich-leonard-part-ii-unveiling-the-dynamics-of-collective-decision-making-from-flocking-starlings-to-desert-ants-political-polarization-and-the-creative-dance-between-arts-and-control-theory">Naomi Leonard Podcast</a> related to our discussion </th>
         </tr>
         <tr>
             <th>Jan 24</th>
