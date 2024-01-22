@@ -122,8 +122,8 @@ table, th, td {
         </tr>
         <tr>
             <th>Jan 19</th>
-            <th> </th>
-            <th></th>
+            <th> consensus on directed networks</th>
+            <th> Chapter 3 [MEBook2010]; <a href="{{ site.baseurl }}/assets/pdf/mehran-notes-597-W2024-Jan-19.pdf" target="_blank">Mehran Notes</a></th>
             <th>HW#2 assigned (see course canvas page); HW#1 due</th>
         </tr>
         <tr>
