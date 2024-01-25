@@ -128,9 +128,9 @@ table, th, td {
         </tr>
         <tr>
             <th>Jan 24</th>
-            <th> </th>
-            <th></th>
-            <th></th>
+            <th> Lyapunov analysis for networks </th>
+            <th>Chapter 4 [MEBook2010]; <a href="{{ site.baseurl }}/assets/pdf/mehran-notes-597-W2024-Jan-24.pdf" target="_blank">Mehran Notes</a></th>
+            <th><a href="https://ieeexplore.ieee.org/document/1333204"> one of the original works in this area </a> and <a href="https://arxiv.org/pdf/1407.7585.pdf"> a more recent work </a> </th>
         </tr>
         <tr>
             <th>Jan 26</th>
