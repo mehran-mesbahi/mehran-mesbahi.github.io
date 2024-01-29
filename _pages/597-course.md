@@ -134,9 +134,9 @@ table, th, td {
         </tr>
         <tr>
             <th>Jan 26</th>
-            <th> </th>
-            <th></th>
-            <th>HW#3 assigned; HW#2 due</th>
+            <th> More on Lyapunov analysis; unicyle formations </th>
+            <th>Chapter 4 [MEBook2010]; <a href="{{ site.baseurl }}/assets/pdf/mehran-notes-597-W2024-Jan-26.pdf" target="_blank">Mehran Notes</a></th>
+            <th><a href="https://ieeexplore.ieee.org/document/4200872"> paper on planar collective motion </a> by Sepulchre/Paley/Leonard</th>
         </tr>
         <tr>
             <th>Jan 31</th>
