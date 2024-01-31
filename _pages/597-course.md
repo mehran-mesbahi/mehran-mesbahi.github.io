@@ -140,61 +140,61 @@ table, th, td {
         </tr>
         <tr>
             <th>Jan 31</th>
-            <th> </th>
-            <th></th>
+            <th> (tentative) unicyle formations; formation specifications/graph rigidity </th>
+                <th>Chapter 5 [MEBook2010]; <a href="{{ site.baseurl }}/assets/pdf/mehran-notes-597-W2024-Jan-31.pdf" target="_blank">Mehran Notes</a></th>
             <th></th>
         </tr>
         <tr>
             <th>Feb 2</th>
-            <th> </th>
+            <th>(tentative) formation control; fax and murray result </th>
             <th></th>
             <th>HW#4 assigned; HW#3 due</th>
         </tr>
         <tr>
             <th>Feb 7</th>
-            <th> </th>
+            <th> (tentative) network synthesis </th>
             <th></th>
             <th></th>
         </tr>
         <tr>
             <th>Feb 9</th>
-            <th> </th>
+            <th> (tentative) games on networks/chip firing </th>
             <th></th>
             <th>HW#5 assigned; HW#4 due</th>
         </tr>
         <tr>
             <th>Feb 14</th>
-            <th> </th>
+            <th> (tentative) network controllability </th>
             <th></th>
             <th></th>
         </tr>
         <tr>
             <th>Feb 16</th>
-            <th> </th>
+            <th> (tentative) distributed estimation </th>
             <th></th>
             <th>HW#6 assigned; HW#5 due</th>
         </tr>
         <tr>
             <th>Feb 21</th>
-            <th> </th>
+            <th> (tentative) distributed optimization </th>
             <th></th>
             <th></th>
         </tr>
         <tr>
             <th>Feb 23</th>
-            <th> </th>
+            <th> (tentative) distributed optimization </th>
             <th></th>
             <th>HW#7 assigned; HW#6 due</th>
         </tr>
         <tr>
             <th>Feb 28</th>
-            <th> </th>
+            <th>(tentative) network identification </th>
             <th></th>
             <th></th>
         </tr>
         <tr>
             <th>March 1</th>
-            <th> </th>
+            <th>(tentative) signed networks </th>
             <th></th>
             <th>HW#8 assigned; HW#7 due</th>
         </tr>
