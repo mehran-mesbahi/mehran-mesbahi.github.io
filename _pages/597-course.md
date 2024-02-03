@@ -140,15 +140,15 @@ table, th, td {
         </tr>
         <tr>
             <th>Jan 31</th>
-            <th> (tentative) unicyle formations; formation specifications/graph rigidity </th>
-                <th>Chapter 5 [MEBook2010]; <a href="{{ site.baseurl }}/assets/pdf/mehran-notes-597-W2024-Jan-31.pdf" target="_blank">Mehran Notes</a></th>
+            <th> unicyle formations; formation specifications/graph rigidity </th>
+                <th>Chapter 6 [MEBook2010]; <a href="{{ site.baseurl }}/assets/pdf/mehran-notes-597-W2024-Jan-31.pdf" target="_blank">Mehran Notes</a></th>
             <th></th>
         </tr>
         <tr>
             <th>Feb 2</th>
-            <th>(tentative) formation control; fax and murray result </th>
-            <th></th>
-            <th>HW#4 assigned; HW#3 due</th>
+            <th> formation control; <a href="https://paperpile.com/shared/OuVYMh"> Fax/Murray paper </a></th>
+            <th>Chapter 6 [MEBook2010]</th>
+            <th>HW#4 assigned; HW#3 due (both on canvas page)</th>
         </tr>
         <tr>
             <th>Feb 7</th>
