@@ -10,13 +10,13 @@ nav: true
 
 * Professor of Aeronautics & Astronautics
 * J. Ray Bowen Endowed Professor in Engineering Education
-* Endowed Professorship in Control Systems & Networks
 * Adjunct Professor of Electrical & Computer Engineering
 * Adjunct Professor of Mathematics
 * Director of the Robotics, Aerospace, and Information Networks (RAIN) Lab
-* Member of the Washington State Academy of Sciences
 * Executive Director of Joint Center for Aerospace Technology Innovation (JCATI)
-* Fellow, IEEE
+* IEEE Fellow
+* AIAA Fellow 
+* Member of the Washington State Academy of Sciences
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder. -->
 <!-- 
