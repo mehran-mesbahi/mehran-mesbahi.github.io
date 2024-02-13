@@ -170,31 +170,31 @@ table, th, td {
         </tr>
         <tr>
             <th>Feb 16</th>
-            <th> (tentative) distributed estimation </th>
+            <th> (tentative) network H2 performance and effective resistance </th>
             <th></th>
             <th>HW#6 assigned; HW#5 due</th>
         </tr>
         <tr>
             <th>Feb 21</th>
-            <th> (tentative) distributed optimization </th>
+            <th> (tentative) distributed estimation </th>
             <th></th>
             <th></th>
         </tr>
         <tr>
             <th>Feb 23</th>
-            <th> (tentative) distributed optimization </th>
+            <th> (tentative) distributed estimation </th>
             <th></th>
             <th>HW#7 assigned; HW#6 due</th>
         </tr>
         <tr>
             <th>Feb 28</th>
-            <th>(tentative) network identification </th>
+            <th>(tentative) distributed optimization </th>
             <th></th>
             <th></th>
         </tr>
         <tr>
             <th>March 1</th>
-            <th>(tentative) signed networks </th>
+            <th>(tentative) distributed optimization (other topics: structural analysis, signed networks, network identification, random graph models, games on networks </th>
             <th></th>
             <th>HW#8 assigned; HW#7 due</th>
         </tr>
