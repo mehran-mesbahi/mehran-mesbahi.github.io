@@ -152,14 +152,14 @@ table, th, td {
         </tr>
         <tr>
             <th>Feb 7</th>
-            <th> (tentative) network synthesis </th>
-            <th></th>
+            <th>games on networks/chip firing/more formation control  </th>
+            <th> <a href="{{ site.baseurl }}/assets/pdf/mehran-notes-597-W2024-Feb-7.pdf" target="_blank">Mehran Notes</a> </th>
             <th></th>
         </tr>
         <tr>
             <th>Feb 9</th>
-            <th> (tentative) games on networks/chip firing </th>
-            <th></th>
+            <th> state-dependent networks; network synthesis </th>
+            <th> <a href="{{ site.baseurl }}/assets/pdf/mehran-notes-597-W2024-Feb-9.pdf" target="_blank">Mehran Notes</a> </th>
             <th>HW#5 assigned; HW#4 due</th>
         </tr>
         <tr>
