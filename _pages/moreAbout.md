@@ -61,6 +61,8 @@ https://www.youtube.com/watch?v=eMXDgzpE-2Y
 
 <span style="color: orange;"> some recognitions </span>: 
 
+* Fellow of AIAA, 2024
+* Member of Washington State Academy of Sciences, 2023
 * Distinguished speaker, Chinese Control and Decision Conference, 2019
 * College of Engineering Faculty Appreciation for Career Education and Training Award, 2019
 * Graduate Instructor of the Year, Aeronautics & Astronautics, 2015
