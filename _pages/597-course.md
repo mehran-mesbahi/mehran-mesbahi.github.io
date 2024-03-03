@@ -164,39 +164,39 @@ table, th, td {
         </tr>
         <tr>
             <th>Feb 14</th>
-            <th> (tentative) network controllability </th>
+            <th> network controllability </th>
             <th></th>
             <th></th>
         </tr>
         <tr>
             <th>Feb 16</th>
-            <th> (tentative) network H2 performance and effective resistance </th>
+            <th> network controllability; network H2 performance and effective resistance </th>
             <th></th>
-            <th>HW#6 assigned; HW#5 due</th>
+            <th>HW#5 due</th>
         </tr>
         <tr>
             <th>Feb 21</th>
-            <th> (tentative) distributed estimation </th>
+            <th> distributed least squares </th>
             <th></th>
             <th></th>
         </tr>
         <tr>
             <th>Feb 23</th>
-            <th> (tentative) distributed estimation </th>
+            <th>  distributed optimization </th>
             <th></th>
-            <th>HW#7 assigned; HW#6 due</th>
+            <th>no homework assigned this week</th>
         </tr>
         <tr>
             <th>Feb 28</th>
-            <th>(tentative) distributed optimization </th>
-            <th></th>
+            <th>distributed estimation and filtering  </th>
+            <th><a href="{{ site.baseurl }}/assets/pdf/mehran-notes-597-W2024-Feb-28.pdf" target="_blank">Mehran Notes</a> </th>
             <th></th>
         </tr>
         <tr>
             <th>March 1</th>
-            <th>(tentative) distributed optimization (other topics: structural analysis, signed networks, network identification, random graph models, games on networks </th>
-            <th></th>
-            <th>HW#8 assigned; HW#7 due</th>
+            <th>distributed estimation and filtering; Markov chains</th>
+            <th><a href="{{ site.baseurl }}/assets/pdf/mehran-notes-597-W2024-March-1.pdf" target="_blank">Mehran Notes</a> </th>
+            <th>HW#6 due</th>
         </tr>
            <tr>
             <th>March 6</th>
