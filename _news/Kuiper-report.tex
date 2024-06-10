@@ -1,0 +1,3203 @@
+%\documentclass[11pt,final,openany,mytheorems]{memoir}
+\documentclass[11pt]{book}
+% \documentclass{ar-1col}
+% \usepackage[numbers]{natbib}
+% \usepackage{url}
+\input{preamble}
+\usepackage{fullpage}
+\begin{document}
+%\frontmatter
+\title{{\bf \large Project Kuiper Synchronization and Positioning}}
+% {\small {\color{magenta} {\bf Disclaimer:} Notes for group discussion only ... \\[-.1in]
+% will be polished overtime for a wider distribution}}}
+\author{\large Mehran Mesbahi}
+\date{\color{blue} \bf February 26, 2024}
+%\makehalftitle
+% \begin{figure}
+% \begin{center}
+% \scalebox{1.}{\includegraphics{eps/download.jpg}}
+% \end{center}
+% \end{figure}
+% %
+
+% \newpage
+% % \thispagestyle{empty}
+
+% \vspace{1in}
+
+% \begin{shaded*}
+% \section*{{\color{blue} Acknowledgments}}
+% Weekly discussions
+% with Tim Gallagher, Pengfei Xia, Vikram Chandrasekhar, Hongbing Cheng, Iskender Kushan, Duong Hoang, and Tim Deck, 
+% instrumental in motivating the setup and scenarios
+% analyzed in this report, are much appreciated. 
+% Furthermore, the Kuiper team's sharing of the Matlab code for Kuiper synchronization
+% as well as the ``confluence'' page is acknowledged.
+% \end{shaded*}
+% \newpage
+%------------------------
+% \vspace{0.01in}
+% \begin{shaded*}
+% \section*{{\color{cyan} Current work as of 5/16/2022}}
+% \begin{itemize}
+% 	\item {\color{blue} Two-way time transfer}
+% 	\item {\color{blue} Kuiper aerial vehicle network}
+% 	\item  {\color{blue} Using the KAV onboard camera for (initial) position/orientation estimation of Kuiper ground rover}
+% 	\item  {\color{blue} IMU/Kuiper integration schemes for mobile units- documentation}
+% 	\item  {\color{blue} Aerial vehicles, IMU/Kuiper integration}\\[.1in]
+	
+%     \hline \hline
+% 	\item Use of inter-vehicle message passing for differential positioning and timing-- this is very important area of current interest and lot of applications for mobile units, as well as indoor units- please advise on priority.
+% 	\item Intermittent filtering (effect of interruptions on SV signal reception) for simultaneous synchronization and localization; performance characterization; this is more of a research question- how much intermittency can be tolerated in the synchronization and timing protocol?
+% 	\item {Geometric dilution of precision for mobile units with Kuiper SV time stamping (Chapter 12)- theory done; advise on priority}
+% 	\item {Synchronization with other sets of observables, carrier beat frequency; nav using comm; advise on priority}
+% 	\item Complete the analysis on ISL synchronization; network coherence and network bias (Chapter 10; done)
+% 	\item how to go from characterizing ``important'' orbits for synchronization to GW site location-- optimizing over ground tracks; done for the most part-- Chapter 10
+% 	\item Differencing schemes and applications to Kuiper (Chapter 5)
+% 	\item Refinements on the CT receiver algorithms- weighted least squares as a function of the path delay covariances and location of SVs with respect to CTs	
+% 	\item IoT synchronization; synchronization/localization for indoor units
+% 	\item Kuiper/GPS integration for higher performance synchronization and timing
+	
+% \end{itemize}
+% \end{shaded*}
+
+% \newpage
+% \thispagestyle{empty}
+% \begin{shaded*}
+% {\color{red} \bf Current Work:}
+
+% \begin{itemize}
+% \item distributed synchronization; synchronization on standalone Kuiper network/basic architecture; performance measures
+% \item Kalman filtering for clock synchronization; ensemble Kalman filtering, clock ensembles
+% \item MLE of clock parameters with respect to delay statistics (exponential and Gaussian)
+% \item normal GPS operation; with SV and CT
+% \item iterative receiver design/factor graphs (chapter 8); synchronization protocols using factor graphs
+% \end{itemize}
+% \end{shaded*}
+
+\newpage
+\tableofcontents
+% \input{preface}
+% \input{preface2}
+% \newpage
+% \input{notation}
+%\mainmatter
+%------------------------------
+
+
+% {\color{red} \bf art work on Kuiper synchronization}
+
+
+% \begin{itemize}
+
+% \item learning the clock model; bias, skew, and covariance? or do it in one shot?
+% \item delay propagation estimate
+% \item learning the delays 
+% \item two state model of clock and Allan variance- Kalman filter parameters
+% \item the physics of synchronization
+% \item inter-satellite clock synchronization
+% \item review the code by Kuiper team
+% }
+% \end{itemize}
+% \include{notation}
+
+% \chapter{foundational aspects}
+
+% what are the fundamental issues in constellations synchronization?
+\part{2023 Effort}
+\include{gps-kuiper}
+\include{sync-ISL-I}
+% \include{sync-ISL-II}
+
+
+# Code Log: November 27, 2023; Mehran Mesbahi
+# Dec. 26, 2023
+# new changes in the Kuper CT class and a few new functionalities
+# added the option to correct for the clock recursively
+# added velocity state for the KCTs
+# added doppler measurement scheme
+# added doppler based extended Kalman filter capability 
+# combined measurement schemes for EKF based PNT
+# -----------
+# Nov. 8, 2023
+# - most of the changes has been implemented in class Kuiper_CT 
+# - added a fisher information metric to choose which satellite to track to reduce position uncertainty 
+# - added an incentive cost not to do the handover for a marginal incremental PNT benefit 
+# - a number of fixes on scaling, particularly for ``speedOflight'' parameter (m/s vs. km/s) to be consistent 
+# - fixed some indexing issues with sate llites identified to be tracked by KCT
+# - fixed a typo in the extended Kalman filter update
+# - included an iterative options for the extended Kalman filtering
+# - included a graphical means of visualizing the prediction from the extended KF and the actual estimation error
+
+
+\end{document}
+%----
+\include{2023-topics}
+\part{}
+\include{coordination-synchronization}
+\include{summary-report}
+
+%\part{Preliminaries}
+\include{introduction}
+%\part{Building Blocks}
+%\include{intro-to-synchronization}
+\include{preliminaries}
+
+% \include{coordinate-frames}
+% \include{clock-theory}
+% \include{sv-ct-gw-dynamics}
+%\include{environmental-models}
+
+% %---
+% \part{Pairwise Synchronization \\with Prior Localization}
+\include{sync-parameter-estimation}
+%\include{time-clock-control}
+% \include{state-control}
+\include{data-guided-sync}
+%----
+% \part{Ground \& Aerial Units:\\
+% Simultaneous Localization and Synchronization}
+% %---
+\chapter{Kuiper Mobile Ground \& Aerial Networks}
+
+In this chapter, we examine synchronization
+for mobile units, augmenting the baseline
+Kuiper network with ground and aerial vehicles.
+%
+Mobile units, in addition to the nominal SV/CT/GW
+units, provide another set of challenges
+as well as flexibility, to
+devise novel synchronization protocols,
+allowing for example, using SV in addition
+to aerial vehicles to achieve better
+synchronization at the CT during a GPS loss.
+%---
+Mobility can also be used to devise
+effective differencing and diffusion-based
+algorithms that further improve
+synchronization performance across the
+{\em augmented Kuiper} network; 
+this is shown in Figure~\ref{mobility-1}.
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=.8\textwidth]{eps/clockeps/mobility.jpg}
+\caption{Augmenting the Kuiper network with mobile aerial and ground nodes}\label{mobility-1}
+\end{center}
+\end{figure}
+
+The synchronization problem with mobile units,
+and potential use of differencing schemes for Kuiper, 
+also allows us to consider the potential use of Kuiper for {\em navigation}.
+%---
+We provide the analysis on how to do this ``comm-for-nav'' could work for Kuiper after setting up the relevant relations and measurement schemes available from GPS and Kuiper. 
+This is mainly done in the context of one-way time transfer;
+extensions to two-way time transfer for mobile units
+is also possible, left for future works.
+
+Although mobile and aerial units have many uses in the
+context of Kuiper network, this chapter is devoted
+to providing the ground work for how mobility, and
+the lack of position information for mobile units,
+can be addressed in the one-way time transfer.
+Other uses and algorithms for mobile ground and aerial Kuiper nodes
+are left for future works.
+
+\section{Observables for Synchronization}
+%-----
+The key construct in designing synchronization
+protocols for any network, is what has commonly been
+referred to as {\em observables} in the GNSS community.
+Observables are measurements that are available
+for each node to estimate the variable of 
+interest, e.g., clock corrections.
+%
+For example, in the case of GPS, code
+and carrier phase observables are the basic
+constructs that are used for position and
+clock offset estimation. This is shown
+in Figure~\ref{gnss-receiver}.
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.08}{\includegraphics{eps/clockeps/gnss-receiver-software-block.jpg}}\caption{GNSS receiver architecture} \label{gnss-receiver}
+\end{center}
+\end{figure}
+
+Now, consider the analogous ``observables'' that
+had been proposed by the Kuiper team for pairwise
+SV-CT synchronization that is based on IEEE-1588.
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.5}{\includegraphics{eps/clockeps/kuiper-syn-pair.jpg}}\caption{SV-CT sync by time stamping} \label{kuiper-team-sync}
+\end{center}
+\end{figure}
+
+In this case, the observable is the time-stamping
+of the SV signal with the purpose of comparing
+\beas
+\tau_{\mbox{\tiny SV}}(t) \quad \mbox{and} \quad \tau_{\mbox{\tiny CT}}(t);
+\eeas 
+the observable in this case is $\tau_{\mbox{\tiny SV}_i}(t_e)$,
+that is received at $\mbox{CT}_j$ at time $t_r$, and
+CT will aim to estimate $t_r$ using,
+\beas
+\tau_{\mbox{\tiny SV}_i}(t_e), \quad \tau_{\mbox{\tiny SV}_i}(t_e), \quad \mbox{and} \quad \widehat{\delta}_p,
+\eeas 
+where $\widehat{\delta}_p$ is the estimate of the propagation delay (more on this subsequently). In this case, the
+CT clock offset is estimated by a sequence of measurements
+(assuming that $\tau_{\mbox{\tiny SV}_i}(t)=t$ for all $i$ and
+all $t$, and that have knowledge of the locations of
+CT and SV precisely).
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.15}{\includegraphics{eps/clockeps/sv-ct-sync.jpg}}\caption{SV-CT sync by time stamping} \label{sv-ct-sync}
+\end{center}
+\end{figure}
+As we pointed out in the previous chapters,
+if we use the ``dynamic'' model of the clock,
+then Kalman filtering can reduce the number of
+measurements for this scheme.
+
+In a nutshell, if we can combine all our measurements
+and assumptions (knowing the propagation delay),
+we can establish an optimization problem 
+that involves the unknown parameter (in this case, the clock 
+bias $\alpha_j$ for $\mbox{CT}_j$), 
+based on our model parameters and observations combined
+in $\bm b$, i.e., 
+\beas
+\min_{\alpha_j} \|{\cal M}_e(\alpha_j, \bm b)\|
+\eeas 
+where $\bm b$ is our measurement/knowledge vector, $t_r$
+in this case, is our unknown parameter;
+the notation ${\cal M}_e$ is the error between what
+the model ${\cal M}$ predicts and actual measurements;
+this error is defined with respect to a particular norm (say, the 2-norm).
+%
+Notice that we can also have a batch processing setup,
+where $t_r$ is only estimated after combining measurements
+over many rounds.
+
+Note that in the case of Kuiper SV-CT time synchronization,
+we have assumed that we know the positions of CT and SV
+(in a consistent coordinate frame). If we do not know
+the position of the unit, then we had to formalize a 
+different optimization model, such as
+\beas
+\min_{\alpha_j,{\bm x}_j} \| {\cal M}_e(\alpha_j, {\bm x}_j, \bm b)\|
+\eeas 
+where $\bm x_j$ would be the position of the unit (at a given time). In general, one can remove ambiguity in
+estimating the underlying variables, if we have 
+as many observations as the number of variables.
+That is, if $\alpha_j$ and ${\bm x}_j$ are not
+constrained, then we need four observations,
+say, from four SVs. In order words, we can 
+certainly use four SV timing signals to estimate
+the clock bias {\em and} the position of the receiver.
+This is shown in Figure~\ref{sv-mobile-sync}.
+
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.1}{\includegraphics{eps/clockeps/moode-picture-mobile.jpg}}\caption{Estimating mobile unit position and clock offset using four range measurements from time-stamped signals from Kuiper SVs.} \label{sv-mobile-sync}
+\end{center}
+\end{figure}
+%---------
+
+If this time stamping (with respect to SV clocks) is
+permissible, then it can be used as observables
+to the base and the mobile units as well. In fact, we can
+take this one step further and extend the base/mobile
+or synchronization and positioning of a {\em network of mobile units}; these scenarios are shown in 
+Figures~\ref{sv-base-mobile-sync}.
+% and~\ref{sv-mobile-mobile-sync}.
+%----
+\begin{figure}[h]
+\begin{center}
+\scalebox{0.08}{\includegraphics{eps/clockeps/mood-base-mobile.jpg}}\;\;
+\scalebox{0.061}{\includegraphics{eps/clockeps/mood-base-mobile-mobile.jpg}}
+\caption{(Left) Estimating mobile unit position and clock offset using pseudorange measurements; (Right) estimating mobile unit position and clock offsets a network of relative observables} \label{sv-base-mobile-sync}
+\end{center}
+\end{figure}
+
+% \begin{figure}[h]
+% \begin{center}
+% \scalebox{0.061}{\includegraphics{eps/clockeps/mood-base-mobile-mobile.jpg}}\caption{Estimating mobile unit position and clock offsets a network of relative observables} \label{sv-mobile-mobile-sync}
+% \end{center}
+% \end{figure}
+
+
+\section{Mobile receiver position/timing architectures and assumptions}
+
+In this section, we provide the basic architecture for
+the mobile unit receiver position and timing algorithms.
+The architecture allows inputs from GNSS when available
+but more importantly, it will have a module to process
+position and timing observables that can become
+available from other Kuiper nodes, such as
+SV time stamped signals. We also consider
+how to use other mobile (ground or aerial)
+units that can exchange position/timing
+information with the given unit, as well as the so-called
+signals of opportunity that might become available at a given
+time. For example, in a recent work it has been
+shown that carrier phase beat frequency can be
+used for positioning of mobile units from 
+LEO constellations such as Starlink--even
+without a Starlink receiver. Similar analysis can
+also be done for the Kuiper network.
+
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.06}{\includegraphics{eps/clockeps/kuiper-mobile-1.jpg}}\caption{Mobile unit receiver architecture for positioning and time} \label{architecture-mobile}
+\end{center}
+\end{figure}
+
+Let us provide distinct algorithms for position and timing
+for mobile units that are suitable under different assumptions;
+we generically call these algorithms PNT for mobile units.
+
+\subsection{Mobile PNT with GNSS}
+
+The baseline assumption in this case is that the mobile unit has
+a GNSS/GPS receiver, providing timing corrections and
+pseudorange information to the mobile unit.
+
+\begin{enumerate}
+\item GNSS pseudoranges (from independent directions) can be processed by the mobile unit receiver to output PNT information for a stationary case; these measurements can also be updated for a slowly moving unit.
+\item If the mobile unit is moving, then we can integrate GNSS measurements with an inertial navigation system (INS). The INS uses
+the information from the inertial measurement units (IMUs) {\em in addition to} the pseudorange measurements from GNSS to update the unit position as well as correct for its clock offset and skew. The setup consists of a nonlinear (extended) Kalman filter built on the mobile unit dynamics (position/velocity and orientation when applicable) as well as the clock dynamics (for example, the second order model that we had discussed previously). In this case, we can also update the clock noise terms depending on the environmental conditions (e.g., outside temperature).
+\item We will discuss the notion of geometric dilution of precision (GDOP) shortly, that can be computed for the globe. If GDOP is poor for certain locations on earth, the GNSS/INS integration can also prove to be useful for mobile units that can operate with intermittent GPS connectivity.
+%----
+\item In the case when GDOP is poor from the GNSS signal,
+one can also consider using other Kuiper nodes (SV, base station, aerial and other ground units) to further improve 
+the nominal GDOP. We understand the basic geometry
+that dictates GDOP for GNSS that can also
+be used to reason as to when this augmentation makes sense
+and useful. The background on such schemes
+are (double/triple) differencing as well as diffusion-based
+protocol that can further improve the PNT accuracy and precision
+for the mobile unit.
+\end{enumerate}
+
+\subsection{Mobile PNT with Kuiper with partial or no GPS} 
+
+There has been a lot of discussions in space-based
+PNT and communication on using commercial space assets
+for improving, augmenting, or even replacing GPS.
+This point of view is particularly relevant when GPS
+signals becomes unavailable or disrupted. Although,
+the baseline Kuiper mode utilizes GPS, there are compelling
+reasons for examining a ``backup mode'' for Kuiper,
+one that only relies on partial or no GPS/GNSS.
+
+In this chapter, we examine how Kuiper time-stamping
+schemes can be used in the context of positioning
+and timing. There are many variations to this setup;
+hence, our primary objective is to show that
+in principle, Kuiper can provide timing and positioning
+functionality, augmenting GPS, or using partial or no
+GPS; this is shown both for ground rovers as well
+as aerial units that we refer to as Kuiper aerial vehicles
+(KAVs) or drones.
+
+\begin{enumerate}
+\item We derive how the time-stamping scheme between
+Kuiper SV and the mobile units can mimic pseudorange
+measurements obtained from GNSS. We can even augment
+time stamping with carrier beat frequency to
+create ``two'' loops for pseudorange estimation that
+further improve PNT accuracy and precision.
+\item Kuiper SV time stamping can also be replicated
+for aerial units; we should some simulations for 
+this setup in this chapter.
+%
+\item Similar to the GPS case, we can augment time stamping
+from Kuiper SV with INS to improve the time-stamping schemes
+and further improve PNT performance at the mobile unit.
+This augmented Kuiper/IMU can be effective for
+ground and aerial vehicles that do not have access to 
+sufficient satellite time-stamped signals at all times.
+%
+\item Kuiper time stamping can also be embedded in (double/triple) differencing with other units in the Kuiper network (ground or aerial vehicles) as well as with diffusion-based schemes to further improve the accuracy and precision of mobile units' PNT.
+\end{enumerate}
+
+% \subsection{Mobile PNT with GNSS and Kuiper}
+
+% This can be an attractive option in certain regions
+% of the globe- for example, Kuiper SV geometry can
+% complement the poor coverage by GNSS at certain locations.
+% more on this ...
+
+\subsection{Mobile PNT with Signals of Opportunity}
+
+This was suggested during our weekly discussion 
+and might of interest to examine further.
+By signals of opportunity, we means signals
+that had not been intended specifically for PNT,
+but can nevertheless be used for such purposes.
+For example, if the mobile unit can recognize 
+a landmark and could estimate its
+relative position with respect to that landmark, then
+one can examine to what extend this ``signal of opportunity''
+can be used either for position estimation, or
+where to look in the sky for a Kuiper SV.
+Another example, is to use the carrier beat frequency
+at the receiver to estimate ranges- that when independent,
+can be used to position estimation.
+
+
+
+\begin{figure}[h]
+\begin{center}
+\scalebox{0.08}{\includegraphics{eps/clockeps/kuiper-mobile-2.jpg}} 
+\caption{Position estimation by monitoring the signal strength from one SV with fixed $\delta t_e$ assuming the SV antenna is not articulated.} \label{SV-signal-strength} 
+\end{center} 
+\end{figure}
+
+
+\begin{enumerate}
+\item Suppose the only measurement available at the mobile unit is the received signal power from a given Kuiper SV. It is then conceivable that the receiver knows at least that it
+is in the particular satellite footprint. If time stamping
+is also embedded in the signal, then we can use
+the time information to know the position of the SV and
+a one-dimensional pseudorange with respect to the SV.
+
+\item If the SV-mobile unit comm is via a spot beam,
+then the coverage distance is more refined, and thus
+more useful for positioning. For example, for a SV in 
+630 km orbit, with a one degree half-beam angle,
+the coverage area is around 380 square km (radius 
+from the sub satellite point is about 11 km).
+
+\item In order to further refine the above uncertainty,
+we can now look a sequence of footprints from on satellite. 
+For example, if the signal strength drops drastically over 
+a time interval of length $\delta t_e$, then the receiver 
+can estimate its
+position to be in the overlap region between the footprint
+just before the signal attenuation; this is shown in 
+Figure~\ref{SV-signal-strength}. For a SV in 630 km circular
+orbit with a half-beam of 1 degree, the width of the overlap is
+\beas
+(2\pi/\mbox{period}) \times R_e \times \delta t_e
+\eeas
+so if $\delta t_e$ is about a second, then the width of the overlap
+is about 6 km.
+
+\item One can also be more creative with using the multi-beam
+geometry; discuss the multi-beam geometry from the single
+SV from the patent found online (search ``geolocation communication'').
+
+\end{enumerate}
+
+In the following, we consider the case-by-case scenarios
+for mobile unit PNT; along the way, we also
+address the following questions:
+\begin{shaded*}
+\begin{enumerate}
+\item What are the parallels between GPS receiver processing and its potential applications for Kuiper? 
+For example, can you use carrier phase information in addition to time-stamping to further improve the synchronization performance?
+\item How effective can differencing schemes be for augmented Kuiper nodes? In particular, we will examine
+how differencing schemes between the base station and mobile nodes, can be used to improve synchronization
+performance across the network?
+\item To what extend can the Kuiper signals be used for navigation? This issue has been examined for SpaceX signal in recent paper (using carrier phase differencing) and extended Kalman filtering.
+\end{enumerate}
+\end{shaded*}
+
+% \section{Mobile Unit PNT: case by case scenarios}
+
+% In this section, we delve into various assumptions
+% that we alluded to above, before propose distinct
+% algorithms that can be used for mobile unit PNT.
+
+\subsection{Positioning based on the received signal strength}
+
+In the next section, we examine the situation when
+time stamped information can be relayed to the
+mobile units by say the Kuiper SV. Such measurements
+can then used to define observables that subsequently
+can be solved for position and timing. The more
+basic question that we like to examine in this
+section is the extent by which one can use received
+signal strength from a Kuiper SV for position,
+without any time stamping information.
+
+Suppose that the rover has established a communication link
+with a Kuiper SV.\footnote{Tim asked what happens if the rover has no information about its position and can not determine where in the sky to look for the SV. There are a few approaches to this scenario that might be worth examining further. Of course, if the rover had some knowledge about its position at {\em some} time in the past, then it could use its inertial navigation system (INS) to update its position information using onboard inertial measurement units (IMUs) provided periodic updates from GPS or Kuiper units. Assuming that this information/update mechanism is not available to the rover, and that it can not receive this information (or its noisy version) from other units- then we can use onboard cameras to estimate the rover's position based on some landmarks or positions of sun or moon in the sky- for example, performing simultaneous localization and mapping using onboard cameras and IMUs. The other approach is have a scanning mechanism for the rover antenna; we can use the Kuiper geometry to devise an optimized scanning profile that increases the probability of establishing a link with a Kuiper SV.}
+The first question is what additional information does this
+link establishment provide for the position/timing estimation.
+To encode this information in the optimization problem,
+consider the geometry shown in Figure~\ref{link-geometry}.
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.15}{\includegraphics{eps/clockeps/sat-spot-beam-geometry.jpg}}  
+\caption{Beam angle and coverage area geometry} \label{link-geometry}
+\end{center}
+\end{figure}
+%------
+With reference to Figure~\ref{link-geometry},
+the coverage area is the function of the angle
+$\gamma$, namely,
+\beas
+A_{\mbox{\tiny cov}} = 2 \pi R_{\mbox{\tiny e}}^{2} (1 - \cos \gamma)
+\eeas 
+that is related to the beam (half) angle $\alpha$.
+If we start with $\alpha$, then we can use the geometry
+to obtain $\gamma$ and the coverage area. To do this, from
+the law of cosines, we observe that,
+\beas
+R_s^{2} = R_{\mbox{\tiny e}}^2 + r_{\mbox{\tiny SV}}^2 - 2 r_{\mbox{\tiny SV}} R_{\mbox{\tiny e}} \cos \gamma
+\eeas 
+where $R_{\mbox{\tiny e}}$ is the radius of Earth
+and $r_{\mbox{\tiny SV}}$ is the distance from the
+center of earth to SV (that is, the radius of Earth added to the SV altitude). In the meantime, we can also write,
+\beas
+R_{\mbox{\tiny e}}^2 = R_{s}^2 + r_{\mbox{\tiny SV}}^2 - 2 r_{\mbox{\tiny SV}} R_{s} \cos \alpha;
+\eeas 
+given $\alpha$ we can thus find $R_s$ from the last
+equation, and then use the previous relationship
+to find $\gamma$ and subsequently the coverage area.
+For Kuiper the coverage area would be about $1500$ square
+kilometers using the half-angle beam of 2 degrees.
+% \beas
+% \alpha = \sin^{-1} R_e/r
+% \eeas 
+So this would be useful if the initial GDOP
+uncertainty provides an uncertainty that is
+larger than this characterization.
+
+In order to provide an algorithm for how
+``side'' information can be used for estimating
+the position of the rover, let
+${\widehat {\bm r}}_{\mbox{\tiny SV}}$ and ${\widehat {\bm r}}_{\mbox{\tiny R}}$ denote, respectively the normalized vectors
+to the Kuiper SV and the rover; we have to fold in the
+fact that rover's position vector will be expressed in
+ECEF frame (rotating with Earth) whereas SV position
+vector is generally expressed in ECI (inertially fixed).
+So there is a (time varying coordinate transformation),
+say, $U(t)^\top$ that puts ${\widehat {\bm r}}_{\mbox{\tiny SV}}$ in
+the ECEF frame at time $t$. Using this transformation,
+we then expressed that the rover is in the SV coverage
+zone by the quadratic inequality,
+\beas
+{\widehat {\bm r}}_{\mbox{\tiny SV}}(t)^\top \, U(t)^\top \, {\widehat {\bm r}}_{\mbox{\tiny R}}(t) \leq \cos \gamma
+\eeas
+where $\gamma$ is dictated by the beam angle $\alpha$
+as discussed previously; this is 
+shown in Figure~\ref{cone-constraint-visibility}.
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.15}{\includegraphics{eps/clockeps/sat-spot-beam-geometry2.jpg}} 
+\caption{Position inequality induced by link existence} \label{cone-constraint-visibility}
+\end{center}
+\end{figure}
+
+Here is now the fundamental observation- if have
+a communication link over a certain time interval, just
+knowing that there is a link over a given interval,
+we can find the feasible point for
+\beas
+{\widehat {\bm r}}_{\mbox{\tiny SV}}(t_1)^\top \, U(t_1)^\top \, {\widehat {\bm r}}_{\mbox{\tiny R}} \leq \cos \gamma\\
+{\widehat {\bm r}}_{\mbox{\tiny SV}}(t_2)^\top \, U(t_2)^\top \, {\widehat {\bm r}}_{\mbox{\tiny R}} \leq \cos \gamma\\
+{\widehat {\bm r}}_{\mbox{\tiny SV}}(t_3)^\top \, U(t_3)^\top \, {\widehat {\bm r}}_{\mbox{\tiny R}} \leq \cos \gamma\\
+\!\!\!\!\vdots\\
+{\widehat {\bm r}}_{\mbox{\tiny SV}}(t_n)^\top \, U(t_n)^\top \, {\widehat {\bm r}}_{\mbox{\tiny R}} \leq \cos \gamma
+\eeas
+assuming that the rover has been stationary during
+this interval (we have removed the time dependency
+for ${\bm r}_{\mbox{\tiny R}}$).
+
+In fact, if we add this set of inequalities to our
+original estimation problem, we obtain a nice
+optimization of the form,
+\beas
+ \min_{{\bm x_{\mbox{\tiny R}}}}} \, \|\widehat{\rho}_{1:4}- \widehat{\rho} ({\bm x_{\mbox{\tiny R}}}})\| \\
+{\widehat {\bm r}}_{\mbox{\tiny SV}}(t_i)^\top \, U(t_i)^\top \, {\widehat {\bm r}}_{\mbox{\tiny R}} \leq \cos \gamma, \, \quad i=1,2,\ldots, n,
+\eeas 
+after $n$ rounds of communication; this is depicted in 
+Figure~\ref{sequence}.
+%---
+% \\~\\
+% \noindent{\color{blue} The code for solving this optimization problem.}
+% \\
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.2}{\includegraphics{eps/clockeps/sat-spot-beam-geometry3.jpg}} 
+\caption{Using a sequence of beam images to estimate position of the rover} \label{sequence}
+\end{center}
+\end{figure}
+
+Now, another aspect of this geometry is the scenario
+when we have multiple beams on the SV (a search online
+with geolocation via satellite communication pointed
+to a patent application- review with the team!)
+%---
+Then the overlap of the corresponding cones on the ground,
+even at a single time, can provide a set of
+quadratic inequalities that augmented,
+the time stamping, for position estimation of the rover.
+
+% More fundamentally, this chapter examines various
+% means of estimating position and timing for
+% mobile ground and aerial units.
+
+% The overall architecture that we will consider is
+% depicted in 
+
+
+% The idea is to what extend can you determine
+% the position of the unit just by knowing when 
+% the satellite is visible.
+
+
+% it is the rate by 
+
+% \beas
+% dA/dt = \frac{dA}{d\delta} \, \frac{d \delta}{dt}
+% \eeas 
+
+
+%--------
+\section{Position/clock bias estimation for (slow) mobile units using time stamping}
+In this section, we examine how we can estimate the
+position and clock bias of a mobile unit using 
+SV time-stamped measurements. We then examine the
+corresponding uncertainties depending on how these
+measurements have come about, e.g., from 
+$n$ number of SVs at a specific time or say, one SV over 
+$n$ subsequent times.
+
+In order to distinguish between time-stamping based
+positioning and timing and those based on say, code/carrier phase
+tracking using in GPS (or carrier phase for Kuiper), 
+we first define the notion of (true)
+TS (time-stamping) observable (between the space vehicles SV and the mobile unit, or the rover, R; this
+observable which we call the ideal pseudorange
+assumes the form,
+\beas
+\rho(t_{r_1},t_{e_1}}) = c \, \{ t_{r_1} -t_{e_1} + \delta t_{\mbox{\tiny} R} \},
+\eeas 
+where $\delta t_{\mbox{\tiny} R}$ is the rover clock bias
+at $t_{r_1}$ (for the moment we assume the corresponding
+SV clock bias is negligible or has been accounted for);
+$c$ denotes the speed of light.
+
+
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.15}{\includegraphics{eps/clockeps/moode-picture-mobile-singleSV.jpg}} 
+\caption{Fundamental limitation position and timing using single SV measurements} \label{PNT-singleSV}
+\end{center}
+\end{figure}
+
+
+The actual TS-pseudorange measurement however would be
+\beas
+\widehat{\rho}(t_{r_1},t_{e_1}}) = c \, \{ \tau_{\mbox{\tiny R}}(t_{r_1})} - \tau_{\mbox{\tiny SV}}(t_{e_1})} \}
+\eeas 
+where essentially the SV and rover clocks are used to measure
+the difference between the emission and reception times
+of the time-stamped signal from SV to the rover.
+%
+The pseudorange expression can now be expanded as,
+\beas
+\widehat{\rho}(t_{r_1},t_{e_1}}) = \rho(t_{r_1},t_{e_1}}) + \rho_{\mbox{\tiny trop}} + \rho_{\mbox{\tiny ion}} + \rho_{\mbox{\tiny MP}} + \rho_{\mbox{\tiny random}}
+\eeas 
+where
+\beas
+{\rho}(t_{r_1},t_{e_1}}) = \|\bm r_{\mbox{\tiny SV}}(t_{e_1}) - \bm r_{\mbox{\tiny R}}(t_{r_1}) \| + c \, \delta t_{\mbox{\tiny R}}(t_{r_1}),
+\eeas 
+with vectors expressed with respect to a consistent
+coordinate frame, and $\rho_{\mbox{\tiny trop}}$, $\rho_{\mbox{\tiny ion}}$, $\rho_{\mbox{\tiny MP}}$, $\rho_{\mbox{\tiny random}},$ are the corresponding (length-scale) delays due to
+troposphere, ionosphere, multipath, and random effects.
+
+Now let 
+\beas
+\widehat{\rho}_{1:4}= \leftm{c} \widehat{\rho}(t_{r_1},t_{e_1}}) \\
+				\widehat{\rho}(t_{r_2},t_{e_2}}) \\
+				\widehat{\rho}(t_{r_3},t_{e_3}}) \\
+				\widehat{\rho}(t_{r_3},t_{e_4}}) \rightm;
+\eeas 
+assume that we know the estimate of $r_{\mbox{\tiny SV}}(t_{e_1})$ as
+\beas
+\widehat{\bm r}_{\mbox{\tiny SV}}(t_{e_1}) = \bm r_{\mbox{\tiny SV}}(t_{e_1}) + \bm e_{\mbox{\tiny E}}
+\eeas 
+where $e_{\mbox{\tiny E}}$ denotes the ephemeris
+estimation error.
+Our estimation problem is now estimating 
+$\widehat{\bm r}_{\mbox{\tiny R}}(t)$ for
+some $t \in [t_{e_1},t_{r_4}]$; this will be pursued
+by minimizing problem,
+\beas
+\min_{\widehat{\bm r}_{\mbox{\tiny R}}(t)} \|
+\leftm{c}
+\widehat{\rho}(\bm r_{\mbox{\tiny R}}(t_{r_1}))\\
+\widehat{\rho}(\bm r_{\mbox{\tiny R}}(t_{r_2}))\\
+\widehat{\rho}(\bm r_{\mbox{\tiny R}}(t_{r_3}))\\
+\widehat{\rho}(\bm r_{\mbox{\tiny R}}(t_{r_4})) \rightm
+- \widehat{\rho}_{1:4} \|
+\eeas 
+with respect to $\bm r_{\mbox{\tiny R}}$; noting that
+$\widehat{\rho}$ is a nonlinear function of 
+$\bm r^{1}_{\mbox{\tiny R}}$, $\bm r^{2}_{\mbox{\tiny R}}$,
+$\bm r^{3}_{\mbox{\tiny R}}$ at the respective times.
+
+Then the problem at hand looks like,
+\beas
+\min_{{\bm x_{\mbox{\tiny R}}}}} \, \|\widehat{\rho}_{1:4}- \widehat{\rho} ({\bm x_{\mbox{\tiny R}}}})\|
+\eeas 
+where
+\beas
+\bm x_{\mbox{\tiny R}} = \leftm{c} {\bm r_{\mbox{\tiny R}}}}  \\ c\, \delta t_{\mbox{\tiny R}} \rightm 
+\eeas
+and 
+\beas
+\widehat{\rho}(\bm x_{\mbox{\tiny R}}) = \leftm{c} \|\bm r_{\mbox{\tiny SV}}(t_{e_1}) - \bm r_{\mbox{\tiny R}}(t) \| + c \, \delta t_{\mbox{\tiny R}}(t) \\\|\bm r_{\mbox{\tiny SV}}(t_{e_2}) - \bm r_{\mbox{\tiny R}}(t) \| + c \, \delta t_{\mbox{\tiny R}}(t) \\ \|\bm r_{\mbox{\tiny SV}}(t_{e_3}) - \bm r_{\mbox{\tiny R}}(t) \| + c \, \delta t_{\mbox{\tiny R}}(t) \\ \|\bm r_{\mbox{\tiny SV}}(t_{e_4}) - \bm r_{\mbox{\tiny R}}(t) \| + c \, \delta t_{\mbox{\tiny R}}(t) \rightm + \mbox{\bf vec} \, (\rho_{\mbox{\tiny trop}} + \rho_{\mbox{\tiny ion}} + \rho_{\mbox{\tiny MP}} + \rho_{\mbox{\tiny random}})
+\eeas 
+where $t$ is between $t_{e_1}$ and $t_{r_4}$ with the 
+implicit assumption that the mobile unit has not
+changed its position in this interval. If it has,
+then we can use the accelerometer to to relate
+$\bm r_{\mbox{\tiny R}}(t)$ from one time stance to
+another.
+%---
+
+Note that if we have two or more rovers (say $n)$, or aerial vehicles (say $m$), then can use the designation 
+the position and their respective clock parameters as,
+\beas
+\bm x_{\mbox{\tiny R}_1} = \leftm{c} {\bm r_{\mbox{\tiny R}_1}}}  \\ c\, \delta t_{\mbox{\tiny R}_1} \rightm, \, \quad \bm x_{\mbox{\tiny R}_2} = \leftm{c} {\bm r_{\mbox{\tiny R}_2}}}  \\ c\, \delta t_{\mbox{\tiny R}_2} \rightm, \, \ldots, \, \leftm{c} {\bm r_{\mbox{\tiny R}_n}}}  \\ c\, \delta t_{\mbox{\tiny R}_n}\rightm,
+\eeas
+and
+\beas
+\bm x_{\mbox{\tiny A}_1} = \leftm{c} {\bm r_{\mbox{\tiny A}_1}}}  \\ c\, \delta t_{\mbox{\tiny A}_1} \rightm, \, \quad \bm x_{\mbox{\tiny A}_2} = \leftm{c} {\bm r_{\mbox{\tiny A}_2}}}  \\ c\, \delta t_{\mbox{\tiny A}_2} \rightm, \, \ldots, \, \leftm{c} {\bm r_{\mbox{\tiny A}_m}}}  \\ c\, \delta t_{\mbox{\tiny A}_m}\rightm;
+\eeas
+Then depending on the information transfer between
+the nodes, we can not only use the information about 
+$\widehat{\rho}(\bm x_{\mbox{\tiny R}_1})$
+and $\widehat{\rho}(\bm x_{\mbox{\tiny R}_2})$,
+for their individual state estimation, but 
+potentially use the inter-rover (or rover-aerial)
+timing and distance information for estimation. 
+This would also be the case with the base
+station, that is often assumed to be at a {\em known} location.
+
+For now, let us consider the single rover case;
+the general approach for solving the position
+and timing (of the rover) proceeds 
+as follows: Let us have an estimate of the position and clock offset for the rover, namely $\bm x_{\mbox{\tiny R}}(0)$;
+then we update these estimates using the recursion,
+\begin{shaded*}
+\beas
+\bm x_{\mbox{\tiny R}} (k+1) = \bm x_{\mbox{\tiny R}}(k) + (H(k)^{\top} H(k))^{-1} H(k) \, (\widehat{\rho}_{1:4} - \widehat{\rho}(\bm x_{\mbox{\tiny R}} (k))), \; \mbox{for} \; k=0, 1, 2, \ldots
+\eeas 
+\end{shaded*}
+where,
+\beas
+H(k) &=& \nabla \widehat{\rho}(\bm x(k)) \\
+&=& \leftm{cccc} 
+(\bm r^{1}_{\mbox{\tiny SV}}(t_{e_1}) - \bm r^{1}_{\mbox{\tiny R}}(k))/p_1 & (\bm r^{2}_{\mbox{\tiny SV}}(t_{e_1}) - \bm r^{2}_{\mbox{\tiny R}}(k))/p_1 & (\bm r^{3}_{\mbox{\tiny SV}}(t_{e_1}) - \bm r^{3}_{\mbox{\tiny R}}(k))/p_1& 1\\[.05in]
+(\bm r^{1}_{\mbox{\tiny SV}}(t_{e_2}) - \bm r^{2}_{\mbox{\tiny R}}(k))/p_2 & (\bm r^{2}_{\mbox{\tiny SV}}(t_{e_2}) - \bm r^{2}_{\mbox{\tiny R}}(k))/p_2 & (\bm r^{3}_{\mbox{\tiny SV}}(t_{e_2}) - \bm r^{3}_{\mbox{\tiny R}}(k))/p_2 & 1\\[.05in]
+(\bm r^{1}_{\mbox{\tiny SV}}(t_{e_3}) - \bm r^{1}_{\mbox{\tiny R}}(k))/p_3 & (\bm r^{2}_{\mbox{\tiny SV}}(t_{e_3}) - \bm r^{3}_{\mbox{\tiny R}}(k))/p_3& (\bm r^{3}_{\mbox{\tiny SV}}(t_{e_3}) - \bm r^{3}_{\mbox{\tiny R}}(k))/p_3& 1\\[.05in]
+(\bm r^{1}_{\mbox{\tiny SV}}(t_{e_4}) - \bm r^{1}_{\mbox{\tiny R}}(k))/p_4 & (\bm r^{2}_{\mbox{\tiny SV}}(t_{e_4}) - \bm r^{2}_{\mbox{\tiny R}}(k))/p_4 & (\bm r^{3}_{\mbox{\tiny SV}}(t_{e_4}) - \bm r^{1}_{\mbox{\tiny R}}(k))/p_4 &  1
+\rightm 
+\eeas
+and
+\beas
+p_i= \|\bm r_{\mbox{\tiny SV}}(t_{e_i}) - \bm r_{\mbox{\tiny R}}(k)\|, \quad i = 1, 2, 3, 4.
+\eeas
+In the GPS case, we generally need at least four measurements to
+resolve for the position {\em and} receiver clock offset
+but more measurements would further improve the quality of these
+estimates-- note that in the above expression
+for $H(k)$, our notation suggests that we are using
+four measurements but in general we can use
+more measurements when available.
+
+The key observation is that the rows of the matrix
+$H(k)$ (that are obtained from the linearization
+of pseudorange equation) are comprised of the normalized vectors from the mobile unit to the SVs (or the base station), 
+augmented by 1's, that pertain to the clock correction,
+Note that these vectors are generally represented in the earth-centered/earth fixed frame
+(ECEF) so appropriate coordinate transformation should be
+used. Hence, in a nutshell, the rows of the matrix
+of interest relate to the independence structure of
+directions from the mobile unit to the SVs; see~Figure~\ref{sv-sync}.
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.18}{\includegraphics{eps/clockeps/moode-picture-mobile-geometry}} 
+\caption{Geometry of SV/Mobile unit synchronization} \label{sv-sync}
+\end{center}
+\end{figure}
+
+This iteration usually converges after a few iterations
+if the matrix $H$ (for various values of $k$) is well-conditioned.
+Once the iterates converge, we have
+\beas
+(H^{\top} H)^{-1} H \, (\widehat{\rho}_{1:4} - \widehat{\rho}(\bm x_{\mbox{\tiny R}})) =0
+\eeas
+where the matrix $H$ is the evaluation of $H(k)$ at 
+$\bm x_{\mbox{\tiny R}}$.
+
+If the measure and delay estimates have covariance $\Sigma$,
+the the covariance of the error estimate (in position and timing)
+is,
+\beas
+(H^{\top} H)^{-1} H^\top \Sigma H (H^\top H)^{-1}
+\eeas
+and in particular, when $\Sigma = \sigma^{2} I$, then
+the delay/measurement error covariance are amplified as 
+$D \sigma^2$ where,
+\beas
+G= (H^{\top} H)^{-1} .
+\eeas
+The matrix $G$ is often called the {\em Geometric Dilution of Precision} or GDOP; this matrix is essentially a 
+multidimensional sensitivity measure of how variations
+in the measurements effect the variation of the estimates
+(in position and time). One can even go one step
+further and consider,\footnote{The subscripts refer to the entries of the matrix.}
+\beas
+\sqrt{G_{33}}, \sqrt{G_{11}+D_{22}}, \; \mbox{and} \; \sqrt{G_{11}+G_{22}+G_{33}},
+\eeas 
+that signify, respectively, the sensitivity of the estimates in altitude, planar, and total position. This is shown 
+geometry below- GDOP captures the uncertainty 
+in distinct directions due to the estimation setup;
+this is shown in Figure~\ref{GDOP-geometry}.
+%
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.15}{\includegraphics{eps/clockeps/GDOP}}
+\caption{Geometry of the dilution of precision}
+\label{GDOP-geometry}
+\end{center}
+\end{figure}
+
+Note that the matrix $G$ is a function of position of the receiver with respect to the satellites; 
+the conditioning $G$
+is at the heart of the issue--so we can evaluate
+$H$ at $\bm x_{\mbox{\tiny R}}$ with respect to
+say four values for $\bm r_{\mbox{\tiny SV}}$'s.
+%--- 
+Now comes the fundamental issue with estimating position and
+timing based on four $\bm r_{\mbox{\tiny SV}}$ 
+for a single SV, say at four distinct time stamps.
+The issue is that single SV orbits are planar in the
+earth-fixed inertial frame. But this then means that
+no matter how many time stamps we have from a single satellite,
+we will have the linear dependence between these vectors
+that does not facilitate position and timing estimation
+from single satellite measurements. As such, depending
+on the direction where the position estimation is
+necessary (say "north" or altitude), one might not
+be able to resolve position and timing, as such,
+we should rely on an ``augmentation'' of the SV measurements
+with other measurements, says from a base station or
+a mobile unit; this is depicted in Figure~\ref{sv-sync-mobile}.
+%---
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.15}{\includegraphics{eps/clockeps/moode-picture-mobile-geometry-2}}
+\caption{Geometry of mobile ground and aerial units positioning and time synchronization}
+\label{sv-sync-mobile}
+\end{center}
+\end{figure}
+%\vspace{.1in}
+% \\
+% \noindent {\bf Example:} To demonstrate the
+% setup above, consider a Kuiper SV sending
+% time stamped signals to the receiver--
+% this has been done in Jupyter Notebook and
+% the result will be included here.
+
+
+% \subsection{Another variation on position and time estimation}
+
+% In the previous section we explored how the time stamping
+% information can be used for range estimates (pseudorange)
+% and how a collection of independent range estimates
+% leads to least squares problem of the form
+% \beas
+% \min_{{\bm x_{\mbox{\tiny R}}}}} \, \|\widehat{\rho}_{1:4}- \widehat{\rho} ({\bm x_{\mbox{\tiny R}}}})\|
+% \eeas 
+% where ${\bm x_{\mbox{\tiny R}}}$ contains the 
+% position and the clock information for the ``rover,''
+% e.g., mobile unit. It is the quality of this estimate
+% that puts a fundamental bound on the estimation accuracy-
+% and one can adopt augmenting pseudorange observables
+% with other measurements, similar to differential GPS or
+% information for a ground base station or an aerial vehicles.
+% (this ``network'' approach will be examined in more details).
+% However, for LEO satellites and in particular Kuiper, there
+% is another type of information that can be useful for
+% position estimation.
+
+
+% \subsubsection{Block diagrams}
+
+% \noindent {\color{blue} Block diagram for the Kuiper positioning and timing for mobile and aerial units.}\\
+
+
+% \noindent {\color{blue} Block diagram for the Kuiper/GPS positioning and timing for mobile and aerial units.}\\
+
+
+% \noindent {\color{blue} Compute of the GDoP for Kuiper alone,
+% Kuiper+GPS at ever point on the globe; identify the variations}\\\\
+% \noindent {\color{blue} another issue that we need to consider
+% is when clocks have a skew; if you include them 
+% in the derivation of the pseudorange, then
+% they show up in the pseudorange equation; in this
+% case, it seems that we can use a two way communication 
+% to obtain the skew first, then proceed with 
+% setting up the estimation as a bi-level problem:
+% estimate the mobile unit clock skew, followed by position
+% and timing- a Kalman filter will prove instrumental to
+% streamline this process.} \\~\\
+
+% % If we assume that the receiver clock offset has a 
+% % frequency bias, then
+% % \beas
+% % \delta_{\mbox{\tiny R}}(t_{r_2}) = \delta_{\mbox{\tiny R}}(t_{r_1}) + \beta (t_{r_2} - t_{r_1})
+% % \eeas 
+% % with $t_{r_2}-t_{r_1} \approx t_{e_2}-t_{e_1}$
+% % leads to addition of one more parameter to the optimization problem.\\~\\
+
+% % Let us now consider an example to underscore the
+% % importance of the Kuiper geometry, or the 
+% % use of a base or aerial platform in the estimation
+% % process. More sophisticiated estimation/filtering
+% % algorithms can be adopted of course, but the setup
+% % above can be used to highlight the fundamental issues
+% % in position and clock offset computaiton (and correction).\\~\\
+
+% % if we have clock skew as well we can do a
+% % two way time stamping if needed.
+
+% % \noindent {\bf Example:} see the Jupyter notebook for the estimation problem without the Kalman filter and
+% % with Kalman filter\\~\\
+
+% % % First, let us provide the key algorithms steps
+% % % for GPS, differential GPS, as well as augmented
+% % % GPS-INS (Inertial Navigation Systems) for clock offset
+% % % estimates and position estimation for mobile units.
+
+
+% % altitude known and unknown\\~\\
+
+
+% \noindent {\bf Example:} how does this compare with GPS
+
+
+% \subsubsection{GDOP heat map for Kuiper over the globe}
+
+% given a particular visibility cone, we can compute,
+% for various phases of Kuiper constellation, 
+% the dilution of precision for every land mass across
+% the globe in terms of the heat map.
+
+\section{Overarching theme for positioning and timing networks}
+
+A network consists of nodes that have knowledge on their
+positioning and timing (or that of other nodes) 
+with respect to a global reference frame.
+%----
+Each node can share information (absolute or relative) timing/position
+information with other nodes but this information is noisy and delayed.
+The various algorithms proposed operate at the node level: given
+each node uncertainty (or lack of knowledge) of its own timing and position,
+aim to reduce the uncertainty of timing/position at various nodes-
+and in the timing case, synchronize. These nodes can be Kuiper SVs,
+CTs, GWs, as well as aerial and mobile units. In the case of IoT
+devices, energy constraints can also be folded in.
+
+\section{Standalone Kuiper Positioning and Timing}
+
+In this section, we consider standalone Kuiper PNT
+for mobile units. The basic building block for
+this scheme is time-stamped observables available
+to the unit from Kuiper SVs. 
+Moreover, time-stamped observables can
+potentially be augmented with an inertial navigation system 
+(INS) including measurements available from the inertial measurement units (IMUs).
+
+\subsection{CT vs. mobile unit clock synchronization performance}
+Prior to developing position and timing algorithms for
+mobile units (which we subsequently refer to as rovers),
+utilizing the dynamics of the vehicle
+and its clock, let us examine how to assess the performance
+of synchronization algorithms {\em in the absence} of such algorithms.
+In particular, we examine the inherent synchronization
+performance when we decouple time and position estimation
+for the rover. 
+
+Suppose that the rover receives a timing signal
+from a Kuiper SV (tagged as $\tau_t_{e}$) and the SV id. 
+To streamline the algebra for now, we assume that
+$\tau_{\mbox{\tiny SV}}(t_{e}) \approx t_{e}$
+that is the SV clock is accurate.
+%
+Then the SV id and the time stamp can be used to 
+know $\bm r_{\mbox{\tiny SV}}(t_{e})$; this
+position vector can be represented in the ECI
+or ECEF frames.
+
+If the rover's location was fixed on earth's surface,
+then receiving this time tagged signal at $t_{r}$,
+measured as $\tau_{\mbox{\tiny R}}(t_{r})$, would then
+allow the rover to formulate an observation equation
+for the propagation time, i.e,
+\bea
+\widehat{t}_p \approx \| \bm r_{\mbox{\tiny SV}}(t)- \bm r_{\mbox{\tiny R}}(t) \|/c ,
+\eea 
+where $\widehat{t}_p$ is the estimate of
+the signal propagation time and $c$ is the signal
+propagation speed; note the ambiguity in $t$,
+as the rover clock does not have access to the universal time.
+The signal propagation time is then used to calibrate the clocks. Any error in the signal propagation is then reflected in the 
+clock error.
+%
+Hence, even at this point, for every meter position
+uncertainty (even if the clocks are accurate)
+we incur about 3.33 ns of time uncertainty. 
+
+When the clocks are {\em not} accurate, the situation
+becomes more interesting, as the emission and
+receptions times, and the corresponding position
+vectors have to all be adjusted and compensated for.
+That is, suppose that $t_{e}$ is accurate but
+$t_r$ is measured by the rover clock at $\tau(t_r)$
+and we like to use,
+\bea
+\widehat{t}_p \approx \| \bm r_{\mbox{\tiny SV}}(t_e)- \bm r_{\mbox{\tiny R}}(t_r) \|/c ,
+\eea
+Then assuming an algebraic model for the clock onboard
+the rover,
+\beas
+\tau_{\mbox{\tiny R}}(t_r) = \alpha + \beta t_r 
+\eeas 
+we can see that the timing error would be related
+to the difference,
+\beas
+\|\bm r_{\mbox{\tiny R}}(t_r) - \bm r_{\mbox{\tiny R}}(\tau_{\mbox{\tiny R}}(t_r))\| \approx \| \bm v_{\mbox{\tiny R}} (t_r) (t_r- \tau_{\mbox{\tiny R}}(t_r))\|;
+\eeas 
+so even in this simple setting, the estimate of
+propagation time needed for clock correction, 
+are related to both the translational and clock dynamics
+of the rover (the bias and skew).
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.05}{\includegraphics{eps/clockeps/rover-position-error}}
+\caption{Kuiper mobile unit position/timing using SV time stamping with position uncertainty}
+\label{time-stamping-position-uncetatinty}
+\end{center}
+\end{figure}
+For example, if we only consider range ambiguity, 
+from Figure~\re{time-stamping-position-uncetatinty},
+and using the law of cosines, it follows that,
+\beas
+d_3^2= d_1^2 + d_2^3 - 2 d_1 d_2 \cos \theta
+\eeas 
+where $d_2 = v \Delta t$. 
+Hence, the percent error in the $t_p$ computation is 
+\beas
+\frac{d_3}{d_1} = \sqrt{1+ \frac{(v\Delta t)^2}{d_1^2} - 2 \frac{v\Delta t}{d_1} \cos \theta};
+\eeas 
+as such, the the timing error is a function
+of the time interval and the velocity, as well as
+the local elevation for the rover.
+
+These examples demonstrate why in scenarios 
+when both the clock parameters
+and the position of the rover need to be estimated, it is
+advantages to use available observables to estimate {\em both}
+if we are using ranging to create time observables.
+
+A few notes: 
+\begin{itemize}
+\item When the rover clock is accurate and
+the position is unknown,
+then we can estimate position from range measurements,
+using at least three independent directions.
+However, if we do not get pseudorange observables
+at the same instance, then we need to use
+an inertial measurement unit to adjust for position updates.
+That is, in this case we can reduce the
+GPS/Kuiper SV navigation solution by one variable, and use
+three pseduorange observables to estimate the
+rover position, when the rover is stationary.
+%
+When the rover moves, then we can update the position
+every time we obtain the required observables 
+from GPS or Kuiper SV network, if available.
+In between receiving the observables, we can
+rely on the onboard IMU to propagate the
+translational states of the rover. 
+Combining these propagated states with observables
+when available is really what a filter does.
+
+\item Similarly, if the position of the rover is
+known, without relying on the clock model, the 
+time synchronization protocol can use averaging schemes
+to correct for clock offset; we saw an example of such a strategy
+for CT synchronization before. We have developed 
+the underlying equations to show how many
+averaging steps are needed to achieve a particular
+synchronization error.
+\end{itemize}
+
+Before we delve into developing nonlinear filters for
+the rover position and time estimation, let us review the basic
+ingredients for the corresponding measurement model
+as well as the underlying ``update'' equations.
+Let us start with the measurement model. 
+We have been using time signaling as our baseline
+observable- that is, we use time stamping as a proxy
+for distance, that in conjunction with speed of signal
+propagation leads to a time observable as well.
+%-----
+
+Now, let us review the update dynamics for different
+modules on the rover receiver. These models are important
+not only for designing filters, but predicting how
+the uncertainties grow over time. We saw a discussion
+on this for the CT clock dynamics before- but let us 
+quickly review how that model can be adopted for the rover
+clock. We then look at the translational
+dynamics of the rover; these models are important
+to not only developing position/timing algorithms,
+but also for propagating uncertainties.
+
+For the rover state, we consider an eight dimensional
+state vector at time $t$ as, 
+\beas
+\bm s(t)= \leftm{c} \bm r(t)\\ \bm v(t)\\ \bm x(t) \rightm 
+\eeas 
+where $\bm r(t)$ is the position vector in some three-dimensional
+coordinate frame (ENU, ECI, or ECEF), $\bm v(t)$ is the velocity
+vector in the same coordinate, with respect to $t$,
+and $\bm x$ is the clock state; for the two-state differential
+model of the clock and since we will be combining position
+and timing in one state vector, we let
+\beas
+\bm x^{1}(t): &\quad& \mbox{signal speed $\times$ clock offset at time $t$}\\
+\bm x^{2}(t): &\quad& \mbox{signal speed $\times$ clock skew at time $t$}
+\eeas 
+in scenarios where we have multiple clocks we can
+use $\bm x_i$ or even something like $\bm x_{{\mbox \tiny R}_i}$ when this augmented notation is justified.
+Similarly, when we have multiple rovers, aerial vehicles, SVs,
+etc., we will use the notation $\bm s_i$ or $\bm s_{{\mbox \tiny R}_i}$ to refer to the state of the node; a notation like
+$\bm r^{j}_{i}$ refers to the $j$th component of the position vector
+for node $i$; for position and velocity vector we can also
+adopt a notation like $\bm r^{x}_{i}$, that refers to
+the position of the $i$th node along the $x$-axis of the implied coordinate frame. For the clock states we also use
+the notation
+\beas
+\bm x^{\phi}(t): &\quad& \mbox{signal speed $\times$ clock offset at time $t$}\\
+\bm x^{f}(t): &\quad& \mbox{signal speed $\times$ clock skew at time $t$}
+\eeas 
+to denote the clock phase offset and skew in distance units;
+the two-state model is depicted in Figure~\ref{2-state-clock}.
+\begin{figure}
+\begin{center}
+\scalebox{0.04}{\includegraphics{eps/clockeps/2-state-clock-model.jpg}} 
+\caption{2-state clock model}\label{2-state-clock}
+\end{center}
+\end{figure}
+Lastly, note that the state of the node can also be augmented to capture {\em other} states of the nodes, for example the orientation of the vehicle or its antenna.
+
+Now, let us consider the evolution of the state in 
+discrete time, that is, we consider a sampling
+interval $\Delta t$, and examine (instead of $\bm s(t)$),
+the evolution of the state at sampled time steps,
+\beas
+\bm s(k \, \Delta t)  \leadsto \bm s((k+1) \Delta t) ;
+\eeas 
+in a nutshell, this evolution is dictated by memory,
+controlled input, and exogenous inputs. 
+Let us consider first the clock
+states- we have discussed this to some extent
+in the previous chapters but provide an overview
+(and more inline with its subsequent integration with 
+translational states) here.
+
+Let us first note that the continuous time clock model
+assumes the form
+\beas
+\leftm{c} \dot{\bm x}^{\phi}(t)\\ \dot{\bm x}^{f}(t) \rightm = \leftm{cc} 0 & 1 \\ 0 & 0 \rightm \leftm{c} {\bm x}^{\phi}(t)\\ {\bm x}^{f}(t) \rightm + \leftm{c} \bm w_c^{\phi}(t) \\ \bm w_c^{f}(t) \rightm;
+\eeas
+where $\bm w_c^{\phi}(t)$ and $\bm w_c^{f}(t)$ are
+zero-mean white processes that capture the phase and
+frequency noise statistics, assumed to be uncorrelated.
+The covariance of these noise terms
+\beas
+Q_c(t) = \mathbb E \{ \bm w_c(t) \bm w_c(t)^{\top} \} = \leftm{cc} q_c^{\phi & 0 \\ 0 & q_c^{f}} \rightm
+\eeas 
+\beas
+Q_d(k) = \mathbb E \{ \bm w_d(k) \bm w_d(k)^{\top} \}
+\eeas
+where
+\beas
+Q_d(k) = \leftm{cc} q_c^{\phi} \Delta t + q_c^{f} \Delta t^3/3 & q_c^{f}\Delta t^2/2 \\ q_c^{f} \Delta t^2/2 & q_c^{f} \Delta t \rightm
+\eeas
+for the resulting discrete time dynamics assumes the form,
+\beas
+\leftm{c} {\bm x}^{\phi}(k+1)\\ {\bm x}^{f}(k+1) \rightm = \leftm{cc} 1 &\Delta t \\ 0 & 1 \rightm \leftm{c} {\bm x}^{\phi}(k)\\ {\bm x}^{f}(k) \rightm + \leftm{c} \bm w_d^{\phi}(k) \\ \bm w_d^{f}(k) \rightm;
+\eeas
+
+Now, let us see how this model would fit the typical
+way of specifying frequency stability for a clock.
+A popular specification is in terms of the
+Allan variance, capturing the RMS value
+in the variations of the the clock frequency over 
+{\em a particular time interval}. As Figure~\ref{allan-variance}
+depicts, these specification is really time dependent.
+\begin{figure}
+\begin{center}
+\scalebox{.9}{\includegraphics{eps/clockeps/allan-variance.jpg}} 
+\caption{Square root of Allan variance (or Allan deviation) plot with asymptotes for a typical ovenized crystal oscillator- include the reference}\label{allan-variance}
+\end{center}
+\end{figure}
+
+So let us see how such a specification maps to the
+covariance in the discrete model of the clock.
+As Figure~\ref{allan-variance} shows, the slope
+of the variations are typically in terms of the
+Allan variance parameter, say, 
+$h_{0}$, $h_{-1}$, $h_{-2}$.
+% \newline
+% {\color{red} \bf Question:} {the typical sampling time for viewing a Kuiper SV from a mobile unit?}
+% \newline
+
+The clock state model uses the clock parameters
+specified for the clock, in particular,
+what are know as Allan variance parameters, 
+$h_{0}$, $h_{-1}$, $h_{-2}$, etc; these are
+depicted in Figure~\ref{allan-variance}.
+The table below shows some typical values
+for various types of clocks.
+\begin{center}
+\begin{tabular}{c|c|c|c}
+{\bf Timing standard} & $h_0$ & $h_{-1}$ & $h_{-2}$
+\\
+\hline \hline
+TCXO (low quality) & 2 \times 10^{-19} & 7 \times 10^{-21} & 2 \times 10^{-20}\\
+TCXO (high quality) & 2 \times 10^{-21} & 1 \times  10^{-22} & 3 \times 10^{-24}\\
+OCXO & 2 \times 10^{-25} & 7 \times  10^{-25} & 6 \times 10^{-25}\\
+Rubidium & 2 \times 10^{-22} & 4.5 x 10^{-26} & 1 \times 10^{-30}\\
+Cesium& 2 \times 10^{-22} & 5 \times  10^{-27} & 1.5 \times 10^{-33}\\
+\caption{Typical Allan Variance}
+\end{tabular}
+\end{center}
+Now, we look at the entries of the covariance matrix $Q_d$,
+we can make the correspondence,
+\beas
+\mathbb E \{ (\bm x^\phi)^2\} &=& q_c^{\phi} \Delta t + q_c^{f} \Delta t^3/3\\
+\mathbb E  \{ \bm x^f \, \bm x^\phi \}&=& q_c^{f} \Delta t^2/2 \\
+\mathbb E  \{ (\bm x^f)^2 \} &=& q_c^{f} \Delta t,
+\eeas 
+over sample interval $\Delta t$; the firs expression also implies
+that the average RMS value for $\bm x^\phi$ is
+\beas
+\sqrt{\frac{q_c^{\phi}}{\Delta t} + \frac{q_c^{f} \Delta t}{3}}
+\eeas
+There are a few procedures to go from clock specification
+to the covariance of the dynamics. The first one is
+using the {\em frequency stability} often specified in terms
+of parts per million (ppm). This is the RMS value of
+the frequency variation, so this would correspond to having
+\beas
+(c \times \mbox{frequency stability})^2 &\approx& \mathbb E  \{ (\bm x^f)^2 \}/\Delta t^2 \\
+&=& (Q_d)_{22}/\Delta t^2
+\eeas 
+hence, for a frequency stability value of $10^{-7}$, we have
+\beas
+q_c^{f}/\Delta t = (c \times \mbox{frequency stability})^2
+\eeas 
+and for a system like GPS with a sampling interval
+$\Delta t = 1$ sec, we end up with 
+\beas
+q_c^{f} = (c \times \mbox{frequency stability})^2
+\eeas
+Now one can argue that the the phase variation term,
+the contribution the two terms should be equal and
+as such, 
+\beas
+q_c^{\phi} \Delta t = q_c^{f} \Delta t^{3}/3
+\eeas
+and therefore,
+\beas
+q_c^{\phi} = q_c^{f} \Delta t^2/3
+\eeas 
+so again for $\Delta t =1$ sec, we end up with 
+\beas
+q_c^{\phi} = q_c^{f}/3
+\eeas 
+Hence, if we are given frequency stability of $10^{-7}$ say
+over 1 second, then we can extrapolate to construct
+the covariance matrix for the desired duration- hence,
+for a $\Detal t=100$ sec (what I have used in the simulations),
+then,
+
+\beas
+Q_d(k)= \leftm{cc} 3.33\times 10^{-09} & 5.00 \times 10^{-11}\\
+ 5.00\times 10^{-11} & 1.00\times 10^{-12} \rightm
+\eeas 
+Let us see how the clock simulation would work for
+the corresponding dynamic model- the frequency variation
+as well as the variation of the bias over one period
+is shown in,
+\begin{figure}
+\begin{center}
+\scalebox{.5}{\includegraphics{eps/mobilityeps/data_freq_variations.png}} 
+\caption{Clock frequency variation from the dynamic clock model for frequency stability of $10^{-7}$}\label{data_freq_variations}
+\end{center}
+\end{figure}
+Now suppose that we look at the RMS value of this variation-
+in principle, this RMS value should be consistent with the frequency stability value.
+The RMS values as a function of time horizon the looks like,
+\begin{figure}
+\begin{center}
+\scalebox{.5}{\includegraphics{eps/mobilityeps/freq_variations_horizon.jpeg}}
+\caption{Frequency variation as a function of the time horizon for frequency stability of $10^{-7}$}\label{horizon-freq-variations}
+\end{center}
+\end{figure}
+indicating that the frequency stability specification is valid
+over a time horizon that is consistent with the simulation interval.
+Another way to build the covariance is directly for
+the Allan variance parameter; for example, it turns
+out that 
+\beas
+q_c^{\phi} \approx h_0/2 \quad \mbox{and} \quad q_c^{f}\approx 2 \pi^2 h_{-2}
+\eeas
+However, the important point is that in order
+to build the covariance from Allan variance, we need
+to specify the time interval for which the variance 
+is being measured.
+
+Now let us look at the clock bias- the essence of the
+the so-called extended (Kalman) filtering
+scheme is to estimate this bias and simultaneously estimate
+the position.
+
+
+\begin{figure}
+\begin{center}
+\scalebox{.5}{\includegraphics{eps/mobilityeps/data_bias_variations.png}}
+\caption{Rover clock bias variation as a function of the time horizon for frequency stability of $10^{-7}$}\label{horizon-freq-variations}
+\end{center}
+\end{figure}
+
+
+
+
+
+Now suppose that we consider the time and position accuracy
+as a function of the clock frequency stability- the
+
+
+
+Using this, we can then obtain a complete picture
+for parameterizing the evolution,
+\beas
+\bm x(k+1) = \leftm{c} \bm x^\phi(k+1)\\\bm x^f(k+1) \rightm=\leftm{cc} 1 & \Delta t\\
+          0 & 1 \rightm \leftm{c} \bm x^\phi(k)\\\bm x^f(k) \rightm  + \leftm{c} \bm w^\phi(k)\\\bm w^f(k)\rightm;
+\eeas
+essentially, the Allan variance for the clock, dictates
+the covariance of the noise term in the evolution equation.
+Hence, one of the main issues in the Kuiper network,
+consisting of various nodes (CT, SV, mobile, aerial)
+is that are developing a synchronization protocol
+to achieve time synchronization for clocks with
+distinct noise covariances.
+
+Similarly, we can develop a dynamic model
+of the position and velocity of the vehicle,
+as well as the combined model with and without the IMU.
+The corresponding block diagrams are shown
+in Figures~\ref{2-state-position} and~~\ref{2-state-position-imu}.
+
+\begin{figure}
+\begin{center}
+\scalebox{0.04}{\includegraphics{eps/clockeps/2-state-position-model.jpg}} 
+\caption{2-state rover dynamics model}\label{2-state-position}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\scalebox{0.04}{\includegraphics{eps/clockeps/2-state-position-model-imu.jpg}} 
+\caption{2-state position model with IMU and GPS/Kuiper integration}\label{2-state-position-imu}
+\end{center}
+\end{figure}
+
+
+Now, let us go back the state equation 
+\beas
+\bm s(k+1) = A \bm s(k) + \bm w(k)
+\eeas 
+where the state was defined previously and
+the $A$ matrix is of the form
+\beas
+\leftm{cc|cc} I & \Delta t \, I & 0 & 0\\
+          0 & I       & 0 & 0\\
+          \hline
+          0 & 0 &    1 & \Delta t\\
+          0 & 0 &    0 & 1 \rightm
+\eeas
+where $I$ denotes the $3 \times 3$ identity matrix;
+hence the upper left block is a $6 \times 6$ matrix.
+This equation can be used to propagate the
+position and velocity of the vehicle
+as well as its clock. 
+
+For the rover state, we consider an eight dimensional
+state vector at time $t$ as, 
+\beas
+\bm s(t)= \leftm{c} \bm r(t)\\ \bm v(t)\\ \bm x(t) \rightm 
+\eeas 
+where $\bm r(t)$ is the position vector in some three-dimensional
+coordinate frame (ENU, ECI, or ECEF), $\bm v(t)$ is the velocity
+vector in the same coordinate, with respect to $t$,
+and $\bm x$ is the clock state; for the two-state differential
+model of the clock and since we will be combining position
+and timing in one state vector, we let
+\beas
+\bm x^{1}(t): &\quad& \mbox{signal speed $\times$ clock offset at time $t$}\\
+\bm x^{2}(t): &\quad& \mbox{signal speed $\times$ clock skew at time $t$}
+\eeas 
+in scenarios where we have multiple clocks we can
+use $\bm x_i$ or even something like $\bm x_{{\mbox \tiny R}_i}$ when this augmented notation is justified.
+Similarly, when we have multiple rovers, aerial vehicles, SVs,
+etc., we will use the notation $\bm s_i$ or $\bm s_{{\mbox \tiny R}_i}$ to refer to the state of the node; a notation like
+$\bm r^{j}_{i}$ refers to the $j$th component of the position vector
+for node $i$; for position and velocity vector we can also
+adopt a notation like $\bm r^{x}_{i}$, that refers to
+the position of the $i$th node along the $x$-axis of the implied coordinate frame. For the clock states we also use
+the notation
+\beas
+\bm x^{\phi}(t): &\quad& \mbox{signal speed $\times$ clock offset at time $t$}\\
+\bm x^{f}(t): &\quad& \mbox{signal speed $\times$ clock skew at time $t$}
+\eeas 
+to denote the clock phase offset and skew in distance units;
+
+hence, the clock bias and skew are now expressed in terms of 
+meters and meters per second.
+
+\subsection{Extended Kalman filter: SV-mobile network}
+We first consider the case of no IMUs and show how
+standalone Kuiper time-stamped signals can be used
+for an extended Kalman filter for estimating the clock parameters
+as well as the position of the mobile unit.
+%----
+This is depicted in Figure~\ref{only-time-stamping}.
+%
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.05}{\includegraphics{eps/clockeps/Kuiper-mobile-3}}
+\caption{Kuiper mobile unit position/timing using SV time stamping}
+\label{only-time-stamping}
+\end{center}
+\end{figure}
+As we will be considering mobile units in conjunction
+with Kuiper SV dynamics, we need to setup the appropriate
+coordinate frames. For example, it is not necessary convenient
+to express the motion of the mobile unit in an earth-centered 
+inertial (ECI) frame. For the development of the 
+filtering scheme discussed below, we need three
+distinct coordinate frames,
+\begin{enumerate}
+\item east-north-up (ENU) frame that is a Euclidean plane tangent to a point on earth's surface/
+\item earth-centered inertial frame (ECI) 
+\item earth-centered earth-fixed (ECEF) frame (that rotates with earth)
+\end{enumerate}
+
+The SV dynamics is usual expressed in terms of ECI frame;
+the usual way that Newton's second law is combined universal gravitation
+to derive the satellite-earth relative dynamics (in an inertial frame).
+One can then translate coordinates in ECI frame to the ECEF. 
+%
+Similarly, we can write the mobile unit dynamics in ENU frame,
+then translate it to ECEF frame so that we can do
+the appropriate computations consistently between
+the positions of the SV and the mobile unit.
+These three coordinate frames are depicted in Figure~\ref{ENU-ECI-ECEF}.
+%
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.05}{\includegraphics{eps/clockeps/ENU-ECI-ECEF}}
+\caption{ENU vs. ECEF vs. ECI}
+\label{ENU-ECI-ECEF}
+\end{center}
+\end{figure}
+
+Now let us consider the ground mobile unit traversing
+a particular trajectory; the coordinates of the mobile
+unit are expressed conveniently in the ENU coordinates.
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.05}{\includegraphics{eps/clockeps/4-sv-mobile-measurements}}
+\caption{Measurement geometry in a Kuiper time-stamping scheme has implications about the position/timing estimation errors}
+\label{4-measurements}
+\end{center}
+\end{figure}
+
+For our working examples, we have considered a mobile unit
+that traverses a few types of trajectories- for example,
+to the east, then up, then west, and down the original location with a given
+speed. For now, we have let the time interval for completing
+this trajectory be equal to the orbital period for
+the Kuiper (phase I) SVs. We assume that we have
+time-stamped measurements from certain Kuiper SVs
+available at the mobile units. As pointed out
+above, we do not assume having access to IMUs for now
+(but they will be included in the architecture/algorithms).\\
+
+The steps that we have followed to develop the code:
+include:
+\begin{enumerate}
+	\item Choose the number of SVs in view for which you could receive time stamp information.
+	\item We can decide which SV-mobile unit link should be used; we can use all of them or only one. The current setup uses the distance to the SV as a criteria for using the time stamp measurements from a given satellite- this is justified by the fact that delays and uncertainties induced by the troposphere are generally a function of the path length traversed by the signal. As such, choosing the closest SV can result in smaller uncertainty in estimating the path delays. On the other hand, as we discussed before, choosing directions from mobile unit to SV that are ``independent'' result in better conditioning and estimation performance for the position and timing for the mobile unit.
+	\item The time stamped signal allows us to construct the pseudorange, essentially the ranges between the mobile units and the SVs, that also contains information on the mobile unit {\em clock offset}.
+	\item The mobile unit receiver now uses these constructed pseudorange observables in the context of an extended Kalman filter (EKF).
+	\item The EKF input hence is a sets of noisy measurements of the position of the mobile unit with respect to the SV. EKF has to make do a few coordinate transformations to make sure that the variables are in the right coordinate frame. The reference to ``extended'' in the EKF is due to the fact that the range measurements are nonlinear function of the mobile unit position- as such, we have to use a recursive linearization scheme in order to combine pseudorange measurements with the knowledge of the translational and clock dynamics.
+	\item The EKF then updates the temporal and spatial coordinates of the mobile units via estimating the clock offset and skew. This is done by having an internal model of the mobile unit translational (position and velocities in the ENU coordinate frame) as well as the clock dynamics- there is flexibility in making the translational and clock dynamic more elaborate- including updating covariance representation of the clock bias/skew noise due to environmental effects like temperature.
+	\item The covariances for position and timing errors are generally a function of: 1) number of SV time stamp measurements, 2) directions of measurements for the pseudo range measurements, 3) the error in estimating the path delays to the SV due to troposphere, 4) quality of the clock onboard the mobile unit, 5) the balance between speed of the mobile unit and the interval between two time stamp updates from the SVs- this is a more involved analysis- essentially, when we consider EKF (or more generally, any recursive filtering) we often assume regularly sampled updates- when we consider intermittent sampling, then even convergence/boundedness of the recursive algorithms is tricky.
+\end{enumerate}
+
+Using the above setup, we then proceeded to examine how various uncertainties
+and clock parameters and delay uncertainties in the signal 
+propagation, as well as mobility, effect the synchronization
+performance on the mobile unit. Below we examine some of the
+simulation results in regards to assessing the effect of,
+\begin{enumerate}
+	\item clock quality, temperature variations
+	\item number of Kuiper SVs in view
+	\item path delay uncertainty due troposphere 
+	\item update rate 
+\end{enumerate}
+on the position and time estimation for the Kuiper 
+mobile units using time stamping signal from the SVs.
+\begin{shaded*}
+The simulation results/plots presented in this chapter for
+ground mobile units have been generated by the 
+python script "mobile-unit-sync.ipynb"
+\end{shaded*}¬j
+
+\begin{figure}
+\vspace{-.1in}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{eps/clockeps/rover-clock_4sv.png}
+\includegraphics[width=0.4\textwidth]{eps/clockeps/rover-estimate1.png}
+\end{center}
+\caption{Using time-stamped signals by accessing 4 SVs for time synchronization and positioning} \label{pnt-rover-time-stamping}
+\end{figure}
+
+
+\begin{figure} %[8]{r}{0.3\textwidth}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{eps/clockeps/rover-estimate_2svs.png} \quad
+\includegraphics[width=0.4\textwidth]{eps/clockeps/rover-estimate_2sv_acc.png}
+\caption{Using 2 SV time-stamped signals for rover positioning and time synchronization without an IMU (left panel) and using a simple model of an accelerometer (right panel)} \label{pnt-2-svs}
+\end{center}
+\end{figure}
+{One of the observations so far has been that using EKF,
+the time synchronization can be achieved efficiently by relying
+only a few (even one) SV time stamped signals, but the position estimates become
+progressively worse by relying on less satellites.}
+
+This last observation motivated looking at how we can fuse information
+from the inertial measurement units, like an accelerometer, can
+be used to future improve the positioning of the mobile unit using
+fewer satellites. The IMU modeling takes a bit more effort,
+however, the initial assessment (using a simple model of including
+a noisy velocity information in the EKF) looks promising.
+If desired, we can proceed to,
+\begin{itemize}
+	\item develop a more IMU dynamic model for Kuiper model unit and assess the corresponding  error statistics,
+	\item develop an EKF that integrates time stamping from Kuiper SVs and the IMUs using more analysis on the corresponding error statistics.
+\end{itemize}
+Another possibility to examine if we can use doppler shift as a proxy
+for velocity information that can then been integrated in the estimation/filtering
+process.
+%
+% \subsection{Geolocation}
+
+% using a uav to see localize 
+% the rover.
+
+\subsection{Using IMUs on the Rover for Positioning and Timing}
+%---
+As we discussed in the previous section, one 
+can use time-stamped signals from Kuiper SVs
+at the rover's receiver to resolve for  positioning
+and time synchronization. However, in situations
+where the SVs are not accessible, the rover
+can rely on its onboard sensors to
+propagate the position and velocity of the rover,
+until the next time-stamped signal from Kuiper SV (or GPS when available) becomes available.\footnote{Note that we can also develop this setup for indoor rovers using ``time'' anchors in the building- another situation would be in urban areas with tall buildings that can periodically block 
+GPS availability.}
+%----
+A prime example of such an onboard
+sensor is an {\em inertial navigation unit} (IMU), consisting
+of accelerometers and gyroscopes. We will discuss IMUs
+shortly, as they become indispensable for
+positioning and time synchronization for
+aerial vehicles as well. Other types of data that can
+be used for positioning of the rover, include
+odometry (using wheel sensors to measure the wheel rotation),
+electronic compass (for heading),
+cameras, sonar (for indoor application),
+and LIDAR, and digital maps.\footnote{A potential direction for further work is to explore augmenting the proposed position/time synchronization for Kuiper units with these other sensing/measurement modalities.}
+
+The overall block diagram for how we envision 
+integrating IMUs for the position and time synchronization is shown in Figure~\ref{ins-integration};
+by inertial navigation system (INS), one
+often means the combination of inertial measurement
+units as well as the necessary
+post-processing (known
+as {\em mechanization} in GPS literature) 
+that leads to an estimate of 
+position and velocity of the rover.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{eps/clockeps/integrated-ins-kuiper}
+\end{center}
+\caption{Integration of inertial navigation system (INS) with Kuiper SV time-signaling (and potentially GPS)} \label{ins-integration}
+\end{figure}
+
+Let us start with the basics setup
+of an accelerometer
+for estimating the position of the rover based on an onboard sensors. As its name suggests,
+an accelerometer estimates the acceleration experienced
+by the rover- in its basic form, 
+this is done by ``measuring'' 
+the displacement of a proof mass inside the
+accelerometer casing.\footnote{For MEMS accelerometers, the idea is similar yet the realization of the ``proof mass'' is more creative.}
+%---
+In reference to Figure~\ref{accel}, suppose that
+the position of the center of mass of the proof 
+mass is denoted by $x(t)$ and that of the casing
+as $y(t)$. We assume that the proof mass has mass $m$ 
+and is attached to the body of the casing by springs
+with spring constants $k/2$.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.2\textwidth]{eps/clockeps/accelerometer}
+\end{center}
+\caption{Simplified model of an accelerometer} \label{accel}
+\end{figure}
+We can now represent the dynamics of the proof mass 
+by the second order differential equation of the form,
+\beas
+m \, \frac{d^2}{dt^2} x(t)= m \, \ddot{x}(t) = k \, \delta(t) ,
+\eeas 
+where $\delta(t)= y(t)-x(t)$ is the relative displacement
+of the casing with respect to the proof mass and
+the time derivative is with respect to an inertial frame;
+as such,
+\beas
+\ddot{x}(t) = \frac{k}{m} \delta(t).
+\eeas 
+Hence the displacement of the proof mass
+becomes a proxy for the acceleration experienced
+by the proof mass, and by extension, the
+acceleration experienced by the casing. 
+In fact, one can compute the transfer
+function between the displacement of
+the proof mass and the chasing as
+\beas
+\frac{y(j\omega)}{x(j\omega)} = \frac{1}{1 - (m/k) \omega^2},
+\eeas 
+so when $\omega \ll \sqrt{k/m}$,
+the displacement of the proof mass is
+accurate indicator of the acceleration
+of the body. The displacement of the
+proof mass, in the meantime, can be 
+picked up by a capacitive transducer, 
+converting the displacement
+to a voltage (MEMs accelerometer).
+
+In a nutshell, the accelerometer's output of
+acceleration $a_{\mbox{\tiny meas}}(t)$ in one
+axis is a generally a biased/noisy version of the
+proof mass acceleration $a(t)$;
+as such we can write, 
+\beas
+a_{\mbox{\tiny meas}}(t)= K_{\mbox{\tiny acc}} a(t) + b_{\mbox{\tiny acc}} + \zeta_{\mbox{\tiny acc}}
+\eeas
+where $K_{\mbox{\tiny meas}}$ is the gain of
+the accelerometer, $b_{\mbox{\tiny acc}}$ is its
+bias, and $\zeta_{\mbox{\tiny acc}}$ is the 
+accelerometer noise.
+%%%%
+This would provide a noisy-biased acceleration measurement in one axis; note that the way we have setup the problem so far, all directions are aligned- the casing and the proof mass movements are aligned with the inertial $x$-axis.
+
+Before we delve into a more generation situation,
+consider the accelerometer assembly in a configuration
+shown in Figure~\ref{general-config-accel}.
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{eps/clockeps/strapdown}
+\end{center}
+\caption{Assembling accelerometers and gyroscopes in one unit} \label{general-config-accel}
+\end{figure}
+Again, assuming that all the corresponding coordinate frames are aligned, 
+the output of the accelerometer assembly can
+be represented in vector form as,
+\beas
+\bm a_{\mbox{\tiny meas}}(t) = A \bm a(t) + \bm b_{\mbox{\tiny acc}} + \bm \zeta_{\mbox{\tiny acc}} ,
+\eeas 
+where the variables are now the ``vector'' of the three
+acceleration terms in each inertial axis; $A$ in this
+case is a $3 \times 3$ matrix. 
+Once acceleration of the casing has been
+estimated, we can then proceed to estimate the position 
+of the rover with respect to its initial position
+and velocity by integration, as
+\beas
+\bm v_{\mbox{\tiny est}} (t) = \bm v (t_0) + \int_{t_0}^{t} \bm a_{\mbox{\tiny meas}}(t) \, dt \quad \mbox{and} \quad \bm r (t) = \bm r (t_0) + \int_{t_0}^{t} \bm v_{\mbox{\tiny est}} (t) \, \dt.
+\eeas 
+Note that the acceleration measurements as well as
+the integration would be approximate/noisy, and hence,
+these estimates are combined with those obtained
+from direct Kuiper SV time-stamping; for example,
+an architecture such as that shown in Figure~\ref{loose-1}
+can be used to fuse the position/velocity
+estimates from each channel.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{eps/clockeps/loosely-coupled} 
+\end{center}
+\caption{Integration of Kuiper SV time-stamping and IMU; between two updates from the Kuiper SV, the IMU integrates acceleration forward to estimate the position and the velocity of the
+vehicle before the next Kuiper time-stamped signal has been received. The Kalman filter then combines the IMU estimation of position/velocity, with the measurements received from the satellite, to obtain a statistically optimal estimate of the rover's position, velocity, and timing error.} \label{loose-1}
+\end{figure}
+
+In Figure~\ref{loose-1}, we have made a reference to ``Mechanization'' of the IMU measurement- hence let us explain what this means. Mechanization refers to the process of converting IMU outputs to states that
+are of interest to us in the {\em right coordinate frame.} For example, consider again the ENU frame- or the {\em local navigation} frame $n$
+(Figure~\ref{ENU-ECI-ECEF-repeat}), where we are interested to estimate the position and velocity of the vehicle.
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.05}{\includegraphics{eps/clockeps/ENU-ECI-ECEF-2}}
+\caption{ENU vs. ECEF vs. ECI}
+\label{ENU-ECI-ECEF-repeat}
+\end{center}
+\end{figure}
+What this means that we need the acceleration 
+of the accelerometer casing expressed in 
+this frame (such frames are often called ``navigation frames''). Hence if we denote the position of accelerometer casing/rover in the (navigation)
+ENU frame as
+\beas
+{\bm r}_{\mbox{\tiny R}/n}
+\eeas 
+then in order estimate this position via
+the integration of the accelerometer output, we need
+the output of the accelerometer to be converted
+to
+\beas
+{\bm a}_{\mbox{\tiny R}/n};
+\eeas 
+when it is implicit that we are referring to the rover we simply
+the above notation, e.g., ${\bm r}_{n}$ is the position of the rover
+in the frame of the navigation frame $n$.
+%---
+This is where mechanization comes in as
+what is measured by the accelerometer is {\em not}
+${\bm a}_{\mbox{\tiny R}/n}$!
+%
+In order to understand what is going on, consider
+again the accelerometer casing now attached to the rover whose movement is monitored in the ENU frame ${\cal F}_n$. 
+% In order to streamline the notation
+% in this section, when we adopt the convention
+% \beas
+% {\bm p}_{\mbox{\tiny R}} = {^{\ell}{\bm p}}_{\mbox{\tiny R}}
+% \eeas
+% for any vector $\bm p$.
+We assume that the three accelerometers in the
+IMU are aligned with the rover's axes and located at the center of mass of the vehicle. We call this
+the rover's frame ${\cal F}_{\mbox{\tiny R}}$; note that
+if we wanted to explicitly include the antenna frame, we have
+to include a conversion as the antenna will typically not be
+at the vehicle center of mass.
+
+Before we derive the relations behind the
+mechanization process, let us include a quick note on 
+coordinate transformations.
+Suppose we have two coordinate frames ${\cal F}_{1}$ and
+${\cal F}_{2}$ and they are related to each
+other via a coordinate transformation $\cal C$ (or rotation):
+\beas
+{\cal C}_{1}^{2} \quad \mbox{transformation required on ${\cal F}_{1}$ to obtain ${\cal F}_{2}$;} \quad \mbox{or, orientation of ${\cal F}_{2}$ with respect to ${\cal F}_{1}$}
+\eeas 
+This also means that if we have a vector $\bm p$
+that has a representation $\bm p^{{\cal F}_{1}}$, in order to obtain its representation in ${\cal F}_{2}$, we can do,
+\beas
+\bm p^{{\cal F}_{2}}= {\cal C}_{1}^{2} \; \bm p^{{\cal F}_{1}}
+\eeas 
+The convention is that this transformation (rotation) expresses the rotation
+of the first frame to the second in the {\em right-handed} coordinate. That is for the 2D case, the rotation of the frame is counter-clockwise. 
+
+Having this notation in place, let us revisit 
+understanding what quantity the accelerometer (whose axes are aligned with the rover coordinate frame) actually measures. In a nutshell, the accelerometer measures
+the ``specific force" in the body frame, where
+the specific force is the net inertial acceleration.
+Suppose 
+\beas
+{\bm r}_{\mbox{\tiny R}/n}
+\eeas 
+is the position of the rover in the ENU frame ${\cal F}_{n}$.
+Then its inertial velocity and acceleration would
+be
+\beas
+\frac{d}{dt_i} \, {\bm r}_{\mbox{\tiny R}/n}(t) \quad \mbox{and} \quad \frac{d^2 }{dt_i^2} \, {\bm r}_{\mbox{\tiny R}/n}(t),
+\eeas 
+where the significant of ``$i$'' as a subscript in the denominator is that the time derivative is
+taken with respect to the inertial frame.
+
+The acceleration that the accelerometer 
+measures then is 
+\beas
+\{\frac{d^2}{dt_i^2}\, {\bm r}_{\mbox{\tiny R}}(t)\}^{\mbox{\tiny R}}
+\eeas 
+where ``${\mbox{\tiny R}}$'' is the abbreviated for ${\cal F}_{{\mbox{\tiny R}}}$ (the rover--or the casing--body frame).
+%
+Now mechanization gets to work! That is, we need
+to convert 
+\beas
+\{\frac{d^2}{dt_i^2} \, {\bm r}_{\mbox{\tiny R}}(t)\}^{\mbox{\tiny R}} \leadsto \{ \frac{d^2 }{dt_{n}^2}  \, \; {\bm r}_{\mbox{\tiny R}}(t)\}^{n} 
+\eeas 
+since it is the double integration of the quantity on
+the right hand side that leads to
+\beas
+{\bm r}_{\mbox{\tiny R}}^n (t)
+\eeas 
+that should be read as the position of the rover 
+in the ENU coordinate frame resolved in the 
+ENU coordinate frame!
+
+The key relations that allows us to do this
+conversion are as follows: consider 
+a vector $\bm p$ and its derivatives with respect to
+coordinate frames ${\cal F}_1$ and ${\cal F}_2$;
+then 
+\beas
+\frac{d}{dt_1} \bm p= \frac{d}{dt_2} \bm p + \bm \omega_{2/1} \times \bm p 
+\eeas
+where $\bm \omega_{2/1}$ is the angular acceleration
+vector between the two frames, i.e., rate at which
+${\cal F}_2$ rotates with respect
+to ${\cal F}_1$.
+%---
+Note that in the above
+relation we have not included where these vectors are
+being resolved in.
+When we continue this for the second derivative, we obtain
+\beas
+\frac{d^2}{dt_1} \bm p= \frac{d^2}{dt_2} \bm p+ 2 \, \bm \omega_{2/1} \times \frac{d}{dt_2} \bm p + \bm \omega_{2/1} \times (\bm \omega_{2/1} \times \bm p).
+\eeas
+This is a key relationship for the mechanization process, as the acceleretion measured by the accelerometer is the {\em total acceleration} that involves not only gravity but also acceleration induced by the various
+rotating coordinate frames with respect to the inertial frame.
+
+
+Now let us come back to the accelerometer measurements;
+even in the simpler case of not dealing with the antenna frame,
+we have three different coordinate frames: the
+ECI frame that is inertial (this will be denoted by ${\cal F}_i$), then ECEF frame that is rotating with earth (denoted by ${\cal F}_{\mbox{e}}$, then the ENU frame (denoted by ${\cal F}_n$, and then the rover/accelerometer frame
+(denoted by ${\cal F}_{\mbox{\tiny R}}$)!
+%----
+Adopting the above relationships, we can then
+write,
+\bea
+\{ \frac{d^2}{dt_i^2} \; {\bm r}_{\mbox{\tiny R}}(t)} \}^{n}  = \{ \frac{d^2}{dt_{n}^2} \; {\bm r}_{\mbox{\tiny R}}(t)\}^{n} + 2 \, \{ \bm \omega_{n/i} (t)\}^n \times \{ \frac{d}{dt_n} {\bm r}_{\mbox{\tiny R}}(t) \}^n
++ \{ \bm \omega_{n/i}(t) \times (\bm \omega_{n/i} (t) \times {\bm r}_{\mbox{\tiny R}}(t)) \}^{n} \label{total-accel}
+\eea
+
+In (\ref{total-accel}), the second term on the right hand side of the equation is called Coriolis acceleration and the last terms of the right hand side is called centrifugal acceleration.
+The difference between these two accelerations,
+one that is essentially measured by the accelerometer,
+and one that is needed to estimate the position of the
+rover in the local frame, it is important to know where the frame is. For example, consider the magnitude of
+\beas
+\| \{ \bm \omega_{n/i}(t) \times \bm \omega_{n/i} (t) \times {\bm r}_{\mbox{\tiny R}}(t) \}^{n} \|
+\eeas 
+and assume that $\bm \omega_{\mbox{\tiny e}/i} \approx \bm \omega_{\ell/i}$ which is about $7 \times 10^{-5}$ rad/s.
+Hence the centerifugal force becomes a function of
+the position of the rover in the local frame.
+The Coriolos acceleration on the other hand 
+is a function of the speed of the vehicles.
+
+
+Now, we use the setup shown the figure below, as our blueprint,
+to show precisely how the the measurement from
+the accelerometer can be used to estimate the position
+of the rover.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.66\textwidth]{eps/clockeps/mechanization.jpg}
+\end{center}
+\caption{Mechanization process for an IMU} \label{mechanization}
+\end{figure}
+
+\begin{comment}
+The first under ``accelemeter output'' is in fact,
+\beas
+{\cal R}^{\mbox{\tiny R}}_{\ell} \, ( \{ \frac{d^2}{dt_i^2} \; \bm r_{\mbox{\tiny R}} \}^\ell - \bm g^\ell )
+\eeas 
+where as before ${\cal F}_\ell$
+and ${\cal F}_{\mbox{\tiny R}}$ are respectively
+the ENU and the rover frames.
+
+For Kuiper we can have a series of ENU (local) frames all over
+the world, defining the ``local'' coordinate frames.
+For example, CT terminals or GW sites can be
+used to defined the origins of these coordinate frames.
+%--
+In Figure~\ref{mechanization}, by ``orientation'' we refer to the fact that we assume the output from the gyroscope (in the IMU) that measures
+\beas
+{\cal R}^{\mbox{\tiny R}}_{i}, 
+\eeas 
+to estimate other rotations such as
+${\cal R}^{\mbox{\tiny R}}_{\ell}$ and
+${\cal R}^{\mbox{\tiny R}}_{\ell}$,
+since ${\cal R}^{\mbox{\tiny e}}_{i}$ and
+${\cal R}_{\mbox{\tiny e}}^{\ell}$ are known.
+With respect to Figure~\ref{mechanization},
+the output of the accelerometer, in conjunction
+with the knowledge of ${\cal R}_{\ell}^{\mbox{\tiny R}}$
+can be used to find $\{\frac{d^2}{dt_i^2} \bm r\}^{\ell}$
+and by extension $\{\frac{d^2}{dt_i^2} \bm r\}^{\ell}$.
+This quantity is now exactly the quantity
+on the left hand side of (\ref{total-accel}).
+Since
+\beas
+\frac{d}{dt_{i}} \bm r_{\mbox{\tiny R}} = \frac{d}{dt_{\ell}} \bm r_{\mbox{\tiny R}} + \bm \omega_{\ell/i} \times \bm r_{\mbox{\tiny R}}
+\eeas 
+the output of the accelerometer can related to the 
+acceleration in the ENU (local) frame in the form of
+\beas
+\bm a_{\mbox{\tiny meas}}(t) = A \bm a(t) + \bm b_{\mbox{\tiny acc}} + \bm \zeta_{\mbox{\tiny acc}} ;
+\eeas 
+% we now have a better appreciation for
+% how the gain and the bias terms arise.
+% %---
+% noting that
+% \beas
+% \{ \frac{d^2}{dt_i^2} \bm r_{\mbox{\tiny R}} \big|_{\mbox{\tiny ENU}} = {\cal R}_{\mbox{\tiny ENU}/\mbox{\tiny ECEF}} \, {\cal R}_{\mbox{\tiny ECEF}/i} \, \frac{d^2}{dt_i^2} {^{\mbox{\tiny{ENU}}}}\bm r_{\mbox{\tiny R}} \big|_{i}
+% \eeas 
+
+% Now we have all the pieces: the flow chart from the accelerometer output looks something like this:
+\end{comment}
+
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{eps/clockeps/loosely-coupled-1} 
+\end{center}
+\caption{Integration of Kuiper SV time-stamping and IMU; we pass the timing information from the top channel for the integration at the bottom channel} \label{loose}
+\end{figure}
+
+\begin{comment}
+The gyroscope measures the angular velocity
+of the body frame with respect to the inertial frame,
+expressed in the body frame. 
+\beas
+\bm \omega_{\mbox{\tiny R}/\mbox{\tiny ENU}} \big|_{\mbox{\tiny R}} = {\cal R}_{\mbox{\tiny R}/\mbox{\tiny ENU}} \, (\bm \omega_{\mbox{\tiny ENU}/i} \big|_{\mbox{\tiny ENU}} + \bm \omega_{\mbox{\tiny ENU}/\mbox{\tiny R}} \big|_{\mbox{\tiny ENU}}) + \bm \omega_{\mbox{\tiny R}/\mbox{\tiny ENU}}\big|_{\mbox{\tiny R}}
+\eeas 
+\end{comment}
+
+We notice that what we need is the acceleration of the
+casing in some ``world" coordinate frame but
+the measured acceleration is in the frame of
+the casing (so-called body frame). Hence, there are
+post processing steps to convert these measured accelerations to those
+that can be used for integration and then fused
+with those obtained using time-stamping from Kuiper SV
+pseudoranges- this processing (that involves the use
+of orientation and angular rate estimates
+is often referred to as {\em mecahnization} in the INS/GPS integration).
+Hence, if Kuiper time-stamped signaling is used for
+position/velocity estimation, one has to devise a 
+Kuiper mechanization process. The mechanization process
+is sequence of steps that converts inertial accelerations
+measured in the body frame, to the acceleration
+of the vehicle with respect to local navigation frame 
+(ENU) expressed in the body frame. For these conversions,
+the IMU also estimates the angular rate and orientation 
+of the casing as shown in Figure~\ref{loose}.
+% The part that I can currently exploring
+% is whether it would make sense to use
+% the time synchronization obtained from the top channel
+% for the integration at the bottom channel. That
+% is, use an architecture that is
+% depicted in Figure~\ref{loose}.
+
+% since we have position and velocity
+% dynamics/derivatives in the state update,
+% we can measure $\dot {\bm v}$.
+% so we can introduce one more variable,
+% the include a noisy measurement- but i have to check how it works out.
+
+% so the accelerometer would be a
+% dynamics related to $\dot {\bm v}$.
+% check tomorrow.
+% \subsection{IMU Mechanization}
+% Let us go over some of the processing
+% that is needed to covert the acceleration
+% experienced by the suspended mass in the
+% accelerometer casing, to the acceleration
+% on the vehicle- as we mentioned, after this
+% conversion, one can integrate the signal
+% to first get an estimate of
+% the velocity, and then the position.
+% As we will develop a model of the IMU in
+% the code, we will expand on what needs to
+% be implemented first.
+% The part that we have to be careful is that
+% it is the total acceleration
+
+% \beas
+% \leftm{c} a_x \\ a_y \\ a_z \rightm
+% = \frac{d \bm v}{dt} + \bm \omega_{b/i} \times \bm v - R_v^{b} {\cal R}_{b/i} \leftm{c} 0 \\ 0 \\ g \rightm
+% \eeas
+
+% ${\cal R}_{b/i} \,{\cal R}_{b/i}^{-1} = I$
+
+% where $R_v^{b}$ is the rotation matrix from
+% the $v$-frame to the body frame.
+
+% in general,
+
+% \beas
+% \frac{d}{dt_i} \bm p =  \frac{d}{dt_b} \bm p + \bm \omega_{b/i} \times \bm p
+% \eeas
+
+% so what is being measured is not necessary
+% let me explain this for the 2-d case.
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{eps/clockeps/body-inertial-2d} 
+\end{center}
+\caption{The role of vehicle's coordinate in what the accelerometer outputs} \label{loose}
+\end{figure}
+We solve the following differential equation to 
+obtain the velocity 
+
+\begin{comment}
+\beas 
+\dot{\bm v}^{n} = {\cal C}_{b}^{n} \bm f_{ib}^{b} - (2 \bm \omega^n_{e/i} + \bm \omega_{n/e}^n) \times \bm v^{n} + \bm g^n
+\eeas
+
+So we need to know what is ${\cal C}_{b}^{n}$.
+
+\beas
+{\cal C}_{e}^{n} =\leftm{ccc} - \sin \theta & \cos \theta & 0 \\
+							  - \sin \phi \cos \theta & - \sin \hi \sin \theta & \cos \phi \\
+							   \cos \phi \cos \theta & \cos \phi \sin \theta & \sin \theta \rightm
+\eeas 
+where $\theta$ is the local reference longitude and
+$\phi$ is the local geocentric latitude.
+where $\theta$ is the local reference longitude 
+and $\phi$ is the local geocentric latitude
+
+% we have also the coordinate frame conversion
+% ENU frame to the body frame 
+3-2-1 sequence \\
+% $\psi$ Y- yaw\\
+% $\theta$ P pitch\\
+% $\phi$ R- roll
+
+\beas
+{\cal C}_{b}^{n} = \leftm{ccc} \sin \psi \cos \theta & \cos \phi  \cos \psi + \sin \phi \sin \psi \sin \theta & -\sin \phi \cos \psi + \cos \phi \sin \psi \sin \theta \\
+		\cos \psi \cos \theta & -\cos \phi \sin \psi + \sin \phi \cos \psi \sin \theta & \sin \phi \sin \psi + \cos \phi \cos \psi \sin \theta \\
+ \sin \theta & - \sin \phi \cos \theta & - \cos \phi \cos \theta \rightm
+\eeas 
+
+
+what is
+\beas
+\bm \omega^n_{e/i} \quad \bm \omega_{n/e}^n \quad 
+\bm g ^{n} = \leftm{c} 0\\0\\ 9.8 \rightm
+\eeas 
+
+we can then do the integration to latitude and longitude
+\beas
+\dot{\phi} &=& \bm v^{n_x}/(R-h)\\
+\dot{\lamda} &=& \bm v^{n_y}/(R-h)\\
+\dot{h} &=& \bm v^{n_z}
+\eeas
+
+
+The IMU provides the angular rate $\bm \omega _{ib}^{b}$.
+then we have to compute
+\beas
+\bm \omega_{b/n}^{b} = \bm \omega{b/n}^{b} - {\cal C}_{b}^{n}^{\top} (\bm \omega_{e/i}^n + \bm \omega_{n/e}^n)
+\eeas
+
+
+where the earth angular rate vector in the $n$-frame is
+\beas
+\bm \omega{e/i}^{n} = \leftm{c} \Omega \cos \phi \\ 0 \\ - \Omega \sin \phi \rightm
+\eeas 
+where $\Omega$ is scare earth rate of rotation and $\phi$ is
+the geographic latitude.
+
+\beas
+\bm \omega_{n/e}^{n} = \leftm{c} v_{}
+\eeas 
+
+so let us put all together- imagine that
+the accelerometer measures a particular specific force on the casing. Suppose
+also that we have a trajectory for the
+orientation of the vehicle with respect to the ENU frame- as show below.
+
+we start with certain orientation, then
+use the rate the update the orientation- this
+would be ${\cal C}_{b}^{n}$. then we solve the differential equation to get $\bm v(t)$, which can then be integrated to get position estimation.
+
+
+essentially, what happens is that we will have
+a particular noise characteristics for the IMU;
+hence the measurements would look like:
+
+\beas
+a(t) =
+\eeas
+
+we can also quantify how the uncertainty by using
+the so-called Allan variance.
+\end{comment}
+%---
+Suppose we consider the sample path for the rover as shown
+in Figure~\ref{fig:sample-path}; this path is show in the local
+navigation frame, the so-called ENU (east-north-up) frame.
+\begin{figure}[ht]
+\begin{center}
+\scalebox{.6}{\includegraphics{eps/clockeps/rover-sample-path.png}}
+\caption{Rover sample path for IMU-Kuiper integration} \label{fig:sample-path}
+\end{center}
+\end{figure}
+As the rover traverses this path, the rover identifies 
+a number of satellites in view and uses the corresponding
+pseudorange measurements to updates it position estimate as well
+as identify and correct for clock biases. 
+For this example and ease of visualization, 
+we have used the origin for the ENU frame
+as the point with zero longitude and latitude. The
+corresponding trajectories in the ECEF and ECI frames
+are depicted in Figure~\ref{fig:sample-path-ecef}.
+
+\begin{figure}[ht]
+\begin{center}
+\scalebox{.5}{\includegraphics{eps/clockeps/rover-sample-path-ecef.png}}
+\scalebox{.5}{\includegraphics{eps/clockeps/rover-sample-path-eci.png}}
+\caption{Rover sample path for IMU-Kuiper integration in ECEF (left panel) and ECI (right panel) frames over one orbital period} \label{fig:sample-path-ecef}
+\end{center}
+\end{figure}
+
+The reason that we care about the ECI frame is that it is underlying
+inertial frame; as such, the accelerometer (e.g., the movement of the proof mass), pertains to the acceleration of the vehicle in the ECI frame.
+Following the number of steps detailed in previous section, we can
+then consider the output of the accelerometer (followed by calibration and
+appropriate coordinate transformations) is of the form,
+\beas
+\bm a_n^n(t) + \bm \zeta_{\tiny \mbox{accel}}
+\eeas 
+where $\bm \zeta_{\tiny \mbox{accel}}$ is the vector-valued
+noise term that depends on the quality of the accelerometer; 
+as before the notation the superscript in $\bm a_n^n(t)$ 
+refers to the frame where the vector is expressed in,
+and the subscript is which frame the acceleration has been computed
+in; for example, the acceleration that is measured by the accelerometer
+is really of the form,
+\beas
+\bm a_{\mathscr i}^\mathscr{b}(t),
+\eeas 
+that this, this is the inertial acceleration of the IMU housing 
+expressed in the body frame; another potential notation for
+this term would have been $\bm a_{b/\mathscr i}^\mathscr{b}(t)$
+(acceleration of the body with respect to the inertial frame, expressed
+in the body frame).
+
+For accelerometers, and more generally IMUs, one can
+quantify a measure of ``quality'' that captures the uncertainty
+in the measuring acceleration of the vehicle. Now
+suppose that one integrates this acceleration 
+over the interval $[0,t]$ to obtain velocity,
+and subsequently, position estimate.
+
+
+Let us now consider how the integration of Kuiper time-signaling
+and IMU would work. Let us consider the rover introduced above
+and assume that the rover has access to four satellites in view
+during the positioning and timing update by the rover.
+The satellites' orbits in the ECI frame are show in Figure~\ref{4-sv-rover}.
+
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.8}{\includegraphics{eps/clockeps/4-sv-orbits-eci.png}}
+\caption{Orbit of four SV satellites in view of the rover} \label{4-sv-rover}
+\end{center}
+\end{figure}
+
+In this simulation results discussed next, we used the
+discretization step of $50$ seconds over the orbital period of
+for Phase I Kuiper.
+%--
+
+So let us first gain some intuition on how the baseline 
+positioning and timing algorithm operates. Recall
+that both the clock
+as well as the accelerometer drift over time- suppose
+that we initialize these measurement units at time $t_0$
+and start the simulation. Then (for our simulation setup),
+50 seconds later, the double integration of the accelerator output
+and the initial knowledge of the rover position leads to 
+a new estimate of the rover position at time $t+\Delta t$,
+where $\Delta t$ is the simulation/discretization step.
+Now, now four SVs become available in view of the rover, 
+and the rover can formalize four pseudoranges, from which
+its position and timing error (clock bias) can be obtained.
+The pseduorange measurements also have uncertainty associated with
+them during to path delay estimates, ephemeris uncertainty, SV clock
+uncertainty, etc. Now these measurements (from SV-time stamping,
+accelerometers) can be combined, to obtain an estimate of the rover
+position and clock bias. When we use the dynamic model of the clock
+and the vehicle in order to obtain this estimate, we are essentially 
+developing a integrated filter that is fusing the time-stamping
+with IMU measurements. For example, in the case of 4 satellites
+in view, we obtain the rover position estimation in the
+ECEF frame as show in Figure~\ref{4-sv-rover-imu-estimate-fig}.
+
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.8}{\includegraphics{eps/clockeps/4-sv-orbits-imu-estimate.png}}
+\caption{Orbit of four SV satellites in view of the rover} \label{4-sv-rover-imu-estimate-fig}
+\end{center}
+\end{figure} 
+
+A moment reflection on the role that "four" time-stamped
+signals from Kuiper constellation plays reveals that these measurements are
+needed to resolve for the three position coordinates and
+one time coordinate associated with the clock bias-- this
+is analogous to the GNSS positioning and timing.
+Note that these four Kuiper SV measurements can be augmented,
+or even substituted by other measurements, e.g., GPS, or
+a time-position signal from a base station (or a flying aerial vehicle).
+In fact, such potential augmentation schemes might allow Kuiper
+to provide improved positioning and timing performance 
+as compared with other LEO constellations.
+In this section, the scenario that we like to consider is whether the IMU can
+be used as an augmentation signal when the four SV timing
+signals are unavailable.
+
+In order to assess this, let us consider 3 SVs in view and assess
+the performance of the corresponding filtering scheme for
+position and timing. This is shown in Figure~\ref{3-sv-rover-imu-estimate-fig}
+to demonstrate the trend. One can of course examine the
+role that the fidelity of the IMU plays in position and timing
+estimation but as this plot demonstrate, there are more outliers
+in the position estimation with only three SVs in view.
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.8}{\includegraphics{eps/clockeps/3-sv-orbits-imu-estimate-enu.png}}
+\caption{Rover position estimation in the ENU frame with 3 SVs in view and an IMU} \label{3-sv-rover-imu-estimate-fig}
+\end{center}
+\end{figure} 
+
+This study can certainly be examined further to reduce the
+number of SVs in view as shown in Figures~\ref{2-sv-rover-imu-estimate-fig} and
+\ref{1-sv-rover-imu-estimate-fig} below.
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.8}{\includegraphics{eps/clockeps/2-sv-orbits-imu-estimate-enu.png}}
+\caption{Rover position estimation in the ENU frame with 2 SVs in view and an IMU} \label{2-sv-rover-imu-estimate-fig}
+\end{center}
+\end{figure} 
+%-----
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.8}{\includegraphics{eps/clockeps/1-sv-orbits-imu-estimate-enu.png}}
+\caption{Rover position estimation in the ENU frame with one SV in view and an IMU} \label{1-sv-rover-imu-estimate-fig}
+\end{center}
+\end{figure} 
+
+The situation with one SV in view of the rover would be
+more manageable if we were not estimating the position over
+the entire orbital period- the biases and noise
+terms in the IMUs in general are integrated for velocity
+and position estimation and without new measurements (say from SVs or
+a base station) they will drift over time.
+
+
+% We note in the meantime
+% that the time estimation, even with one SV in view can 
+% still be manageable as shown in Figure~\ref{}1-sv-rover-imu-time-estimate-fig
+
+% \begin{figure}[t]
+% \begin{center}
+% \scalebox{0.8}{\includegraphics{eps/clockeps/rover-clock_1sv.png}}
+% \caption{Rover clock bias estimation with one SV in view and an IMU} \label{1-sv-rover-imu-time-estimate-fig}
+% \end{center}
+% \end{figure} 
+
+% In a nutshell you can build a model of the acceleration
+% measurements available from the accelerometer.
+% This measurement can then be combined with pseudorange
+% measurement in the context of a Kalman filter.
+
+% However, there are a number of ways to combine the
+% Kuiper information with that of an accelerometer.
+
+
+% We now consider a few scenarios to demonstrate some
+% of the issues related to IMU integration. There are
+% a few options to how to integrated 
+
+% we adopt what is often referred to as tight integration
+% of IMU to examine some of the 
+
+
+% \subsection{Kuiper only velocity estimation}
+
+% can we use the Kuiper directly for velocity estimation;
+% this can be done with doppler and without and performance
+% can be evaluated accordingly.
+
+%\subsection{Example runs}
+
+% the measured acceleration is actually 
+% related to the linear acceleration,
+% Corilolis acceleration, and gravitational acceleration- we will develop a more elaborate
+% model when we we discuss aerial vehicles.
+
+% once acceleration is obtained,
+% we can then integrate to get velocity
+% and then position- 
+
+% \beas
+% \bm a = \frac{d^2 \bm r}{dt^2} 
+% \eeas
+
+% and 
+
+% \beas
+% \bm v(t) = \int \bm a \, dt = a t + v_o
+% \eeas 
+
+% integration --- so have the clock bias corrected
+% then use that for integration-
+% loosely coupled and tighthy couopled
+
+
+% The working of the accelerometer is
+% as follows- and this is how it can be
+% integrated with the Kuiper time stamping-
+% we can also have an encoder on the wheels.
+
+% The IMU works as follows--
+
+% essentially it is a moving mass inside
+% the chasis- so once we have three
+% different d
+
+% the output of the IMU 
+
+
+% Another topic of interest is to combine time stamping scheme from Kuiper SVs
+% with those from GPS for more precision positioning and time for Kuiper mobile units.
+
+% % \subsection{Synchronization for Aerial Units}
+
+% In this section, we consider synchronization problems for
+% aerial units- the scenario of interest a two time tag
+% setup as the vehicle flies over a CT-
+
+% suppose we want to synchronize the timing between CT and aerial vehicle-
+% the vehicle can use two time stamps 
+
+% to correct with timing- we look at two time stamping scenario-
+
+% this might be interesting to look at-- two way communication for synchronization
+
+
+
+
+% \begin{itemize}
+% \item using the GPS speed estimator
+% \item using an accelerometer 
+% \item digital compass
+% \item rate gyros/IMU
+% \item how to integrate GPS with IMUs
+% \end{itemize}
+
+
+% \section{Aerial Vehicle Positioning and Timing}
+
+% We can can Kuiper SV time-stamped signals on aerial vehicles
+% for positioning and timing- the baseline model can also
+% be augmented with IMUs to better performance.
+
+% \subsection{Without IMUs}
+
+
+% \subsection{With IMUs}
+
+
+% \section{Summary and Potential Next Topics}
+% %
+% In this chapter, we have examined how the Kuiper SV network
+% can be used for positioning and time synchronization for
+% mobile units. In the next chapter, we consider the
+% same scenario for areial vehicles.
+
+\subsection{Position/clock bias estimation for mobile units using time stamping and a base station}
+%-----
+Let us now go back GPS observables; these oberservables
+are used to estimate position and clock bias of
+the GPS receiver. These observables are constructed
+differently but one of the step is to estimate the
+signal emission time from GPS, namely, $t_e$;
+we will discuss how these estimate are computed
+subsequently in this chapter- and why for example, knowledge of the position
+of the receiver leads to the sufficiency of
+{\em one measurement} to obtain an estimate of the clock bias.
+
+A mentioned above, mobile units can use propagation time
+estimates from four SVs to compute their respective
+range with respect to the satellites, and through these
+measurements, obtain an estimate of its position
+and clock offset. 
+%----
+And what is even more interesting, is
+that we can use ``differential'' schemes,
+similar to what is used in differential GPS (but
+with respect to the SV signal),
+or GPS-INS integration for mobile units,
+but this time with time-stamping schemes.
+%--------
+Furthermore, analogous to the SV-CT sync, or the use of ISL,
+we and utilize (extended) Kalman filtering
+or network differencing to further improve the
+synchronization performance. This will be done
+both for the case that we have access to
+position information, 
+as well as when the position information has to be estimated.
+
+How knowledge of the base's position,
+and differencing schemes with a ``rover'' unit
+be used for clock correction/positioning of the
+mobile unit.
+
+
+% \section{Velocity Estimation using Kuiper time signaling}
+
+
+% \subsection{Positioning and Timing from LEO: Carrier tracking only}
+
+% Along the lines of the reported work on Starlink;
+% discuss in meeting. with a base station or other units.
+
+
+% \subsection{Synchronization between Aerial and Ground Mobile Units}
+
+% \subsection{Positioning and timing with GPS and Kuiper (Hybrid)}
+
+% \subsection{Distributed Kalman filterin for position and clock estimation}
+
+\subsection{Receiver Processing via Carrier Beat Frequency}
+
+The basic ``observable'' in GPS receiver is a pseudorange,
+a construct that has range, transmit times, transmit delays,
+and processing delays all embedded; the pseudorange
+is the range computed with all the errors-- hence the ``pseudo''!
+
+There is actually two types of pseudoranges, one constructed
+from code phase (difference) and one from the (carrier) beat frequency.
+%--------
+In a nutshell, once a particular GNSS signal has been acquired,
+between $\mbox{SV}_i$ and $\mbox{CT}_k$,
+the pseudrange (from code phase),
+\beas
+\mbox{pseudorange} = \mbox{true range} + c \; \mbox{(delays)}
+\eeas
+where $c$ is the speed of light. The ``delay'' term above is decomposed
+and some of the terms can be accounted for in general, and some are
+left as noise (more on this below). One term that is difficult to get ride of is
+the receiver clock bias, particularly important since it multiplies the
+speed of light in the pseudorange computation. 
+
+A similar expression can be derived for the carrier phase
+pseudorange (converting a phase to length by multiplying
+by the wavelength) as,
+\beas
+\Phi_{i,k}= \rho_{ik} + c \; \mbox{(delays)} + \lambda \mbox{(initial phase offset)} + \lambda N_{i,k} - \epsilon_{i,k}
+\eeas
+where $N_{i,k}$ cycle ambiguity between the SV and CT;
+the terms that we have ignored are the delay
+uncertainties due to ionosphere and troposphere;
+last term can capture for example delays due
+to multipath.
+
+
+
+The algorithmic sequence for GPS receiver software consists of,
+\begin{enumerate}
+	\item sample the channels that are tracking the GPS signal from a particular SV; we denote these times as $\tau_{\mbox{\tiny R}}(t_{r_i})$, where ``R'' is used generically for the receiver, and $t_{r_i}$ is the $i$th reception time.
+	\item Based on the channel variables such as bit counts, number of C/A repetitions and code chips, $\tau_{{\mbox \tiny SV}_j}(t_{e_i})$ is determined; this is the signal emission time with resepct to the satellite clock. We will discuss this step in more detail.
+	\item Using $\tau_{{\mbox \tiny SV}_j}(t_{e_i})$ and $\tau_{R}(t_{r_i})$, corrections sent by SV to the receiver, and other corrections included in the measurement, the transmission time $t_{e_i,r_i}= {t}_{r_i}- t_{e_i}$ is estimated; let us denote this by $\widehat{t}_{e_i,r_i}$.
+	The pseudorange (for that channel) is now simply the speed of light multiplied by $\widehat{t}_{e_i,r_i}$.
+\end{enumerate}
+Once we have ``sufficient'' number of pseudoranges measurements,
+we can then proceed to go after the position and the
+clock offset for the receiver. 
+
+Let us see how this actually works out
+and in particular, how knowledge of the receiver position
+would allow characterizing the receiver clock bias very efficiently.
+The computation of the position becomes relevant when we 
+subsequently consider mobile units.
+
+Let the true range between the GPS satellite indexed as SV $i$ and the receiver
+``R'' at time $t$ be,\footnote{The notation $\| \bm x \|$ denotes the 2-norm of the vector $\bm x$.}
+\beas
+\rho_{i,\mbox{\tiny R}}(t) = \| \bm r_{\mbox{\tiny SV}_i}(t) - \bm r_{\mbox{\tiny R}}(t)) \| ;
+\eeas 
+then the pseudorange can be written as,
+\beas
+\widehat{\rho}_{i, \mbox{\tiny R}}(t) = \rho_{i, \mbox{\tiny R}}(t) + c \; \delta t_{\mbox{\tiny R}} + e_{\mbox{\tiny R}}(t)
+\eeas 
+where $e_{\mbox{\tiny R}}(t)$ captures the stochastic errors (the sources of this error term consists of dispersive and non-dispersive atmospheric effects, multipath, etc.).
+
+Note that in general the position vectors $\bm r_{\mbox{\tiny SV}_i}$ and 
+$\bm r_{\mbox{\tiny R}}$ are often expressed in different coordinate frames;
+let us for a moment assume that the relevant transformation has been
+done to put them in the consistent coordinate frame and
+\beas
+\bm r_{\mbox{\tiny SV}_i}(t) = \leftm{c} \bm r^1_{\mbox{\tiny SV}_i}(t)\\[.05in]
+										\bm r^2_{\mbox{\tiny SV}_i}(t)\\[.05in]
+										\bm r^3_{\mbox{\tiny SV}_i}(t) \rightm
+\quad \mbox{and} \quad
+\bm r_{\mbox{\tiny R}_j}(t) = \leftm{c} \bm r^1_{\mbox{\tiny R}}(t)\\[.05in]
+										 \bm r^2_{\mbox{\tiny R}}(t)\\[.05in]
+										 \bm r^3_{\mbox{\tiny R}}(t) \rightm,
+\eeas 
+where the superscripts are the components of the corresponding
+vector if that ``consistent'' coordinate frame.
+%
+This is important, as conversion between two coordinate frame one of which is time-varying, we need to use a consistent notion of time- which is also an unknown!
+
+Let us for a moment assume that both position vectors have been
+expressed in consistent coordinate frame; in this case, the
+key algorithmic component of the GPS receiver is to use 
+\beas
+\widehat{\rho}_{\mbox{\tiny R}}^{j}(t), \quad j = 1, 2, \ldots
+\eeas
+to solve for $x_{\mbox{\tiny R}}(t)$, $y_{\mbox{\tiny R}}(t)$
+$z_{\mbox{\tiny R}}(t)$ {\em and} $\delta t_{\mbox{\tiny R}}$.
+In fact, using this pseudorange observable, the receiver formulates a least squares problems in four unknowns (three positions and one clock offset).
+
+% \subsection{Position/clock bias estimation for mobile units using time stamping and beat frequency estimation}
+
+% How $t_p$ can be used in conjunction beat frequency tracking
+% to for clock/position estimation.
+
+% \subsection{Position/clock bias estimation for mobile units using time stamping, beat frequency estimation, and inertial navigation}
+
+% \begin{comment}
+% Now let us consider the analogous construct with Kuiper. In this case,
+% we do not necessary have a pseudorange construct; instead we 
+% assume that $\tau_{\mbox{\tiny SV}}(t_e)$ is communicated to
+% the receiver.
+
+% the key difference if we have $t_e$ directly, ....
+
+% Now suppose we 
+
+
+% in the internal document it was stated that the SV $j$ sends
+% INE-BCH (once per SDN cylce) provides SV ephemeris data,
+% MAC subframe number, orbit information and GPS system time-
+% we denote this last information by $\tau_{{\mbox \tiny SV}_j}(t_{e_i})$.
+% For our purposed we assume that 
+% \beas
+% \tau_{{\mbox \tiny SV}_j}(t_{e_i}) = t_{e_i} \quad \quad \mbox{for all SV's $j$};
+% \eeas
+% but as we have discussed in this report, the discrepancy between 
+% $\tau_{{\mbox \tiny SV}_j}$'s with each other and with $t$'s 
+% can be measured using the network-bias and coherency that
+% quantify {\em with and without} GPS 
+% and even with {\em partial GPS} availability.
+
+% What are the observables: in GPS case
+% and Kuiper. What would a differential Kuiper 
+% processing looks like-
+% how can you use the communication link for navigation.
+
+% why we can get away with one measurement for time?
+
+% the difference between observables for GPS
+% and observables for Kuiper.
+
+% how differential GPS idea works and improves\\
+
+% \end{comment}
+% %
+% \subsection{Carrier phase observable schemes}
+
+% \subsection{Differencing schemes}
+% \subsection{Differential methods for mobile units synchronization}
+
+% \subsection{Cascade filtering}
+
+% we can use the differential model to correct
+% for the clock and position errors.
+% We can use a SV network be used
+% for positioning/timing of aerial vehicle that in turn can be used for position and timing of the ground vehicles.
+
+% \subsection{Network-level synchronization}
+
+% Can we use inter-mobile synchronization 
+% (e.g., aerial to ground) be used to further improve synchronization performance.
+
+% % ISL control system
+% % spatial invariance for orbits and its consequences
+
+% \begin{comment}
+% \beas
+% \bm q_{\mbox{\tiny R}}(t) = \leftm{c} \bm r_{\mbox{\tiny R}}(t) \\
+% 						   \bm x_{\mbox{\tiny R}}	(t)
+% 	   				      \rightm
+% \eeas 
+
+% will use superscripts to denote the coordinates- so for example,
+% $\bm x^{1}_{\mbox{\tiny R}}(t)$ would be the clock bias for the receiver
+% at time $t$.
+
+% and based on the pseudorange measurements, we aim to estimate 
+
+% \beas
+% {\widehat{\bm q}}_{\mbox{\tiny R}}(t)}
+% \eeas 
+% where as before 
+% \beas
+% \bm x_i (t)= \leftm{c}
+% \mbox{position for node $i$ at time $t$} \\
+% \mbox{velocity for node $i$ at time $t$} \\
+% \mbox{antenna orientation for for node $i$ at time $t$}\\
+% \mbox{clock reading for for node $i$ at time $t$};
+% \rightm
+% \eeas 
+
+% \beas
+% A(t) \bm r_{\mbox{\tiny R}}(t) + \ones \, c \, \delta t_{\mbox{\tiny R}}(t) = \bm b_{\mbox{\tiny R}} (t)- \bm \epsilon_{\mbox{\tiny R}}(t)
+% \eeas 
+
+
+% \beas
+
+% A(t) \bf r_{\mbox{\tiny R}} + \leftm{cccc} \ones & 0 & \cdots & 0 \\
+% 										0     & \ones & \cdots & 0 \\
+% 										\vdots & \vdots & \vdots & \vdots\\
+% 									0     & 	0 \cdots & \ones \rightm
+
+% 									= \leftm{c} c \delta t_{\mbox{\tiny R}} \rightm
+% \eeas 
+
+% how to use phase observations?
+
+% Let $\ones = $
+
+% \subsection{Differencing Schemes}
+
+% differencing schemes are use to remove common errors
+
+% rover and base setup: the base has knowledge of its position
+% and shares carrier phase observables with the rover-
+% the rover has no knowledge of its position but
+% only the carrier phase observable.
+% can shares 
+
+
+% carrier phase 
+
+% if the timing information is available ...
+
+% we can also have a model of the receiver clock- if
+% we don't then need to extract the nav. information somehow.
+
+
+
+% \subsection{Comm for Nav}
+
+
+% carrier phase observable with respect to the $i$th SV
+
+% \beas
+% \zeta(k) = \| xxxxx \| + a_i k D + b_i + c + \nu
+% \eeas 
+
+% in this case, we can solve for $a_i$'s and $b_i$ as well as 
+% $r$ $D=10$ is the downsampling factor,
+
+
+% This letter makes the following contributions. First, the Starlink signals are analyzed and a model suitable for carrier phase
+% tracking is developed. Second, an adaptive KF-based tracking
+% loop is developed where the measurement noise is updated
+% based on a heuristic of the residuals. Third, a demonstration
+% of the first carrier phase tracking and positioning results with
+% real Starlink signals is presented, showing a horizontal position
+% error of 7.7 m with six Starlink SVs.
+
+
+% The adaptive KFbased carrier tracking algorithm is described below.
+
+
+% ir interface in general, except for the channel frequencies
+% and bandwidths. One cannot readily design a receiver to track
+% Starlink signals with the aforementioned information only as
+% a deeper understanding of the signals is needed. Softwaredefined radios (SDRs) come in handy in such situations, since
+% they allow one to sample bands of the radio frequency spectrum. However, there are two main challenges for sampling
+% Starlink signals: (i) the signals are transmitted in Ku/Kabands, which is beyond the carrier frequencies that most
+% commercial SDRs can support, and (ii) the downlink channel
+% bandwidths can be up to 240 MHz, which also surpasses the
+% capabilities of current commercial SDRs. The first challenge
+% can be resolved by using a mixer/downconverter between the
+% antenna and the SDR. However, the sampling bandwidth can
+% only be as high as the SDR allows. In general, opportunistic
+% navigation frameworks do not require much information from
+% the communication/navigation source (e.g., decoding telemetry
+% or ephemeris data or synchronizing to a certain preamble).
+% Therefore, the aim of the receiver is to exploit enough of the
+% downlink signal to be able produce raw navigation observables
+% (e.g., Doppler and carrier phase). Fortunately, a look at the
+% FFT of the downlink signal at 11.325 GHz carrier frequency
+% 0018-9251 (c) 2021 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission. See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+% This article has been accepted for publication in a future issue of this journal, but has not been fully edited. Content may change prior to final publication. Citation information: DOI 10.1109/TAES.2021.3113880, IEEE
+% Transactions on Aerospace and Electronic Systems
+% and sampling bandwidth of 2.5 MHz shows nine “carrier
+% peaks,” as shown in Fig. 1(a). Furthermore, the waterfall plot
+% in Fig. 1(b) shows that these carrier peaks vary as the Doppler
+% frequency over an 80-second interval. The Doppler frequency
+% was predicted using two-line element (TLE) files
+
+% \end{comment}
+
+% \section{Synchronization with the mobile units}
+
+% \subsection{GPS to Mobile Units}
+
+
+
+% \begin{itemize}
+% \item do we have to worry about multipath for mobile units? can we use mobile units in concert to eliminate the effect of multipath?
+% \end{itemize}
+
+\section{Kuiper Aerial Vehicle Network}
+In this section, we discuss the use of Kuiper Aerial Vehicles (KAVs) network for positioning and timing. In particular, we consider how to use
+KAVs as ``anchors" for Kuiper ground mobile units or IoT devices, 
+or augmenting timing and navigation signals from 
+GPS or Kuiper satellites to improve timing and position
+estimation for other Kuiper nodes.
+
+Kuiper aerial vehicles provide a unique opportunity to
+augment the baseline Kuiper network. This augmentation
+has multiple facets. For example, long endurance medium altitude
+aerial vehicles (operating altitudes between 3-7 km for 24-48 hours)
+or long endurance high altitude aerial vehicles (operating altitude
+of 20 km for months) provide an unprecedented opportunity for
+creating ad hoc communication or navigation solutions to customers
+on the ground and sea. Such vehicles can also be used for augmenting
+existing networks or such as Kuiper SV/GW/CT (for communication and navigation)
+as well as navigation networks such as GPS/GNSS.
+
+At lower altitudes, in addition to augmenting
+existing satellite or ground networks, KAVs can provide
+other types of functionalities. For example, the KAV clock can be synchronized
+with ``Kuiper time" as it flies over a customer terminal or a
+base station, and subsequently be used ``relay" that information
+to ground mobile units or ships. KAVs can
+also be used to provide network connectivity during 
+disruptions in the baseline satellite networks.
+
+Let us now examine a few scenarios of interest.
+
+\begin{itemize}
+
+\item Consider the situation where there has been a 
+GPS disruption at a ground mobile unit or a region of interest.
+As discussed in the previous chapter, in such scenarios,
+one can use the time stamped signals from Kuiper SVs for positioning and time
+synchronization of the ground units. This setup would be more efficient
+and accurate when we have at least four Kuiper SVs in view 
+(without using any other ``side information'' like knowledge of the
+terrain). As we also showed in the previous chapter, one can use the
+Kuiper SV time-stamped signals in conjunction with inertial measurement units
+to improve the positioning and timing performance when the ground
+rover does not have access to four SVs during the clock steering 
+and position/velocity updates. However, the above scheme can
+only work if the rover's antenna can receive the required time-stamped signal
+from the SVs. For this to happen, the antenna on the ground vehicle
+should be pointing toward the transmitter's antenna, implicitly
+suggesting that the rover should know where it is with respect
+to the satellites on the earth's surface. 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=.5\textwidth]{eps/clockeps/mobility-kav-base.jpg}
+\caption{Synchronization for aerial and Kuiper base using two time stamped signaling}\label{kav-base}
+\end{center}
+\end{figure}
+
+If the rover (or a Kuiper boat) does have any information about its location nor
+where in the sky to search for Kuiper satellites, then a
+solution strategy, based on a KAV node can be adopted
+as follows. The KAV first identifies a Kuiper ground vehicle 
+(say from a tag or identifiable feature) using its onboard camera.
+If the KAV camera is gimbaled, it can scan areas on the ground
+where the likelihood of the ground vehicle finding a satellite is too
+low. Once the camera of a KAV sees (pixels on the camera image plane!)
+the ground vehicle, it can
+estimate the ground vehicle's position from the projection of
+the vehicle in the camera frame. There is some geometry 
+and coordinate transformation involved in this process, but this can be done.
+We can even use multiple KAVs to improve the rover's position/antenna
+orientation estimation by running a distributed estimation algorithm
+across the KAV network flying over the ground receiver.
+
+\item Note that in the scenario above, the KAV needs to know
+its altitude with a use of an altimeter. Alternatively, we can
+assume that KAV can estimate its position and orientation, and
+as such, can estimate its states using GPS or Kuiper SV network.
+
+\item Now suppose that KAV identifies the Kuiper mobile unit
+that does not have a GPS access (may be there is status indicator on
+the mobile unit). Furthermore, assume 
+that the mobile unit's antenna is not pointing in the right
+direction. If the KAV's altitude is low, then it can 
+use its camera and some ML, to estimate the orientation of
+the antenna and then choose a trajectory to fly in the
+footprint of rover's antenna. We can then develop a steering 
+algorithm on the KAV's antenna to keep the rover in its
+foot print for the time duration needed to perform
+clock synchronization and facilitate a navigation solution for 
+the rover. This information can subsequently be used by the rover,
+in order to scan the correct portion of the sky for SV signals
+and subsequent synchronization and positioning. The KAV initialization
+can also be used by the rover's onboard IMU for state propagation.
+
+\item In the scenario above, one is using a low altitude
+KAV with a gimbaled camera to resolve for the relative position
+(vector) of the ground rover with respect to the
+aerial vehicle. In a nutshell, we are using the onboard camera
+onboard- in addition to some geometric relations-
+to estimate the 3D relative position vector and subsequently achieve
+time synchronization. Now suppose that instead, we use
+signal processing to estimate the delay
+in the signal propagation from KAV to the rover. 
+Then having a model for this delay,
+and the positions of at least four KAVs, would allow the
+rover to estimate its position in the world coordinate.
+If KAVs' velocity information is also available to the rover,
+then doppler can be used to estimate the velocity of
+the rover. Hence, in essence, one can create a 
+{\em KAV anchor network} that can be used for positioning and timing of 
+other vehicles in the network as needed. Since the accuracy of the
+navigation and timing is a function of the geometry of the
+anchor units, we can then choose the KAV's configuration (adaptively!)
+for a given region that minimizes the average estimation error for
+both timing and navigation performance.
+
+\item Lastly, KAV can act both as relays as well as augmentation
+units for the comm network when needed- creating a adaptive "node"
+that can effectively be used during disruptions, e.g., 
+disaster recovery.
+
+\item And of course, KAV can also be used to augment Kuiper SV or GPS signals
+for the rover positioning and timing, including facilitating differential
+processing for higher accuracy navigation and timing.
+\end{itemize}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=.5\textwidth]{eps/clockeps/Kuiper-mobile-KAV.jpg}
+\caption{Synchronization for aerial and CT using two time stamped signaling}\label{mobility-kav}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=.5\textwidth]{eps/clockeps/Kuiper-mobile-KAV2.jpg}
+\caption{Synchronization for aerial and CT using two time stamped signaling}\label{mobility-kav2}
+\end{center}
+\end{figure}
+
+
+\section{Localizing Ground Mobile Units from the Air using an Onboard Camera}
+In this section, we examine how to use an
+onboard camera on a KAV for positioning and time synchronization 
+of a mobile ground rover. This setup provides the means of
+{\em initializing} the subsequent positioning and timing,
+say through delay estimation, as well as air-ground communication. 
+Hence, the setup can be referred
+to as localization without relying on communication, or
+localization in support of communication!
+%
+Let us explain the setup. It is assumed that KAV has synchronized its
+time with Kuiper base and ``in-tune'' with 
+the system time; it also has self navigation information.
+Furthermore, we assume that
+KAV has identified a rover that requires
+time/navigation information- this can be 
+either through an SOS message as Pengfei suggested
+or having KAV(s) cover an area and looking for a status
+light on the rover that has lost its navigation/timing information.
+
+Suppose that the origins of the camera frame and that of the gimbal,
+onboard the KAV, coincide with the center of mass of the KAV. Suppose that
+we also have the body frame for the KAV.
+Now we monitor the rotation that is needed to go from the
+body frame to the gimbal and the camera frames. These coordinate
+transformations involve a few angles, including the so-called
+gimbal-azimuth $\alpha_{z}$ and the gimbal elevation $\alpha_{z}$ 
+angles. % These are shown in the figure below. 
+Using these angles, we can find the rotation matrix needed to go 
+from the body to the gimbal frame; hence using these angles and
+parameterize the direction cosine matrix ${\cal C}_{b}^{g}$.
+%
+We also have a transformation to go from the gimbal frame to the camera
+frame that we have to keep track of; the computer vision folks
+generally set these coordinate frames in such a way that
+the corresponding rotation matrix is of the form,
+\beas
+{\cal C}_{g}^{c} = \leftm{ccc} 0 & 1 & 1 \\ 0 & 0 & 1\\ 1 & 0 & 0 \rightm.
+\eeas
+Hence, so far, we can find the necessary coordinate
+transformations between the gimbal, camera, and the body frames of KAV
+in terms of these two angles.
+
+Now, let us go back to the camera frame. A typical camera
+geometry is as follows. The key parameters are the focal 
+length in units of pixels $f$ and its conversion to
+units of meters $pf$ ($p$ is a scaling factor).
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=.5\textwidth]{eps/clockeps/camera-frame.jpg}
+\caption{The camera geometry}\label{camera-frame}
+\end{center}
+\end{figure}
+Let us assume that the pixel array is square for now consisting also of square pixels; 
+let the (pixel) width of the pixel array be $M$. The camera focal length 
+and the array width are the related through the
+half angle of the camera field of view;
+in particular, 
+\beas
+\tan \frac{\nu}{2} = \frac{M}{2 f};
+\eeas 
+so in essence we know $f$ and $pf$ if we know the camera field of view and the array (pixel) width.
+
+Now comes the interesting (yet simple) relationship.
+In relation to Figure~\ref{camera-frame}, 
+suppose the pixel coordinates 
+in the image plane of the
+KAV camera corresponding to rover is 
+$(\epsilon^x_{\mbox{\tiny R}},\epsilon^y_{\mbox{\tiny R}})$; in the 3D version, this coordinate is
+really
+\beas
+(\epsilon^x_{\mbox{\tiny R}},\epsilon^y_{\mbox{\tiny R}}, pf).
+\eeas 
+Therefore the distance from the camera frame
+to the pixel location is 
+\beas
+F= \sqrt{f^2 + (\epsilon^x_{\mbox{\tiny R}})^2 + (\epsilon^y_{\mbox{\tiny R}})^2  }.
+\eeas 
+We use some geometry (similar triangles) to realize that,
+\beas
+\bm r^c_{\mbox{\tiny R/KAV}} = \frac{d}{F} 
+\leftm{c} \epsilon^x_{\mbox{\tiny R}}\\
+\epsilon^y_{\mbox{\tiny R}}\\
+f \rightm
+\eeas 
+where $d$ is the distance between the rover and
+its projection on the image plane.
+
+This means that although the relative
+vector from the KAV to the rover can not be
+uniquely determined, its ``direction'' can!
+That is,
+\beas
+\widehat{\bm r}^c_{\mbox{\tiny R/KAV}} = \frac{1}{\sqrt{f^2 + (\epsilon^x_{\mbox{\tiny R}})^2 + (\epsilon^y_{\mbox{\tiny R}})^2  }} 
+\leftm{c} \epsilon^x_{\mbox{\tiny R}}\\
+\epsilon^y_{\mbox{\tiny R}}\\
+f \rightm;
+\eeas 
+we are adopting the convention of referring to the normalized version of any vector $\bm v$ 
+as $\widehat{\bm v}$.
+
+Since we can find the direction to the rover, all we need know now is the range to the rover. 
+That is, once we know this range, the we can obtain
+${\bm r}^c_{\mbox{\tiny R/KAV}}$ and convert
+that to ${\bm r}^i_{\mbox{\tiny R/KAV}}$
+that can be combined with 
+${\bm r}^i_{\mbox{\tiny KAV}}$ to obtain
+${\bm r}^i_{\mbox{\tiny R}}$, i.e., 
+\beas
+\bm r_{\mbox{\tiny R}/i}  = \bm r_{\mbox{\tiny KAV}/i} + {\cal C}_{b}^i \, {\cal C}_{g}^b \, {\cal C}_{c}^g \, {\bm r}^c_{\mbox{\tiny R/KAV}};
+\eeas 
+recall that if the superscript is not included, the vector is being resolved in the inertial frame.
+%
+Now suppose that we know the altitude of the KAV denoted by $h$. 
+Then the geometry of Figure~\ref{mobility-kav}
+with a flat earth approximation, implies
+that, 
+\beas
+d = \frac{h}{\cos \phi}
+\eeas 
+where $\phi$ is the angle between 
+${\bm r}^c_{\mbox{\tiny R/KAV}}$,
+converted to the inertial frame,
+and $k$ axis of the inertial frame. 
+This completes the relation location 
+determination of the rover 
+by the gimbaled camera on the KAV.
+%
+The resolution of such a localization
+depends camera resolution and as knowledge
+of the various angles and the height
+of the KAV. The basics are there, but of course,
+there are a number of ways to improve this
+estimate, including using multiple KAVs
+to localize a rover and then exchange information
+to reduce the localization uncertainty; another
+possibility is to use a filter to update the rover's location 
+using a time series of camera images. The localization can
+also be improved by strategically maneuver a low altitude KAV 
+so that the uncertainty in the measurement geometry is reduced.
+
+Once the relative position of the rover is determined, the 
+KAV can perform a ``initialization'' maneuver followed by an 
+initialization protocol for the rover, to provide the information
+to the rover to updates its position, thus facilitating subsequent 
+communication with the KAV or KSV networks.
+% %
+
+% \subsection{Keeping the rover in the KAV camera field of view}
+
+% \subsection{Simultaneous localization and time synchronization}
+
+% \subsection{Air-ground communication}
+
+% \section{KAV network for positioning and timing}
+
+
+% \section{KAV-SV network for positioning and timing}
+
+% Once we know the relative position of the rover - and either estimate the pose of the antenna
+% from the KAV camera or know the default orientation (for example, rover antenna should
+% go) ... check what type of camera and then see the rover antenna geometry that is needed
+% to intercept the beam.
+
+% \section*{Notes and References}
+
+
+
+
+% \begin{figure}[ht]
+% \begin{center}
+% \includegraphics[width=.8\textwidth]{eps/clockeps/mobility1.jpg}
+% \caption{Synchronization for aerial and CT using two time stamped signaling}\label{mobility1}
+% \end{center}
+% \end{figure}
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=.4\textwidth]{eps/clockeps/mobility2.jpg}
+\caption{Positioning using mixed time stamped signaling from aerial units and Kuiper SV}\label{mobility}
+\end{center}
+\end{figure}
+
+
+
+\section*{Notes and References}
+In this chapter, we examine how to using Kuiper time-stamping
+not only for time-synchronization but also for positioning,
+adopting a one-way time transfer protocol. In this case,
+timing and positioning becomes coupled, as such the
+time-stamped signals are used in conjunction for resolve
+for position and clock offset of a ground mobile vehicle.
+When enough SV time-stamped signals are not available, the
+vehicle was augmented with an inertial measurement unit.
+It is show that the Kuiper SV time-stamped signaling 
+in conjunction with the vehicle inertial measurement provide
+a rather robust mechanism for time synchronization and
+position estimation. The positioning and timing protocols
+discussed in this chapter are part of the broader 
+discipline of positioning, navigation, and timing (PNT).
+This is an active area of research currently,
+as there are a number of extensions that can be 
+examined in the context of Kuiper network. One prime
+example in this direction is the use of Kuiper aerial vehicles, both in the backup and augmentation modes for
+the baseline Kuiper network.
+
+% \begin{figure}[h]
+% \begin{center}
+% \includegraphics[width=.4\textwidth]{eps/clockeps/mobility3.jpg}
+% \caption{Positioning using mixed time stamped signaling from aerial units and Kuiper SV}\label{mobility}
+% \end{center}
+% \end{figure}
+
+
+% \section*{Notes and References}
+% \chapter{Control system for ISL Instrument}
+
+
+% \chapter{IoT Synchronization/Indoor Positioning \& Timing}
+
+% latency issues for critical systems (industrial, autonomy), energy constraints/synchronization performance. Also interacting with the environment
+% and how learning/data driven methods can
+% be used to optimize energy and lower the
+% communication overhead to achieve 
+% the desired levels of synchronization.
+
+
+% \section{Indoor Positioning and Timing}
+
+% \section{Energy-aware synchronization}
+
+% \section*{Notes and References}
+% %learning/data driven?
+
+% \part{Part III: System-level Kuiper Network Synchronization}
+%\include{constellations-orbital}
+
+%\include{iterative-design}
+% %-----
+% \part{Part IV: Kuiper Aerial Vehicles}
+
+% \part{Part V: Internet of Things}
+
+%\include{state-coordination}
+
+%\include{network-resilience}
+%\part{Summary and Future Works}
+\include{summary-future-works}
+%\part{Appendix}
+%-------
+%\include{conference_paper}
+% \include{matrices-probability-optimization}
+% \include{gps-theory}
+%\include{interference}
+%\include{other-topics}
+%\include{comments_from_kuiper_team}
+%------
+
+% \include{extra}
+%\part{Code}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+
+% 
+% other topics could include DTN performance
+% lunar communication and navigation
+% as well as the use of spatial invariance and symmetry
+% properties of the Kuiper network

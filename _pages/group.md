@@ -21,101 +21,122 @@ Spencer Kraisler, Ph.D. Candidate (<a href="https://spencerkraisler.github.io/">
 
 Shiva Shakeri, Ph.D. Candidate (<a href="https://shivashakeri.com/">Webpage</a>) 
 
-Niyousha Rahimi, Ph.D. Candidate  (<a href="https://students.washington.edu/nrahimi/">Webpage</a>)
+Aditya Deole, Ph.D. Candidate (<a href="https://www.linkedin.com/in/aditya-deole-26aab3101/">Linkedin</a>) 
 
-Aditya Deole, Ph.D. Candidate 
+Jackson Zhou, Ph.D. Candidate (<a href="https://www.linkedin.com/in/qishi-zhou-901a51170/">Linkedin</a>) 
 
-Josh Holder, Ph.D. Candidate 
+Eddie Tang, Ph.D. Candidate (<a href="https://www.linkedin.com/in/kuang-ying-ting/">Linkedin</a>) 
 
-Bijan Barzgaran, Ph.D. Candidate 
+Yifu Wang, Ph.D. Candidate (<a href="https://www.linkedin.com/in/yifu-wang-645b00120/">Linkedin</a>) 
 
-Shahriar Talebi, Ph.D. Candidate  (<a href="http://students.washington.edu/shahriar/">Webpage</a>)
+Joseph Pinkston, Ph.D. Candidate (<a href="https://www.linkedin.com/in/pinkstonj/">Linkedin</a>) 
 
-Mengyuan Wang, Ph.D. Candidate (<a href="http://students.washington.edu/mywang10/">Webpage</a>)
- 
-Beniamino Pozzan, Visiting Ph.D. student (<a href="https://sparcs.dei.unipd.it/">SPARCS/Padova</a>)
+Joalda Morancy, Ph.D. Candidate (<a href="https://www.linkedin.com/in/joalda-morancy-1108b1146/">Linkedin</a>) 
 
+Salma Hajian, Undergraduate Researcher (<a href="https://www.linkedin.com/in/salma-hajian/">Linkedin</a>) 
+
+Maximus Kolavennu, Undergraduate Researcher (<a href="https://www.linkedin.com/in/maxkolavennu/">Linkedin</a>) 
+
+Keira Morrissey, Undergraduate Researcher (<a href="https://www.linkedin.com/in/karen-morrissey-4068021a5/">Linkedin</a>) 
+
+Audrey Rossow, Undergraduate Researcher (<a href="https://www.linkedin.com/in/audrey-rossow/">Linkedin</a>) 
 
 <strong style="color: red;">Alumni</strong>
 
-Foight, Dillon, Ph.D., 2021, Lunar Gateway Spacecraft Systems Operation Analyst at NASA Johnson Space Center
+Seth Reed, M.S. 2024 (<a href="https://www.linkedin.com/in/sethreed01/"> Linkedin</a>) 
 
-Reynolds, Taylor, Ph.D. 2020, Research Scientist at Amazon Prime Air
+Berit Syltebo, M.S. 2024 (<a href="https://www.linkedin.com/in/berit-syltebo-6a1064200/">Linkedin</a>) 
 
-Bu, Jingjing, Ph.D., 2020, Software Engineer at Google
+Josh Holder, M.S., 2024 (<a href="https://josh-holder.github.io/about/">Webpage</a>)
 
-van Waarde, Henk, Visiting Ph.D. Student, 2019-2020, Assistant Professor at University of Groningen
+Niyousha Rahimi, Ph.D., 2024  (<a href="https://students.washington.edu/nrahimi/">Webpage</a>)
 
-Alemzadeh, Siavash, Ph.D., 2020, Data and Applied Scientist at Microsoft
+Mengyuan Wang, Ph.D., 2023 (<a href="https://www.linkedin.com/in/mengyuan-wang-156955130/">Linkedin</a>)
 
-Vasisht, Soumya, Ph.D.  2020,  Research Scientist, PNNL; Intelligent Control and Optimization for Dynamical Aerosystems
+Shahriar Talebi, Ph.D., 2023  (<a href="https://shahriarta.github.io/">Webpage</a>)
 
-Hudoba de Badyn, Mathias, Ph.D., 2019, Postdoctoral Scholar at Automatic Control Laboratory, ETH Zürich
+Bijan Barzgaran, Ph.D. Candidate (<a href="https://www.linkedin.com/in/bijan-barzgaran-564a9b1b8/?locale=en_US">LinkedIn</a>)
 
-Schoof, Eric, Ph.D., 2017, Senior Research Engineer at University of Melbourne
+Beniamino Pozzan, Visiting Ph.D. student, 2022-2023 (<a href="https://sparcs.dei.unipd.it/">SPARCS/Padova</a>)
 
-Chapman, Airlie, Ph.D., 2016, Associate Professor (Senior Lecturer; tenured) at University of Melbourne
+Dillon Foight, Ph.D., 2021, Lunar Gateway Spacecraft Systems Operation Analyst at NASA Johnson Space Center (<a href="https://www.linkedin.com/in/dillon-foight/">Linkedin</a>)
 
-Rahmani, Amirreza, Ph.D., 2009, Group Supervisor, NASA Jet Propulsion Laboratory, Caltech
+Taylor Reynolds, Ph.D. 2020, Research Scientist at Amazon Prime Air (<a href="https://www.linkedin.com/in/taylorpatrickreynolds/">Linkedin</a>)
 
-Nabi, Marzieh, Ph.D., 2012, Technology and Product Lead in AI, Amazon
+Jingjing Bu, Ph.D., 2020, Software Engineer at Google (<a href="https://www.linkedin.com/in/jingjing-bu-b09a8a54/">Linkedin</a>)
 
-Hosseini, Saghar, Ph.D., 2016, Senior Researcher at Microsoft Research
+Henk van Waarde, Visiting Ph.D. Student, 2019-2020, Assistant Professor at University of Groningen (<a href="https://henkvanwaarde.github.io/"> Webpage</a>)
 
-Wang, Yifu, M.S. 2021, Ph.D. Candidate at University of Washington
+Siavash Alemzadeh, Ph.D., 2020, Data and Applied Scientist at Microsoft
 
-Eddie, Ting, M.S., 2021, Ph.D. Candidate at University of Washington
+Soumya Vasisht, Ph.D.  2020,  Research Scientist, PNNL; Intelligent Control and Optimization for Dynamical Aerosystems
 
-Zelazo, Dan, Ph.D. , 2009, Associate Professor at Technion
+Mathias Hudoba de Badyn, Ph.D., 2019, Associate Professor, University of Oslo
 
-Panyakeow, Prachya. Ph.D., 2015, Guidance, Navigation, and Control Engineer at Boeing
+Eric Schoof, Ph.D., 2017, Senior Research Engineer at University of Melbourne
 
-Lee, Unsik, Ph.D. 2013, Sr. Controls Engineer at Robodub 
+Airlie Chapman, Ph.D., 2016, Associate Professor (Senior Lecturer; tenured) at University of Melbourne
 
-Kim, Yoonsoo, Ph.D., 2003, Professor at Gyeongsang National University, South Korea
+Amirreza Rahmani,  Ph.D., 2009, Group Supervisor, NASA Jet Propulsion Laboratory, Caltech
 
-Melville, Nicholas, M.S., 2021, US Air Force
+Marzieh Nabi, Ph.D., 2012, Technology and Product Lead in AI, Amazon
 
-Heritier, Aurelie, M.S., 2008, Senior Astrodynamics Engineer at Advanced Space
+Saghar Hosseini, Ph.D., 2016, Senior Researcher at Microsoft Research
+
+Yifu Wang, M.S. 2021, Ph.D. Candidate at University of Washington
+
+Ting Eddie, M.S., 2021, Ph.D. Candidate at University of Washington
+
+Dan Zelazo, Ph.D. , 2009, Associate Professor at Technion
+
+Prachya Panyakeow, Ph.D., 2015, Guidance, Navigation, and Control Engineer at Boeing
+
+Unsik Lee, Ph.D. 2013, Sr. Controls Engineer at Robodub 
+
+Yoonsoo Kim, Ph.D., 2003, Professor at Gyeongsang National University, South Korea
+
+Nicholas Melville, M.S., 2021, US Air Force
+
+Aurelie Heritier, M.S., 2008, Senior Astrodynamics Engineer at Advanced Space
 
 Yuko Hatano, M.S., 2006, Servo Engineer at Western Digital
 
-Gonzalez, Carlos, M.S., 2005, Senior Manager, Software Development at Amazon
+Carlos Gonzalez, M.S., 2005, Senior Manager, Software Development at Amazon
 
-Maximoff, Joshua, M.S., 2012, Sensors, Robotics, and Embedded Systems Expert
+Joshua Maximoff, M.S., 2012, Sensors, Robotics, and Embedded Systems Expert
 
-Besson, David,  M.S., 2015, AWS Aerospace and Satellite Professional Services
+David Besson, M.S., 2015, AWS Aerospace and Satellite Professional Services
 
-Miesen, Thomas, M.S., 2019, Control Systems Engineer I at Tethers Unlimited Inc.
+Thomas Miesen, M.S., 2019, Control Systems Engineer I at Tethers Unlimited Inc.
 
-Howerton, Will, M.S., 2016, Senior GNC Engineer at Raytheon
+Will Howerton, M.S., 2016, Senior GNC Engineer at Raytheon
 
-Guy, Nathan, M.S., 2012, Technology Lead, Woven Planet Holdings
+Nathan Guy, M.S., 2012, Technology Lead, Woven Planet Holdings
 
-Chu, Clayton, M.S., 2012, Senior Manager, Controls Test & Integration at Rivian
+Clayton Chu, M.S., 2012, Senior Manager, Controls Test & Integration at Rivian
 
-Hughes, Kyle, M.S., 2010, Interplanetary Mission Designer at NASA Goddard Space Flight Center
+Kyle Hughes, M.S., 2010, Interplanetary Mission Designer at NASA Goddard Space Flight Center
 
-Holzinger, Marcus, M.S., 2004, Associate Professor, University of Colorado, Boulder
+Marcus Holzinger, M.S., 2004, Associate Professor, University of Colorado, Boulder
 
-Solish, Ben, M.S., 2006, Systems Engineer at Jet Propulsion Laboratory
+Ben Solish, M.S., 2006, Systems Engineer at Jet Propulsion Laboratory
 
-Matthew, Allan, M.S., 2007, Chief Technology Officer at Planck Aerosystems
+Allan Matthew, M.S., 2007, Chief Technology Officer at Planck Aerosystems
 
-Sandhu, Jasmine, M.S., 2005, Software Engineer at Coiled
+Jasmine Sandhu, M.S., 2005, Software Engineer at Coiled
 
-Kim, Geun, M.S., 2007, Avionics Design Engineer at Boeing
+Geun Kim, M.S., 2007, Avionics Design Engineer at Boeing
 
-Kosuge, Kunihiko, M.S., 2007, Lead Engineer, Toshiba America Energy Systems
+Kunihiko Kosuge, M.S., 2007, Lead Engineer, Toshiba America Energy Systems
 
-Brodkin, Peter, M.S., 2021,  Physics Department at Pierce College 
+Peter, Brodkin, M.S., 2021,  Physics Department at Pierce College 
 
-Mesbahi, Afshin, Postdoctoral Fellow, 2018, Consultant
+Afshin Mesbahi, Postdoctoral Fellow, 2018, Consultant
 
-Dai, Ran, Postdoctoral Fellow, 2012: Associate Professor at Purdue University
+Ran Dai, Postdoctoral Fellow, 2012: Associate Professor at Purdue University
 
-Chakrabortty, Aranya, Postdoctoral Fellow, Yes, 2009: Program Director at National Science Foundation
+Aranya Chakrabortty, Postdoctoral Fellow, Yes, 2009: Program Director at National Science Foundation
 
-Das, Arindam, Postdoctoral Fellow, 2005: Faculty at Eastern Washington University
+Arindam Das, Postdoctoral Fellow, 2005: Faculty at Eastern Washington University
 
 
