@@ -41,6 +41,14 @@ Keira Morrissey, Undergraduate Researcher (<a href="https://www.linkedin.com/in/
 
 Audrey Rossow, Undergraduate Researcher (<a href="https://www.linkedin.com/in/audrey-rossow/">Linkedin</a>) 
 
+
+<strong style="color: red;">Students/alumni from other research groups that I have interacted with closely</strong>
+
+Yue Yu (<a href="https://yueyu.netlify.app/">Webpage</a>) 
+
+Taewan Kim (<a href="https://taewanresearch.notion.site/Taewan-Kim-930b3a3fdd414924acc089bf054d8617">Webpage</a>) 
+
+
 <strong style="color: red;">Alumni</strong>
 
 Seth Reed, M.S. 2024 (<a href="https://www.linkedin.com/in/sethreed01/"> Linkedin</a>) 
