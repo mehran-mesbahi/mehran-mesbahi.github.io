@@ -22,7 +22,8 @@ I am a Professor of Aeronautics & Astronautics and an Adjunct Professor of Mathe
  from 1996-2000 and then an Assistant Professor of Aerospace Engineering and Mechanics at the University of Minnesota from 2000-2002. My research group is the Robotics, Aerospace, and Information Networks 
 (<a href="http://depts.washington.edu/uwrainlab/">RAIN</a>) 
 Laboratory; I am the Executive Director of the Joint Center for Aerospace Technology Innovation (<a href="https://jcati.org/">JCATI</a>) and a member of the 
-<a href="https://washacad.org/new-members-elected-to-washington-state-academy-of-sciences/">WA State Academy of Sciences</a>. My research interests are distributed and networked aerospace systems, autonomy, and control theory and learning.
+<a href="https://washacad.org/new-members-elected-to-washington-state-academy-of-sciences/">WA State Academy of Sciences</a>. My research interests are distributed and networked aerospace and
+robotic systems, optimization, autonomy, data-driven/model-based decision making, control theory and learning.
 
 See extended version of "about" in [<span style="color: orange;"> about+</span>](https://mehran-mesbahi.github.io/about+/)
 

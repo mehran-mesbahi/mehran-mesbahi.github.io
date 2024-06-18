@@ -32,12 +32,12 @@ Put your address / P.O. box / other info right below your picture. You can also 
 <span style="color: dodgerblue;"> Networks & coordination</span>: Coordination algorithms, synchronization, control over networks, distributed optimization/decision-making, algebraic graph theory, mixed networks, product networks, multi-time scale networks, human/bots teams, aerospace networks, network control and dynamics, state-dependent networks, uncertain/random networks, adaptive and resilient networks, system theory of networks, fundamental theory, algorithms, and applications.
 
 <span style="color: dodgerblue;"> Autonomy & Control</span>:
-Optimization-based synthesis, guidance problems and funnels, landing, rendezvous and docking, applied semidefinite and convex programming, applied robust and optimal control, real time motion planning, computational control, distributed actuation, perception-based control, hybrid and electric air mobility, air mobility networks,
+Optimization-based synthesis, guidance problems and funnels, data-driven dynamic decision-making, applied semidefinite and convex programming, applied robust and optimal control, real time motion planning, LLMs for control, computational control, distributed actuation, perception-based control, hybrid and electric air mobility, air mobility networks,
 transportation networks, flight systems, energy optimization, 
 human/bots teams, cubesats.
 
 <span style="color: dodgerblue;"> Data-guided Decision-making</span>:
-Learning for feedback control and autonomy, data-guided network control, trade-offs between identification and control, fundamental guarantees, dimension reduction, safe learning, data-guided control, first order methods for control and games, reinforcement learning, and federated/distributed learning.
+Learning for feedback control and autonomy, data-guided network control, trade-offs between identification and control, control theory and LLMs, fundamental guarantees, dimension reduction, safe learning, data-guided control, first order methods for control and games, reinforcement learning, and federated/distributed learning.
 
 <span style="color: dodgerblue;"> Engineering Education</span>:
 Learning paradigms, effective teaching, social learning, write/code/build to-learn, online learning, inclusive teaching, teaching across disciplines and cultures; see  <a href="http://www.washington.edu/alumni/columns/june05/league_mesbahi.html">UW Columns article</a>, and 
