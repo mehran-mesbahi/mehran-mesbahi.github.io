@@ -25,7 +25,7 @@ multiagent robotics, optimized flight vehicles, constrained trajectory planning 
 
 I received my Ph.D. from USC in 1996, was a member of the Guidance, Navigation, and Analysis group at 
 <a href="https://www.jpl.nasa.gov/">Jet Propulsion Laboratory</a>
- from 1996-2000 and then an Assistant Professor of Aerospace Engineering and Mechanics at the University of Minnesota from 2000-2002. My research group is the Robotics, Aerospace, and Information Networks 
+ from 1996-2000 and then an Assistant Professor of Aerospace Engineering and Mechanics at the University of Minnesota from 2000-2002. I was a senior technical advisor for Blue Origin from 2022-2024. My research group is the Robotics, Aerospace, and Information Networks 
 (<a href="http://depts.washington.edu/uwrainlab/">RAIN</a>) 
 Laboratory; I am the Executive Director of the Joint Center for Aerospace Technology Innovation (<a href="https://jcati.org/">JCATI</a>), Fellow of IEEE, Fellow of AIAA, and a member of the 
 <a href="https://washacad.org/new-members-elected-to-washington-state-academy-of-sciences/">WA State Academy of Sciences</a>. 
