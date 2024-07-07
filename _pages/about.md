@@ -21,7 +21,10 @@ I am a Professor of Aeronautics & Astronautics and an Adjunct Professor of Mathe
 aerospace and robotic systems. Over the years, I have worked on areas such
 as policy optimization, distributed estimation and filtering, network control, formation flight,
 synchronization and distributed task allocation, data-driven control, 
-multiagent robotics, optimized flight vehicles, constrained trajectory planning and control, among many others. Although my research certainly has  theoretical and algorithmic facets, it has been extremely rewarding to see it  used on flagship NASA missions, multiagent robotics, constellations, and for planetary and lunar landing.
+multiagent robotics, optimized flight vehicles, constrained trajectory planning and control, among many others. 
+
+Although my research has many theoretical and algorithmic facets, it has been extremely rewarding to see it  used on flagship NASA missions, multiagent robotics, constellations, and for planetary and lunar landing. I also take pride in the accomplishments of my students who not only did exceptional while at UW, but also became leaders in academia, industry, and government after graduation. My research group has also been very active leading educational and outreach efforts, including our department <a href="https://www.nanosats.eu/sat/soc-i">cubesat</a>, implementing guidance algorithms developed in our group. Over the years, the group has developed ground and aerial multi-robotic testbeds, wind tunnel models for active control, and utilizing game engine for system design.
+
 
 I received my Ph.D. from <a href="https://www.usc.edu/">USC</a> in 1996, was a member of the Guidance, Navigation, and Analysis group at 
 <a href="https://www.jpl.nasa.gov/">Jet Propulsion Laboratory</a>
