@@ -17,13 +17,18 @@ news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
-I am a Professor of Aeronautics & Astronautics and an Adjunct Professor of Mathematics and Electrical & Computer Engineering at the University of Washington. I received my Ph.D. from USC in 1996, was a member of the Guidance, Navigation, and Analysis group at 
+I am a Professor of Aeronautics & Astronautics and an Adjunct Professor of Mathematics and Electrical & Computer Engineering at the University of Washington. My research is broadly in the area of decision-making, control, optimization, networks, and learning, with applications to autonomous
+aerospace and robotic systems. Over the years, I have worked on areas such
+as policy optimization, distributed estimation and filtering, network control, formation flight,
+synchronization and distributed task allocation, data-driven control, 
+multiagent robotics, optimized flight vehicles, constrained trajectory planning and control, among many others. Although my work certainly has  theoretical and algorithmic facets, it has been extremely rewarding to see them being used on flagship NASA missions, multiagent robotics, constellations, and for planetary and lunar landing.
+
+I received my Ph.D. from USC in 1996, was a member of the Guidance, Navigation, and Analysis group at 
 <a href="https://www.jpl.nasa.gov/">Jet Propulsion Laboratory</a>
  from 1996-2000 and then an Assistant Professor of Aerospace Engineering and Mechanics at the University of Minnesota from 2000-2002. My research group is the Robotics, Aerospace, and Information Networks 
 (<a href="http://depts.washington.edu/uwrainlab/">RAIN</a>) 
-Laboratory; I am the Executive Director of the Joint Center for Aerospace Technology Innovation (<a href="https://jcati.org/">JCATI</a>) and a member of the 
-<a href="https://washacad.org/new-members-elected-to-washington-state-academy-of-sciences/">WA State Academy of Sciences</a>. My research interests are distributed and networked aerospace and
-robotic systems, optimization, autonomy, data-driven/model-based decision making, control theory and learning.
+Laboratory; I am the Executive Director of the Joint Center for Aerospace Technology Innovation (<a href="https://jcati.org/">JCATI</a>), Fellow of IEEE, Fellow of AIAA, and a member of the 
+<a href="https://washacad.org/new-members-elected-to-washington-state-academy-of-sciences/">WA State Academy of Sciences</a>. 
 
 See extended version of "about" in [<span style="color: orange;"> about+</span>](https://mehran-mesbahi.github.io/about+/)
 
