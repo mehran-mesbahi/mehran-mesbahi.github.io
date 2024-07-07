@@ -17,7 +17,7 @@ news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
-I am a Professor of Aeronautics & Astronautics and an Adjunct Professor of Mathematics and Electrical & Computer Engineering at the University of Washington. My research is broadly in the area of decision-making, control, optimization, networks, and learning, with applications to autonomous
+I am a Professor of Aeronautics & Astronautics and an Adjunct Professor of Mathematics and Electrical & Computer Engineering at the University of Washington. My research is broadly in the areas of decision-making, control, optimization, networks, and learning, with applications to autonomous
 aerospace and robotic systems. Over the years, I have worked on areas such
 as policy optimization, distributed estimation and filtering, network control, formation flight,
 synchronization and distributed task allocation, data-driven control, 
