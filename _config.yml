@@ -91,22 +91,22 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-# blog_name: random and semi-random ideas # blog_name will be displayed in your blog page
-# blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
-# blog_description: ... on research, education, and academic life (upcoming)
-# permalink: /blog/:year/:title/
+blog_name: blog # blog_name will be displayed in your blog page
+blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
+blog_description: ... on research, education, and life 
+permalink: /blog/:year/:title/
 
-# # Pagination
-# pagination:
-#   enabled: false
+# Pagination
+pagination:
+  enabled: true 
 
-# # Comments
-# disqus_shortname: al-folio # put your disqus shortname
-# # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+# Comments
+disqus_shortname: al-folio # put your disqus shortname
+# https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
-# # External sources.
-# # If you have blog posts published on medium.com or other exteranl sources,
-# # you can display them in your blog by adding a link to the RSS feed.
+# External sources.
+# If you have blog posts published on medium.com or other exteranl sources,
+# you can display them in your blog by adding a link to the RSS feed.
 # external_sources:
 #   - name: medium.com
 #     rss_url: https://medium.com/@al-folio/feed
@@ -125,8 +125,13 @@ collections:
     output: true
     permalink: /projects/:path/
 
-news_scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-news_limit: 5 # leave blank to include all the news in the `_news` folder
+# news_scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+# news_limit: 5 # leave blank to include all the news in the `_news` folder
+
+latest_posts:
+  enabled: true
+  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  limit: # leave blank to include all the blog posts
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
