@@ -31,7 +31,7 @@ and introduction to rendezvous and docking,  <span style="color: orange;"> week 
 theory, <span style="color: orange;"> week 6)</span> attitude estimation, <span style="color: orange;"> week 7)</span> attitude control, <span style="color: orange;"> week 8)</span> restricted three body problem,
 <span style="color: orange;"> week 9)</span> GPS and constellations, and <span style="color: orange;"> week 10)</span> group presentations. It will be fun!
 
-Here are the <a href="{{ site.baseurl }}/assets/pdf/AA528-W2025-Lectures/mehran-notes-528-W2024-introductory.pdf" target="_blank">introductory remarks</a> on the course notes.
+Here are the <a href="{{ site.baseurl }}/assets/pdf/AA528-W2025-Lectures/mehran-notes-528-W2025-introductory.pdf" target="_blank">introductory remarks</a> on the course notes.
 
 <p><b>Class Time:</b> (Wednesdays and Fridays) 10:00 am - 11:20 am</p>
 
