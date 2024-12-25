@@ -16,7 +16,7 @@ AA447: Control in Aerospace Systems
 
 AA310: Orbital and Spaceflight Mechanics
 
-AA528: Spacecraft Dynamics and Control
+AA528: Spacecraft Dynamics and Control; [<span style="color: orange;"> Winter 2025</span>](/528-course/)
 
 AA/EE/ME 548: Linear Multivariable Control
 
