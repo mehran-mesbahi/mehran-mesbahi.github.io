@@ -4,6 +4,8 @@ date: 2024-06-10
 inline: true
 ---
 
+- December 2024: Spencer's wins the 2024 CDC Best Student Paper Award!<br /><br />
+
 - June 2024: Spencer's paper on quotient geometry of policy optimization for LQG is accepted for both 2024 CDC and L-CSS. Congrats!<br /><br />
 
 - May 2024: Aditya passed his Ph.D. general exam. Congrats!<br /><br />

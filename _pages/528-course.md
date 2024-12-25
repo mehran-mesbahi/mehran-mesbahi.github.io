@@ -31,6 +31,9 @@ and introduction to rendezvous and docking,  <span style="color: orange;"> week 
 theory, <span style="color: orange;"> week 6)</span> attitude estimation, <span style="color: orange;"> week 7)</span> attitude control, <span style="color: orange;"> week 8)</span> restricted three body problem,
 <span style="color: orange;"> week 9)</span> GPS and constellations, and <span style="color: orange;"> week 10)</span> group presentations. It will be fun!
 
+
+Here is the link to the introductory remarks on the course notes.
+
 <p><b>Class Time:</b> (Wednesdays and Fridays) 10:00 am - 11:20 am</p>
 
 <p><b>Class Room:</b> Guggenheim Hall 204</p>
@@ -207,125 +210,33 @@ table, th, td {
             <th></th>
             <th>Project reports due on March 17 at 11:59pm</th>
         </tr>
+    </tbody>
+</table>
 
+<br>
 
+<br>
 
+During the course of the quarter, I will include some papers that you can consider to dive into for your project. However, if there are other papers that you like to consider, please coordinate with me ahead of time (at least 3-4 weeks before the end of the quarter).
 
-{% comment %}        
+<br>
+<br>
+<table style="width:100%">
+    <thead>
         <tr>
-            <th>Apr 4th</th>
-            <th>Laplacian, its spectrum and connectivity</th>
-            <th>Chp 2 [Mesbahi2010Graph], <a href="{{ site.baseurl }}/assets/pdf/teach_network/GRAPHS_MAR30_annotated.pdf" target="_blank">Algebraic Graph Theory Slides (annotated)</a></th>
-            <th>Linear Algebra: same</th>
-            <th><a href="{{ site.baseurl }}/assets/pdf/teach_network/DFT.pdf" target="_blank"> circulant matrices</a></th> 
+            <th colspan="6"> <p style="font-size:22pt"> <span style="color: orange;"> Some suggested Papers for the Project</span> </p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th><span style="color: orange;"> Related to Lecture</span></th>
+            <th><span style="color: orange;"> Paper</span></th>
+            <th><span style="color: orange;"> Student assigned</span></th>
         </tr>
         <tr>
-            <th>Apr 6th</th>
-            <th>Agreemment protocol (undirected graph)</th>
-            <th>Chp 2 and 3 [Mesbahi2010Graph], <a href="{{ site.baseurl }}/assets/pdf/teach_network/Agreement_Protocol1.pdf" target="_blank">Notes (AP)</a></th>
-            <th> Linear systems: Basic linear dynamical systems, their solution, stability and convergence properties</th>
-            <th></th>
+            <th>lecture x</th>
+            <th>suggested paper</th>
+            <th>initials</th>
         </tr>
-        <tr>
-            <th>Apr 11th</th>
-            <th>Agreemment protocol (directed graph + discrete time)</th>
-            <th>Chp 3 [Mesbahi2010Graph], <a href="{{ site.baseurl }}/assets/pdf/teach_network/Agreement_Protocol2.pdf" target="_blank">Notes (directed AP)</a></th>
-            <th>Linear systems: same; Linear algebra [Horn2013Matrix]: non-negative matrices and their properties</th>
-            <th></th>
-        </tr>
-        <tr>
-            <th>Apr 13th</th>
-            <th>Agreemment protocol (directed graph + discrete time)</th>
-            <th>Cont. Chp 3 [Mesbahi2010Graph], <a href="{{ site.baseurl }}/assets/pdf/teach_network/Agreement_Protocol3.pdf" target="_blank">Notes (directed AP-cont.)</a></th>
-            <th>Linear systems: same; Linear algebra [Horn2013Matrix]: non-negative matrices and their properties,  Perron–Frobenius theorem</th>
-            <th></th>
-        </tr>
-        <tr>
-            <th>Apr 18th</th>
-            <th>Factorization Lemma</th>
-            <th>Cont. Chp 3 [Mesbahi2010Graph], <a href="{{ site.baseurl }}/assets/pdf/teach_network/Factorization_Lemma.pdf" target="_blank">Notes (Factorization Lemma)</a></th>
-            <th>Linear systems: same; Linear algebra [Horn2013Matrix]: Kronecker product of matrices</th>
-            <th></th>
-        </tr>
-        <tr>
-            <th>Apr 20th</th>
-            <th>Varying graph</th>
-            <th>Chp 4 [Mesbahi2010Graph] <a href="{{ site.baseurl }}/assets/pdf/teach_network/Lyapunov_methods.pdf" target="_blank">Notes (Lyapunov methods)</a></th>
-            <th>Linear systems: same; Linear algebra [Horn2013Matrix]: Perron–Frobenius theorem, [Mesbahi2010Graph, Appendix]: Lyapunov stability, LaSalle's invariance principle</th>
-            <th></th>
-        </tr>
-        <tr>
-            <th>Apr 25th</th>
-            <th>Varying graph (cont.)+ Edge consensus</th>
-            <th>Chp 4 [Mesbahi2010Graph] <a href="{{ site.baseurl }}/assets/pdf/teach_network/Edge_consensus.pdf" target="_blank">Notes (Lyapunov methods cont.+ Edge consensus)</a> </th>
-            <th>Linear systems, Linear algebra, [Mesbahi2010Graph, Appendix]: LaSalle's invariance principle for switched linear systems</th>
-            <th><a href="{{ site.baseurl }}/assets/pdf/teach_network/BLOCKMATRIX.pdf" target="_blank">Block Matrix Multiplication</a>, and <a href="{{ site.baseurl }}/assets/pdf/teach_network/DIAGONAL.pdf" target="_blank">Eigenvalue-Eigenvector</a></th>
-        </tr>
-        <tr>
-            <th>Apr 27th</th>
-            <th>discretization and generalization of A.P.</th>
-            <th>Chp 4 [Mesbahi2010Graph] <a href="{{ site.baseurl }}/assets/pdf/teach_network/discretization.pdf" target="_blank">Notes (discretization vs discrete sampling)</a></th>
-            <th>Linear systems: same; Linear algebra [Horn2013Matrix]: Perron–Frobenius theorem, Metzler matrices</th>
-            <th><a href="https://ieeexplore.ieee.org/abstract/document/1429377" target="_blank"> Moreau'04</a>, and <a href="https://ieeexplore.ieee.org/document/1393134" target="_blank"> Moreau'05</a>; <a href="https://ieeexplore.ieee.org/document/1431045" target="_blank"> time-varying graph</a></th>
-        </tr>
-        <tr>
-            <th>May 2nd</th>
-            <th>Discrete A.P. and distributed estimation</th>
-            <th>Chp 8 [Mesbahi2010Graph] <a href="{{ site.baseurl }}/assets/pdf/teach_network/distributed_estimation.pdf" target="_blank">Notes</a> </th>
-            <th>Discrete linear systems: Linear algebra [Horn2013Matrix]: Perron–Frobenius theorem, irreducible and primitive matrices</th>
-            <th><a href="https://web.stanford.edu/~boyd/papers/pdf/avg_metropolis.pdf" target="_blank"> Metropolis weights</a>; <a href="https://projecteuclid.org/journals/annals-of-statistics/volume-21/issue-1/On-Reaching-a-Consensus-Using-Degroots-Iterative-Pooling/10.1214/aos/1176349032.full" target="_blank"> Consensus on opinions</a> </th>
-        </tr>
-        <tr>
-            <th>May 4th</th>
-            <th>Distributed Kalman Filtering</th>
-            <th>Chp 8 [Mesbahi2010Graph] <a href="{{ site.baseurl }}/assets/pdf/teach_network/Kalman_filter.pdf" target="_blank">Notes</a> and <a href="{{ site.baseurl }}/assets/pdf/teach_network/KALMAN.pdf" target="_blank">Slides</a> </th>
-            <th>Discrete linear systems; Linear algebra [Horn2013Matrix]; Kalman Filter</th>
-            <th><a href="{{ site.baseurl }}/assets/pdf/teach_network/ARRAYS.pdf" target="_blank">Python slides (Numpy array)</a></th>
-        </tr>
-        <tr>
-            <th>May 9th</th>
-            <th>Kalman Filtering (cont.)+ distributed optimization</th>
-            <th>Chp 8 [Mesbahi2010Graph] <a href="{{ site.baseurl }}/assets/pdf/teach_network/Kalman_filter2.pdf" target="_blank">Kalman Filter2</a>  <a href="{{ site.baseurl }}/assets/pdf/teach_network/KALMAN.pdf" target="_blank"></a> </th>
-            <th>Discrete linear systems; Linear algebra [Horn2013Matrix]; Kalman Filter</th>
-            <th><a href="https://stanford.edu/~jduchi/projects/DuchiAgWa10_nips.pdf" target="_blank">Distributed Dual Averaging</a> </th>
-        </tr>
-        <tr>
-            <th>May 11th</th>
-            <th>distributed optimization (Cont.)</th>
-            <th><a href="{{ site.baseurl }}/assets/pdf/teach_network/notesMay11.pdf" target="_blank">notes</a> </th>
-            <th>Discrete linear systems; Linear algebra [Horn2013Matrix]; Basic convex analysis</th>
-            <th><a href="https://stanford.edu/~jduchi/projects/DuchiAgWa10_nips.pdf" target="_blank">Distributed Dual Averaging</a> </th>
-        </tr>
-        <tr>
-            <th>May 16th</th>
-            <th>distributed optimization (Cont.) + Formation Control</th>
-            <th>Chp 6 [Mesbahi2010Graph], <a href="{{ site.baseurl }}/assets/pdf/teach_network/notesMay16.pdf" target="_blank">notes</a> </th>
-            <th>Discrete linear systems; Linear algebra [Horn2013Matrix]; Basic convex analysis</th>
-            <th> </th>
-        </tr>
-        <tr>
-            <th>May 18th</th>
-            <th>Formation Control (Cont.)</th>
-            <th>Chp 6 [Mesbahi2010Graph], <a href="{{ site.baseurl }}/assets/pdf/teach_network/notesMay18.pdf" target="_blank">notes</a> </th>
-            <th>Discrete linear systems; Linear algebra [Horn2013Matrix]; </th>
-            <th> </th>
-        </tr>
-        <tr>
-            <th>May 23th</th>
-            <th>Controllability of Networks</th>
-            <th>Chp 10 [Mesbahi2010Graph], <a href="{{ site.baseurl }}/assets/pdf/teach_network/notesMay23.pdf" target="_blank">notes</a> </th>
-            <th>Controllability and Observability of linear systems; PBH test</th>
-            <th> <a href="http://control.asu.edu/Classes/MAE598/598Lecture05.pdf" target="_blank">slides</a> of LMIs for Controllability by M. Peet</th>
-        </tr>
-        <!--
-        <tr>
-            <th>Apr 18th</th>
-            <th>(tentative!) Agreemment protocol (random graph) </th>
-            <th>Chp 5 [Mesbahi2010Graph]</th>
-            <th> Probability: Basic concepts such as Event, probability, and expectation. Also, convergence of sequences in probability. </th>
-            <th></th>
-        </tr>
-        -->
-{% endcomment %}
     </tbody>
 </table>
