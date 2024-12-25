@@ -217,7 +217,7 @@ table, th, td {
 
 <br>
 
-During the course of the quarter, I will include some papers that you can consider to dive into for your project. However, if there are other papers that you like to consider, please coordinate with me ahead of time (at least 3-4 weeks before the end of the quarter).
+During the course of the quarter, I will include some papers below that you can consider to dive into for your project. However, if there are other papers that you like to consider, please coordinate with me ahead of time (at least 3-4 weeks before the end of the quarter).
 
 <br>
 <br>
