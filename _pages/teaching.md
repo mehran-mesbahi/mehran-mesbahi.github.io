@@ -5,10 +5,6 @@ title: teaching
 description: Courses and notes/lectures
 nav: true
 ---
-<strong style="color: red;">Current Quarter (Winter 2022) </strong>
-
-AA/EE/ME 598: Mathematical Foundations of Systems Theory: This course is the ``old'' AA/EE/ME 510 dealing with developing vector space machinery for systems analysis and optimization. In the Winter quarter of 2022, we will first re-examine finite dimensional vector spaces (linear algebra) and then move towards viewing system design issues thru the lens of the machinery that we develop.
-
 
 <strong style="color: red;">Courses taught at UW </strong>
 
