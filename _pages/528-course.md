@@ -194,7 +194,7 @@ table, th, td {
         </tr>
            <tr>
             <th><span style="color: orange;"> March 7</span></th>
-            <th> More on constellations </th>
+            <th> Space networks </th>
             <th></th>
             <th>HW#9 assigned</th>
         </tr>
