@@ -1,115 +1,2084 @@
----
----
 
-@string{aps = {American Physical Society,}}
+<!---2024--->
 
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@misc{talebi2024policy,
+bibtex_show={true},
+      title={Policy Optimization in Control: Geometry and Algorithmic Implications}, 
+      author={Shahriar Talebi and Yang Zheng and Spencer Kraisler and Na Li and Mehran Mesbahi},
+      year={2024},
+      eprint={2406.04243},
+      archivePrefix={arXiv},
+      primaryClass={math.OC},
+      arxiv = {2406.04243},
 }
 
-@book{einstein1956investigations,
+@misc{kraisler2024outputfeedback,
+bibtex_show={true},
+      title={Output-feedback Synthesis Orbit Geometry: Quotient Manifolds and LQG Direct Policy Optimization}, 
+      author={Spencer Kraisler and Mehran Mesbahi},
+      year={2024},
+      eprint={2403.17157},
+      archivePrefix={arXiv},
+      primaryClass={math.OC},
+      arxiv = {2403.17157}
+}
+
+
+
+@misc{kim2024sixdegreeoffreedom,
+bibtex_show={true},
+      title={Six-Degree-of-Freedom Aircraft Landing Trajectory Planning with Runway Alignment}, 
+      author={Taewan Kim and Abhinav G. Kamath and Niyousha Rahimi and Jasper Corleis and Behçet Açıkmeşe and Mehran Mesbahi},
+      year={2024},
+      eprint={2405.16680},
+      archivePrefix={arXiv},
+      primaryClass={math.OC},
+      arxiv = {2405.16680}
+}
+
+
+@misc{pozzan2023activesensing,
+bibtex_show={true},
+      title={An Active-Sensing Approach for Bearing-based Target Localization}, 
+      author={Beniamino Pozzan and Giulia Michieletto and Mehran Mesbahi and Angelo Cenedese},
+      year={2023},
+      eprint={2311.10221},
+      archivePrefix={arXiv},
+      primaryClass={eess.SY}
+}
+
+
+@inbook{doi:10.2514/6.2024-2416,
+bibtex_show={true},
+author = {Michael J. Park and Dylan Markovic and Mehran Mesbahi and Sean Phillips},
+title = {Extended Abstract for Collaborative Mission Autonomy for Resilient Highly Integrated Networked Operations (CMA-RHINO)},
+booktitle = {AIAA SCITECH 2024 Forum},
+chapter = {},
+pages = {},
+doi = {10.2514/6.2024-2416},
+URL = {https://arc.aiaa.org/doi/abs/10.2514/6.2024-2416},
+eprint = {https://arc.aiaa.org/doi/pdf/10.2514/6.2024-2416},
+    abstract = { The standard process for determining and disseminating tasking for surveillance satellite systems can be a slow and lengthy procedure, especially when faced with occasionally intermittent connections between ground-to-satellite and intersatellite communications. For specific applications with dynamic real-time surveillance requirements, such as defense missions with unpredictable adversaries, real-time satellite tasking would be a critical enabler. The purpose of SSCI’s Collaborative Mission Autonomy for Resilient Highly Integrated Network Operations (CMA-RHINO) effort is to study algorithms that can manage and adjust the satellite network autonomously in real-time, with resilience to disruptions that may occur in real-world scenarios. CMA-RHINO analyzes a selected sample of heuristic and auction-based algorithms; posits a decentralized heuristic-supported algorithm to improve satellite network tasking and reduce the need for ground control intervention; and implements this approach in simulation and benchtop hardware, with promising results. }
+}
+
+@inbook{doi:10.2514/6.2024-0090,
+bibtex_show={true},
+author = {Niyousha Rahimi and Mehran Mesbahi},
+title = {Data-Guided Regulator for Adaptive Nonlinear Control},
+booktitle = {AIAA SCITECH 2024 Forum},
+chapter = {},
+pages = {},
+doi = {10.2514/6.2024-0090},
+URL = {https://arc.aiaa.org/doi/abs/10.2514/6.2024-0090},
+eprint = {https://arc.aiaa.org/doi/pdf/10.2514/6.2024-0090},
+    abstract = { This paper addresses the problem of designing a data-driven feedback controller for complex nonlinear dynamical systems in the presence of time-varying disturbances with unknown dynamics. Such disturbances are modeled as the “unknown” part of the system dynamics. The goal is to achieve finite-time regulation of system states through direct policy updates while also generating informative data that can subsequently be used for data-driven stabilization or system identification. First, we expand upon the notion of “regularizability” and characterize this system characteristic for a linear time-varying representation of the nonlinear system with locally-bounded higher-order terms. “Rapid-regularizability” then gauges the extent by which a system can be regulated in finite time, in contrast to its asymptotic behavior. We then propose the Data-Guided Regulation for Adaptive Nonlinear Control (DG-RAN) algorithm, an online iterative synthesis procedure that utilizes discrete time-series data from a single trajectory for regulating system states and identifying disturbance dynamics. The effectiveness of our approach is demonstrated on a 6-DOF power descent guidance problem in the presence of adverse environmental disturbances. },
+    selected      = true
+}
+
+
+@inbook{doi:10.2514/6.2024-0947,
+bibtex_show={true},
+author = {Aditya Deole and Beniamino Pozzan and Mehran Mesbahi},
+title = {MPC-based Estimation-Aware Trajectory Generation for Uncontrolled Satellite Pose Tracking},
+booktitle = {AIAA SCITECH 2024 Forum},
+chapter = {},
+pages = {},
+doi = {10.2514/6.2024-0947},
+URL = {https://arc.aiaa.org/doi/abs/10.2514/6.2024-0947},
+eprint = {https://arc.aiaa.org/doi/pdf/10.2514/6.2024-0947},
+    abstract = { We show that observability based measures can effectively be used for evaluating trajectories that facilitate improved state estimation under uncertain measurements in the space environment. In this direction, we examine the problem of tracking an uncontrolled/uncooperative Target satellite by an Ego spacecraft using output measurements from a Machine Learning (ML) based pose estimator. We then represent state dependent uncertainties to model the output measured from the nonlinear perception map. Using an estimate of the current satellite state, we then proceed to propose a Model Predictive Controller (MPC) based design for generating desirable and informative trajectories for the Ego spacecraft. The MPC optimizes a trajectory that performs a tracking task while improving state estimation for auxiliary purposes. We use observability measures on the perception map to justify that the selected trajectory improves Target tracking. },
+    selected      = true
+}
+
+@ARTICLE{10224332,
   bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
-}
+  author={Talebi, Shahriar and Mesbahi, Mehran},
+  journal={IEEE Transactions on Automatic Control}, 
+  title={Policy Optimization Over Submanifolds for Linearly Constrained Feedback Synthesis}, 
+  year={2024},
+  volume={69},
+  number={5},
+  pages={3024-3039},
+  keywords={Geometry;Costs;Manifolds;Cost function;Convergence;Behavioral sciences;Symmetric matrices;Optimization over submanifolds;output-feedback linear quadratic regulator (LQR) control;structured LQR (SLQR) control;constrained stabilizing controllers},
+  doi={10.1109/TAC.2023.3306384},
+  selected      = true
+  }
 
-@article{einstein1950meaning,
-  abbr={AJP},
+@ARTICLE{10216335,
   bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
-}
+  author={Jing, Gangshan and Wan, Changhuang and Dai, Ran and Mesbahi, Mehran},
+  journal={IEEE Transactions on Network Science and Engineering}, 
+  title={Design and Transformation Control of Triangulated Origami Tessellation: A Network Perspective}, 
+  year={2024},
+  volume={11},
+  number={1},
+  pages={635-647},
+  keywords={Shape;Rigidity;Three-dimensional displays;Surface treatment;Process control;Optimization;Kinematics;Network design;optimization;origami tessellation;rigidity theory},
+  doi={10.1109/TNSE.2023.3303260}}
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
-}
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
+@ARTICLE{10436325,
   bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
+  author={Alemzadeh, Siavash and Talebi, Shahriar and Mesbahi, Mehran},
+  journal={IEEE Transactions on Automatic Control}, 
+  title={Data-Driven Structured Policy Iteration for Homogeneous Distributed Systems}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-15},
+  keywords={Costs;Artificial neural networks;Large-scale systems;Distributed feedback devices;Decentralized control;Symmetric matrices;Scalability;Structured control;Patterned monoids;Data-driven Policy Iteration;Networked control systems},
+  doi={10.1109/TAC.2024.3366038},
+
+  selected      = true
+  }
+
+@ARTICLE{10103930,
+  bibtex_show={true},
+  author={Wang, Mengyuan and Mesbahi, Mehran},
+  journal={IEEE Transactions on Transportation Electrification}, 
+  title={To Charge In-Flight or Not: A Comparison of Two Parallel Hybrid Electric Aircraft Configurations via Optimal Control}, 
+  year={2024},
+  volume={10},
+  number={1},
+  pages={475-484},
+  keywords={Aircraft propulsion;Aircraft;Batteries;Fuels;Engines;Atmospheric modeling;Resource management;Hybrid architectures;hybrid electric aircraft (HEA);optimal control;sensitivity analysis},
+  doi={10.1109/TTE.2023.3268148}}
+
+<!---2023--->
+
+
+@article{doi:10.1146/annurev-control-042920-020021,
+bibtex_show={true},
+author = {Hu, Bin and Zhang, Kaiqing and Li, Na and Mesbahi, Mehran and Fazel, Maryam and Ba\c{s}ar, Tamer},
+title = {Toward a Theoretical Foundation of Policy Optimization for Learning Control Policies},
+journal = {Annual Review of Control, Robotics, and Autonomous Systems},
+volume = {6},
+number = {1},
+pages = {123-158},
+year = {2023},
+doi = {10.1146/annurev-control-042920-020021},
+URL = {https://doi.org/10.1146/annurev-control-042920-020021},
+eprint = {https://doi.org/10.1146/annurev-control-042920-020021},
+selected      = true
 }
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@inproceedings{NEURIPS2023_dbe81858,
+ bibtex_show={true},
+ arxiv = {2305.17836},
+ author = {Talebi, Shahriar and Taghvaei, Amirhossein and Mesbahi, Mehran},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {A. Oh and T. Neumann and A. Globerson and K. Saenko and M. Hardt and S. Levine},
+ pages = {69546--69585},
+ publisher = {Curran Associates, Inc.},
+ title = {Data-driven Optimal Filtering for Linear Systems with Unknown Noise Covariances},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2023/file/dbe8185809cb7032ec7ec6e365e3ed3b-Paper-Conference.pdf},
+ volume = {36},
+ year = {2023},
+ selected      = true
 }
+
+@misc{alemzadeh2023datadriven,
+    bibtex_show={true},
+      arxiv = {2103.11572},
+      title={Data-Driven Structured Policy Iteration for Homogeneous Distributed Systems}, 
+      author={Siavash Alemzadeh and Shahriar Talebi and Mehran Mesbahi},
+      year={2023},
+      eprint={2103.11572},
+      archivePrefix={arXiv},
+      primaryClass={eess.SY},
+      selected      = true
+}
+
+
+ @ARTICLE{abhi-scitech2023,
+    bibtex_show={true},
+   title     = "A Customized Real-Time First-Order Solver for Onboard Dual Quaternion-based Powered-Descent Guidance",
+   author    = "Kamath, Abhinav and Elango, Purnanand and Mceowen, Skye and Yu, Yue and Carson, John and Mesbahi, Mehran and Acikmese, Behcet",
+   journal   = "AIAA SciTech",
+   year      =  2023
+
+ }
+
+  @ARTICLE{saptarshi-scitech2023,
+    bibtex_show={true},
+   title     = "Vision-based Distributed Pose Estimation using a Spacecraft Constellation",
+   author    = "Bandyopadhyay, Saptarshi and Gehlot, Vinod and Seto, William and Rahmani, Amir and Kraisler, Spencer and Talebi, Shahriar and Deole, Aditya and Rahimi, Niyousha and Mesbahi, Mehran and Becktor, Jonathan",
+   journal   = "AIAA SciTech",
+   year      =  2023
+ }
+
+  @ARTICLE{aditay-scitech2023,
+    bibtex_show={true},
+   title     = "Multi-Agent Passivity-based Control for Perception-based Guidance",
+   author    = "Deole, Aditya and Talebi, Shahriar and Kraisler, Spencer and Rahimi, Niyousha and Mesbahi, Mehran and Bandyopadhyay, Saptarshi and Gehlot, Vinod and Seto, William and Rahmani, Amir and Becktor, Jonathan",
+   journal   = "AIAA SciTech",
+   year      =  2023
+ }
+
+
+<!---2022--->
+
+ @ARTICLE{Pan2022-zq,
+   bibtex_show={true},
+   arxiv = {arXiv:2209.10786},
+   title         = "Vector-valued {Privacy-Preserving} Average Consensus",
+   author        = "Pan, Lulu and Shao, Haibin and Lu, Yang and Mesbahi, Mehran
+                    and Li, Dewei and Xi, Yugeng",
+   month         =  sep,
+   year          =  2022,
+   journal =       "arXiv",
+   primaryClass  = "eess.SY",
+   eprint        = "2209.10786",
+   selected      = true
+ }
+ 
+ @ARTICLE{Hu2022-fy,
+  bibtex_show={true},
+  arxiv = {arXiv:2210.04810},
+   title         = "Towards a Theoretical Foundation of Policy Optimization for
+                    Learning Control Policies",
+   author        = "Hu, Bin and Zhang, Kaiqing and Li, Na and Mesbahi, Mehran
+                    and Fazel, Maryam and Ba{\c s}ar, Tamer",
+   month         =  oct,
+   year          =  2022,
+   journal       = "arXiv",
+   primaryClass  = "math.OC",
+   eprint        = "2210.04810",
+   selected      = false
+ }
+ 
+
+@article{wang2022,
+  bibtex_show={true},
+  arxiv = {arXiv:2208.08969v1},
+  author = {Wang, Mengyuan and Mesbahi, Mehran},
+  title = {To charge in-flight or not: an inquiry into parallel-hybrid electric aircraft configurations via optimal control},
+  journal = {arXiv},
+  year = {2022},
+  selected=false
+  }
+
+@ARTICLE{Talebi_cdc2022,
+
+   bibtex_show={true},
+   title  = "Riemannian Constrained Policy Optimization Via Geometric Stability Certificates",
+   author = "Talebi, Shahriar and Mesbahi, Mehran",
+   journal = "IEEE Conference on Decision and Control",
+   year = 2022,
+   selected={true}
+ }
+
+
+  @ARTICLE{Ting2022-aj,
+    bibtex_show={true},
+   title     = "Wind Tunnel Study of Preview {H2} and {H$\infty$} Control for
+                Gust Load Alleviation for Flexible Aircraft",
+   author    = "Ting, K. Y. and Mesbahi, M. and Livne, E. and Morgansen, K.",
+   journal   = "AIAA SCITECH",
+   publisher = "arc.aiaa.org",
+   year      =  2022
+ }
+ 
+ @INPROCEEDINGS{Becktor2022-wc,
+   bibtex_show={true},
+   title       = "Robust Vision-based Multi-spacecraft Guidance Navigation and
+                  Control using {CNN-based} Pose Estimation",
+   booktitle   = "{IEEE} Aerospace Conference",
+   author      = "Becktor, J. and Seto, W. and Deole, A. and
+                  Bandyopadhyay, S. and Rahimi, N. and Talebi,
+                  S. and Mesbahi, M. and Rahmani, A.",
+   institution = "IEEE",
+   year        =  2022
+ }
+ 
+ @ARTICLE{Rahimi2022-hy,
+   bibtex_show={true},
+   title     = "Robust Controller Synthesis for Vision-based Spacecraft Guidance
+                and Control",
+   author    = "Rahimi, Newsha. and Talebi, Shahriar and Deole, Aditya and Mesbahi, Mehran and Bandyopadhyay, Saptarshi and Rahmani, Amir",
+   journal   = "AIAA SCITECH",
+   publisher = "AIAA",
+   year      =  2022,
+   selected={true}
+ }
+ 
+ @ARTICLE{Elango2022-kd,
+   bibtex_show={true},
+   title     = "A Customized {First-Order} Solver for {Real-Time}
+                {Powered-Descent} Guidance",
+   author    = "Elango, Purnanand and Kamath, Abhinav and Yu, Yue and Acikmese, Behcet and Mesbahi, Mehran. and Carson, John M.",
+   journal   = "AIAA SCITECH",
+   publisher = "arc.aiaa.org",
+   year      =  2022,
+   selected  = true
+ }
+ 
+ @ARTICLE{Yu2022-cx,
+      bibtex_show={true},
+   title         = "Vertiport Selection in Hybrid {Air-Ground} Transportation
+                    Networks via Mathematical Programs with Equilibrium
+                    Constraints",
+   author        = "Yu, Y. and Wang, M. and Mesbahi, M. and Topcu,
+                    U.",
+   month         =  mar,
+   year          =  2022,
+   archivePrefix = "arXiv",
+   primaryClass  = "math.OC",
+   eprint        = "2203.05702",
+   arxiv= "arXiv:2203.05702"
+ }
+ 
+ @ARTICLE{Pan2022-eb,
+ 
+   bibtex_show={true},
+   title     = "Cluster consensus on matrix-weighted switching networks",
+   author    = "Pan, L. and Shao, H. and Mesbahi, M. and Li, D. and Xi, Y.",
+   journal   = "Automatica",
+   publisher = "Elsevier",
+   year      =  2022
+ }
+ 
+
+  @ARTICLE{Talebi_undated-jq,
+
+   bibtex_show={true},
+   title  = "Policy Optimization over Submanifolds with Applications to
+             Constrained Feedback Synthesis",
+   author = "Talebi, S. and Mesbahi, M.",
+   journal = "IEEE Transactions on Automatic Control",
+   year = 2022,
+   arxiv= "arXiv:2201.11157"
+ }
+
+
+@ARTICLE{WCM2022,
+
+  author={van Waarde, H. J. and Camlibel, M. K. and Mesbahi, M.},
+  bibtex_show={true},
+  journal={IEEE Transactions on Automatic Control}, 
+  title={From Noisy Data to Feedback Controllers: Nonconservative Design via a Matrix S-Lemma}, 
+  year={2022},
+  volume={67},
+  number={1},
+  pages={162-175},
+  }
+
+@ARTICLE{WangMesbahi2022,
+  author={Wang, M. and Mesbahi, M. and Kolluri, S. and Shah, K. A. and Subramanian, V. R.},
+   bibtex_show={true},
+  journal={IEEE Transactions on Aerospace and Electronic Systems}, 
+  title={Energy management for an All-Electric Aircraft via Optimal Control}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-12},
+  doi={10.1109/TAES.2022.3196634}}
+
+ <!---2021--->
+@ARTICLE{De_Badyn2021-wb,
+
+   bibtex_show={true},
+   title         = "{Discrete-Time} {Linear-Quadratic} Regulation via Optimal
+                    Transport",
+   author        = "de Badyn, M. Hudoba and Miehling, E. and Janak, D.
+                    and A{\c c}{\i}kme{\c s}e, B. and Mesbahi, M.
+                    and Ba{\c s}ar, T. and Lygeros, J. and Smith, R. S.",
+   month         =  sep,
+   year          =  2021,
+   archivePrefix = "arXiv",
+   primaryClass  = "math.OC",
+   eprint        = "2109.02347",
+   journal       = "arXiv"}
+
+@INPROCEEDINGS{Reynolds2021-ww,
+ 
+  bibtex_show={true},
+  title   = "Funnel Synthesis for the {6-DOF} Powered Descent Guidance Problem",
+  author  = "Reynolds, T. and Malyuta, D. and Mesbahi, M. and
+              Acikmese, B. and Carson, J. M.",
+  booktitle = "AIAA Scitech Forum",
+   year    =  "2021"
+ }
+
+  @MISC{YTWTMA2021,
+
+  bibtex_show={true},
+  author="Yu, Y. and Talebi, S. and van Waarde, H. J. and Topcu, U. and Mesbahi, M. and Acikmese, B.",
+  journal={IEEE Conference on Decision and Control}, 
+  title="On Controllability and Persistency of Excitation in Data-Driven Control: Extensions of Willems Fundamental Lemma", 
+  year="2021",
+  pages="6485-6490"}
+
+  @ARTICLE{TARM:2021,
+
+  bibtex_show={true},
+  author={Talebi, S. and Alemzadeh, S. and Rahimi, N. and Mesbahi, M.},
+  journal={IEEE Transactions on Automatic Control}, 
+  title={On Regularizability and its Application to Online Control of Unstable LTI Systems}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TAC.2021.3131148}}
+
+
+@ARTICLE{9366828,
+ 
+  bibtex_show={true},
+  author={Pan, L. and Shao, H. and Mesbahi, M. and Xi, Y. and Li, D.},
+  journal={IEEE Transactions on Automatic Control}, 
+  title={Consensus on Matrix-Weighted Switching Networks}, 
+  year={2021},
+  volume={66},
+  number={12},
+  pages={5990-5996},
+  doi={10.1109/TAC.2021.3063115}}
+
+
+@ARTICLE{9031557,
+
+  bibtex_show={true},
+  author={Hudoba de Badyn, M.  and Mesbahi, M.},
+  journal={IEEE Transactions on Automatic Control}, 
+  title={H2 Performance of Series-Parallel Networks: A Compositional Perspective}, 
+  year={2021},
+  volume={66},
+  number={1},
+  pages={354-361},
+  doi={10.1109/TAC.2020.2979758}}
+
+
+@INPROCEEDINGS{9683331,
+
+  bibtex_show={true},
+  author={Talebi, S. and Alemzadeh, S. and Mesbahi, M.},
+  booktitle={IEEE Conference on Decision and Control}, 
+  title={Distributed Model-Free Policy Iteration for Networks of Homogeneous Systems}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={6970-6975},
+  doi={10.1109/CDC45484.2021.9683331}}
+
+ <!---2020--->
+  @ARTICLE{Vasisht2020-oe,
+    bibtex_show={true},
+   title     = "{Data-Guided} Aerial Tracking",
+   author    = "Vasisht, Soumya and Mesbahi, Mehran",
+   journal   = "J. Guid. Control Dyn.",
+   publisher = "American Institute of Aeronautics and Astronautics",
+   volume    =  43,
+   number    =  8,
+   pages     = "1540--1549",
+   month     =  aug,
+   year      =  2020
+ }
+
+
+ @ARTICLE{Reynolds2020-zp,
+   bibtex_show={true},
+   title     = "Optimal Planar Powered Descent with Independent Thrust and
+                Torque",
+   author    = "Reynolds, Taylor P and Mesbahi, Mehran",
+   journal   = "J. Guid. Control Dyn.",
+   publisher = "American Institute of Aeronautics and Astronautics",
+   volume    =  43,
+   number    =  7,
+   pages     = "1225--1231",
+   month     =  jul,
+   year      =  2020
+ }
+ 
+ @INPROCEEDINGS{Wang2020-du,
+   bibtex_show={true},
+   title     = "Energy Management for Electric Aircraft via Optimal Control:
+                Cruise Phase",
+   booktitle = "2020 {AIAA/IEEE} Electric Aircraft Technologies Symposium
+                ({EATS})",
+   author    = "Wang, M and Mesbahi, M",
+   publisher = "ieeexplore.ieee.org",
+   pages     = "1--15",
+   month     =  aug,
+   year      =  2020
+ }
+ 
+
+
+ @INPROCEEDINGS{Bu2020-jx,
+   bibtex_show={true},
+   title     = "{LQR} via First Order Flows",
+   booktitle = "2020 American Control Conference ({ACC})",
+   author    = "Bu, J and Mesbahi, A and Mesbahi, M",
+   publisher = "ieeexplore.ieee.org",
+   pages     = "4683--4688",
+   month     =  jul,
+   year      =  2020
+ }
+ 
+
+ @INPROCEEDINGS{Alemzadeh2020-zi,
+   bibtex_show={true},
+   title     = "Resource Allocation for Infrastructure Resilience using
+                Artificial Neural Networks",
+   booktitle = "International Conference on Tools with
+                Artificial Intelligence ({ICTAI})",
+   author    = "Alemzadeh, S. and Talebiyan, H. and Talebi, S. and
+                Due{\~n}as-Osorio, L. and Mesbahi, M.",
+   pages     = "617--624",
+   month     =  nov,
+   year      =  2020
+ }
+ 
+
+ @ARTICLE{Alemzadeh2020-ud,
+   bibtex_show={true},
+   title         = "Deep Learning-based Resource Allocation for Infrastructure
+                    Resilience",
+   author        = "Alemzadeh, Siavash and Talebiyan, Hesam and Talebi, Shahriar
+                    and Duenas-Osorio, Leonardo and Mesbahi, Mehran",
+   month         =  jul,
+   year          =  2020,
+   archivePrefix = "arXiv",
+   primaryClass  = "eess.SP",
+   eprint        = "2007.05880"
+ }
+
+
+ @ARTICLE{Reynolds2020-jd,
+
+   bibtex_show={true},
+   title     = "Dual {Quaternion-Based} Powered Descent Guidance with
+                {State-Triggered} Constraints",
+   author    = "Reynolds, T. P and Szmuk, M. and Malyuta, D. and
+                Mesbahi, M. and A{\c c}{\i}kme{\c s}e, B. and
+                Carson, J. M.",
+   journal   = "Journal of Guidance, Control, and Dynamics",
+   publisher = "American Institute of Aeronautics and Astronautics",
+   volume    =  43,
+   number    =  9,
+   pages     = "1584--1599",
+   month     =  sep,
+   year      =  2020
+ }
+
+@INPROCEEDINGS{Talebi2020-ty,
+   bibtex_show={true},
+   title     = "Online Regulation of Unstable Linear Systems from a Single
+                Trajectory",
+   booktitle = "2020 59th {IEEE} Conference on Decision and Control",
+   author    = "Talebi, S. and Alemzadeh, S. and Rahimi, N. and
+                Mesbahi, M.",
+   pages     = "4784--4789",
+   month     =  dec,
+   year      =  2020
+ }
+
+
+ @ARTICLE{Pan2020-fb,
+
+   bibtex_show={true},
+   title   = "On the Controllability of {Matrix-Weighted} Networks",
+   author  = "Pan, L. and Shao, H. and Mesbahi, M. and Xi, Y. and Li, D.",
+   journal = "IEEE Control Systems Letters",
+   volume  =  4,
+   number  =  3,
+   pages   = "572--577",
+   month   =  jul,
+   year    =  2020
+ }
+
+
+
+ @ARTICLE{Yu2020-xm,
+
+   bibtex_show={true},
+   title     = "Mass--spring--damper networks for distributed optimization in
+                non-Euclidean spaces",
+   author    = "Yu, Y. and A{\c c}ikmese, B. and Mesbahi, M.",
+   journal   = "Automatica",
+   publisher = "International Federation of Automatic Control",
+   number    =  112,
+   pages     = "52",
+   year      =  2020
+ }
+
+ @INCOLLECTION{Malyuta2020-ed,
+
+  bibtex_show={true},
+   title     = "Fast Trajectory Optimization via Successive Convexification for
+                Spacecraft Rendezvous with Integer Constraints",
+   booktitle = "{AIAA} Scitech",
+   author    = "Malyuta, D. and Reynolds, T. and Szmuk, M. and
+                Acikmese, B. and Mesbahi, M.",
+   publisher = "American Institute of Aeronautics and Astronautics",
+   series    = "AIAA SciTech Forum",
+   month     =  jan,
+   year      =  2020
+ }
+ 
+
+
+ @ARTICLE{De_Badyn2020-xk,
+  bibtex_show={true},
+  title         = "Graph-theoretic optimization for edge consensus",
+   author        = "{Hudoba de Badyn}, M. and Foight, D. R. and Calderone,
+                    D. and Mesbahi, M. and Smith, R. S.",
+   month         =  jun,
+   year          =  2020,
+   archivePrefix = "arXiv",
+   primaryClass  = "math.OC",
+   eprint        = "2006.16201"
+ }
+
+
+ @ARTICLE{Hudoba_de_Badyn2020-oq,
+   bibtex_show={true},
+   title     = "{H2} Performance of {Series-Parallel} Networks: A Compositional
+                Perspective",
+   author    = "Hudoba de Badyn, M and Mesbahi, M",
+   journal   = "IEEE Trans. Automat. Contr.",
+   publisher = "ieeexplore.ieee.org",
+   pages     = "1--1",
+   year      =  2020
+ }
+
+
+ @ARTICLE{Chapman2020-zk,
+   bibtex_show={true},
+   title     = "Online Adaptive Network Design for Disturbance Rejection",
+   author    = "Chapman, Airlie and Schoof, Eric and Mesbahi, Mehran",
+   journal   = "Principles of Cyber-Physical Systems: An Interdisciplinary
+                Approach",
+   publisher = "Cambridge University Press",
+   pages     = "127",
+   year      =  2020
+ }
+ 
+ @ARTICLE{Alemzadeh2020-nu,
+   bibtex_show={true},
+   title         = "Adaptive Traffic Control with Deep Reinforcement Learning:
+                    Towards State-of-the-art and Beyond",
+   author        = "Alemzadeh, Siavash and Moslemi, Ramin and Sharma, Ratnesh
+                    and Mesbahi, Mehran",
+   month         =  jul,
+   year          =  2020,
+   archivePrefix = "arXiv",
+   primaryClass  = "cs.LG",
+   eprint        = "2007.10960"
+ }
+ 
+ <!---2019--->
+@ARTICLE{Reynolds2019-if,
+  bibtex_show={true},
+   title         = "Dual Quaternion Based Powered Descent Guidance with
+                    {State-Triggered} Constraints",
+   author        = "Reynolds, Taylor P and Szmuk, Michael and Malyuta, Danylo
+                    and Mesbahi, Mehran and Acikmese, Behcet and Carson, III,
+                    John M",
+   month         =  apr,
+   year          =  2019,
+   archivePrefix = "arXiv",
+   primaryClass  = "math.OC",
+   eprint        = "1904.09248"
+ }
+ 
+  @ARTICLE{Bu2019-ni,
+    bibtex_show={true},
+   title         = "{LQR} through the Lens of First Order Methods: Discrete-time
+                    Case",
+   author        = "Bu, Jingjing and Mesbahi, Afshin and Fazel, Maryam and
+                    Mesbahi, Mehran",
+   month         =  jul,
+   year          =  2019,
+   archivePrefix = "arXiv",
+   primaryClass  = "eess.SY",
+   eprint        = "1907.08921"
+ }
+ 
+
+ @ARTICLE{Bu2019-hv,
+   bibtex_show={true},
+   title         = "On Topological and Metrical Properties of Stabilizing
+                    Feedback Gains: the {MIMO} Case",
+   author        = "Bu, Jingjing and Mesbahi, Afshin and Mesbahi, Mehran",
+   month         =  apr,
+   year          =  2019,
+   archivePrefix = "arXiv",
+   primaryClass  = "cs.SY",
+   eprint        = "1904.02737"
+ }
+ 
+
+  @ARTICLE{Bu2019-ss,
+    bibtex_show={true},
+   title         = "Global Convergence of Policy Gradient for Sequential
+                    {Zero-Sum} Linear Quadratic Dynamic Games",
+   author        = "Bu, Jingjing and Ratliff, Lillian J and Mesbahi, Mehran",
+   month         =  nov,
+   year          =  2019,
+   archivePrefix = "arXiv",
+   primaryClass  = "eess.SY",
+   eprint        = "1911.04672"
+ }
+
+  @INPROCEEDINGS{Szmuk2019-xf,
+    bibtex_show={true},
+   title     = "A tutorial on successive convexification for real-time rocket
+                landing guidance with state-triggered constraints",
+   booktitle = "Proc. {AIAA} Scitech Forum",
+   author    = "Szmuk, M and Reynolds, T and A{\c c}{\i}kme{\c s}e, B and
+                Mesbahi, M and Carson, J M",
+   pages     = "1--16",
+   year      =  2019
+ }
+ 
+
+ @INPROCEEDINGS{Foight2019-fj,
+   bibtex_show={true},
+   title     = "Time Scale Design for Network Resilience",
+   booktitle = "2019 {IEEE} 58th Conference on Decision and Control ({CDC})",
+   author    = "Foight, D R and Hudoba de Badyn, M and Mesbahi, M",
+   pages     = "2096--2101",
+   month     =  dec,
+   year      =  2019
+ }
+ 
+
+ @INPROCEEDINGS{Foight2019-zf,
+   bibtex_show={true},
+   title     = "Influenced Consensus for {Multi-Scale} Networks",
+   booktitle = "2019 American Control Conference ({ACC})",
+   author    = "Foight, D R and Mesbahi, M",
+   pages     = "2753--2758",
+   month     =  jul,
+   year      =  2019
+ }
+
+  
+ @ARTICLE{Awad2019-hf,
+   bibtex_show={true},
+   title   = "{Time-Scale} Separation in Networks: {State-Dependent} Graphs and
+              Consensus Tracking",
+   author  = "Awad, A and Chapman, A and Schoof, E and Narang-Siddarth, A and
+              Mesbahi, M",
+   journal = "IEEE Transactions on Control of Network Systems",
+   volume  =  6,
+   number  =  1,
+   pages   = "104--114",
+   month   =  mar,
+   year    =  2019
+ }
+
+
+ @INPROCEEDINGS{Talebi2019-wd,
+   bibtex_show={true},
+   title     = "Distributed Learning in Network Games: a Dual Averaging Approach",
+   booktitle = "2019 {IEEE} 58th Conference on Decision and Control ({CDC})",
+   author    = "Talebi, S and Alemzadeh, S and Ratliff, L J and Mesbahi, M",
+   pages     = "5544--5549",
+   month     =  dec,
+   year      =  2019
+ }
+ 
+
+
+ @INPROCEEDINGS{De_Badyn2019-lu,
+    bibtex_show={true},
+   title     = "Efficient Computation of {H2} Performance on {Series-Parallel}
+                Networks",
+   booktitle = "American Control Conference",
+   author    = "Hudoba De Badyn, M. and Mesbahi, M.",
+   pages     = "3364--3369",
+   month     =  jul,
+   year      =  2019
+ }
+
+
+ @ARTICLE{Alaeddini2019-xs,
+   bibtex_show={true},
+   title   = "Augmented state feedback for improving observability of linear
+              systems with nonlinear measurements",
+   author  = "Alaeddini, A. and Morgansen, K. A and Mesbahi, M.",
+   journal = "Syst. Control Lett.",
+   volume  =  133,
+   pages   = "104520",
+   month   =  nov,
+   year    =  2019
+ }
+
+
+ <!---2018--->
+
+
+ @INPROCEEDINGS{Alaeddini2018-kb,
+ bibtex_show={true},
+   title     = "Linear Model Regression on Time-series Data: Non-asymptotic
+                Error Bounds and Applications",
+   booktitle = "2018 {IEEE} Conference on Decision and Control ({CDC})",
+   author    = "Alaeddini, A and Alemzadeh, S and Mesbahi, A and Mesbahi, M",
+   pages     = "2259--2264",
+   month     =  dec,
+   year      =  2018
+ }
+ 
+
+ @INPROCEEDINGS{Reynolds2018-ym,
+ bibtex_show={true},
+   title     = "Coupled {6-DOF} Control for Distributed Aerospace Systems",
+   booktitle = "2018 {IEEE} Conference on Decision and Control ({CDC})",
+   author    = "Reynolds, T P and Mesbahi, M",
+   pages     = "5294--5299",
+   month     =  dec,
+   year      =  2018
+ }
+  
+
+ @INCOLLECTION{Reynolds2018-zb,
+ bibtex_show={true},
+   title     = "Development of a Generic Guidance Navigation \& Control System
+                for Small Satellites: Application to {HuskySat-1}",
+   booktitle = "2018 {AIAA} {SPACE} and Astronautics Forum and Exposition",
+   author    = "Reynolds, Taylor and Kaycee, Krish and Barzgaran, Bijan and
+                Hudoba de Badyn, Mathias and Rice, Sean and Hansen, Emma and
+                Adler, Aaron and Acikmese, Behcet and Mesbahi, Mehran",
+   publisher = "American Institute of Aeronautics and Astronautics",
+   series    = "AIAA SPACE Forum",
+   month     =  sep,
+   year      =  2018
+ }
+ 
+ @ARTICLE{Yu2018-dj,
+ bibtex_show={true},
+   title    = "Bregman Parallel Direction Method of Multipliers for Distributed
+               Optimization via Mirror Averaging",
+   author   = "Yu, Yue and Acikmese, Behcet and Mesbahi, Mehran",
+   journal  = "IEEE Control Systems Letters",
+   volume   =  2,
+   number   =  2,
+   pages    = "302--306",
+   year     =  2018,
+   language = "en"
+ }
+
+ @ARTICLE{Sun2018-gn,
+ bibtex_show={true},
+   title    = "Weighted Network Design with Cardinality Constraints via
+               Alternating Direction Method of Multipliers",
+   author   = "Sun, Chuangchuang and Dai, Ran and Mesbahi, Mehran",
+   journal  = "IEEE Transactions on Control of Network Systems",
+   pages    = "1--1",
+   year     =  2018,
+   language = "en"
+ }
+ 
+
+ @ARTICLE{Mousavi2018-hm,
+ bibtex_show={true},
+   title    = "Controllability Analysis of Threshold Graphs and Cographs",
+   author   = "Mousavi, Shima Sadat and Haeri, Mohammad and Mesbahi, Mehran",
+   journal  = "arXiv:1802.04022 [math]",
+   month    =  feb,
+   year     =  2018
+ }
+
+ 
+ @ARTICLE{Mousavi2018-ma,
+ bibtex_show={true},
+   title    = "Laplacian Dynamics on Cographs: Controllability Analysis through
+               Joins and Unions",
+   author   = "Mousavi, Shima Sadat and Haeri, Mohammad and Mesbahi, Mehran",
+   number   =  18,
+   pages    = "7",
+   year     =  2018,
+   language = "en"
+ }
+  
+ @ARTICLE{Awad2018-fx,
+ bibtex_show={true},
+   title    = "{Time-Scale} Separation in Networks: {State-Dependent} Graphs and
+               Consensus Tracking",
+   author   = "Awad, Armand and Chapman, Airlie and Schoof, Eric and
+               Narang-Siddarth, Anshu and Mesbahi, Mehran",
+   journal  = "IEEE Transactions on Control of Network Systems",
+   pages    = "1--1",
+   year     =  2018,
+   language = "en"
+ }
+ 
+
+
+  @INPROCEEDINGS{Alemzadeh2018-be,
+  bibtex_show={true},
+   title     = "Influence Models on Layered Uncertain Networks: A
+                {Guaranteed-Cost} Design Perspective",
+   booktitle = "{IEEE} Conference on Decision and Control",
+   author    = "Alemzadeh, S. and Mesbahi, M.",
+   pages     = "5251--5256",
+   month     =  dec,
+   year      =  2018
+ }
+ 
+
+
+@INPROCEEDINGS{De_Badyn2018-rz,
+   bibtex_show={true},
+   title     = "Optimal Mass Transport and Kernel Density Estimation for
+                {State-Dependent} Networked Dynamic Systems",
+   booktitle = "{IEEE} Conference on Decision and Control",
+   author    = "Hudoba de Badyn, M. and Eren, U. and A{\c c}ikme{\c s}e, B. and Mesbahi,
+                M.",
+   pages     = "1225--1230",
+   month     =  dec,
+   year      =  2018
+ }
+
+
+ @ARTICLE{Schoof2018-qq,
+   bibtex_show={true},
+   title   = "Weighted {Bearing-Compass} Dynamics: Edge and Leader Selection",
+   author  = "Schoof, E. and Chapman, A. and Mesbahi, M.",
+   journal = "IEEE Transactions on Network Science and Engineering",
+   volume  =  5,
+   number  =  3,
+   pages   = "247--260",
+   month   =  jul,
+   year    =  2018
+ }
+
+
+
+ <!---2017--->
+
+ @INCOLLECTION{Lee2017-fo,
+ bibtex_show={true},
+   title     = "Development of Attitude Determination and Control Subsystem for
+                {3U} {CubeSat} with Electric Propulsion",
+   booktitle = "{AIAA} {SPACE} and Astronautics Forum and Exposition",
+   author    = "Lee, Unsik and Reynolds, Taylor and Barzgaran, Bijan and Badyn,
+                Mathias Hudoba de and Chrisope, Jeff and Adler, Aaron and
+                Kaycee, Krish and Mesbahi, Mehran",
+   publisher = "American Institute of Aeronautics and Astronautics",
+   series    = "AIAA SPACE Forum",
+   month     =  sep,
+   year      =  2017
+ }
+ 
+
+ @INPROCEEDINGS{Chapman2017-qv,
+ bibtex_show={true},
+   title     = "Data-guided control: Clustering, graph products, and
+                decentralized control",
+   author    = "Chapman, Airlie and Gonzalez, Andres D and Mesbahi, Mehran and
+                Duenas-Osorio, Leonardo and D'Souza, Raissa M",
+   publisher = "IEEE",
+   pages     = "493--498",
+   year      =  2017,
+   language  = "en"
+ }
+
+
+
+
+ @INPROCEEDINGS{Chen2017-ra,
+ bibtex_show={true},
+   title     = "Constrained attitude control, {PSD} lifts, and semidefinite
+                programming",
+   author    = "Chen, Dian-Jing and Mesbahi, Mehran",
+   publisher = "IEEE",
+   pages     = "2134--2139",
+   year      =  2017,
+   language  = "en"
+ }
+ 
+
+ @INPROCEEDINGS{Reynolds2017-ml,
+ bibtex_show={true},
+   title     = "Small Body Precision Landing via Convex Model Predictive Control",
+   author    = "Reynolds, Taylor and Mesbahi, Mehran",
+   publisher = "American Institute of Aeronautics and Astronautics",
+   month     =  sep,
+   year      =  2017,
+   language  = "en"
+ }
+ 
+ 
+ @ARTICLE{Tsiotras2017-aw,
+ bibtex_show={true},
+   title    = "Toward an Algorithmic Control Theory",
+   author   = "Tsiotras, Panagiotis and Mesbahi, Mehran",
+   journal  = "J. Guid. Control Dyn.",
+   volume   =  40,
+   number   =  2,
+   pages    = "194--196",
+   year     =  2017,
+   language = "en"
+ }
+ 
+
+
+ @ARTICLE{Lee2017-zm,
+ bibtex_show={true},
+   title    = "Constrained Autonomous Precision Landing via Dual Quaternions and
+               Model Predictive Control",
+   author   = "Lee, Unsik and Mesbahi, Mehran",
+   journal  = "J. Guid. Control Dyn.",
+   volume   =  40,
+   number   =  2,
+   pages    = "292--308",
+   year     =  2017,
+   language = "en"
+ }
+ 
+ @INPROCEEDINGS{De_Badyn2017-rn,
+ bibtex_show={true},
+   title     = "Controllability and data-driven identification of bipartite
+                consensus on nonlinear signed networks",
+   booktitle = "2017 {IEEE} 56th Annual Conference on Decision and Control
+                ({CDC})",
+   author    = "de Badyn, M H and Alemzadeh, S and Mesbahi, M",
+   pages     = "3557--3562",
+   month     =  dec,
+   year      =  2017
+ }
+ 
+
+ @ARTICLE{Hudoba_de_Badyn2017-rg,
+ bibtex_show={true},
+   title   = "{Large-Scale} Distributed Kalman Filtering via an Optimization
+              Approach",
+   author  = "Hudoba de Badyn, M. and Mesbahi, M.",
+   journal = "IFAC-PapersOnLine",
+   volume  =  50,
+   number  =  1,
+   pages   = "10742--10747",
+   month   =  jul,
+   year    =  2017
+ }
+ 
+
+
+ @ARTICLE{Gonzalez2017-gx,
+    bibtex_show={true},
+   title     = "Efficient infrastructure restoration strategies using the
+                recovery operator",
+   author    = "Gonz{\'a}lez, A. D. and Chapman, A. and
+                Due{\~n}as-Osorio, L. and Mesbahi, M. and D'Souza,
+                R. M.",
+   journal   = "Computer-aided Civil and Infrastructure Engineering",
+   publisher = "Wiley",
+   volume    =  32,
+   number    =  12,
+   pages     = "991--1006",
+   month     =  dec,
+   year      =  2017,
+   copyright = "http://onlinelibrary.wiley.com/termsAndConditions\#vor",
+   language  = "en"
+ }
+
+
+ @ARTICLE{Schoof2017-kn,
+ bibtex_show={true},
+   title    = "Weighted {Bearing-Compass} Dynamics: Edge and Leader Selection",
+   author   = "Schoof, Eric and Chapman, Airlie and Mesbahi, Mehran",
+   journal  = "IEEE Transactions on Network Science and Engineering",
+   pages    = "1--1",
+   year     =  2017,
+   language = "en"
+ }
+
+ 
+ <!---2016--->
+
+  @ARTICLE{Hosseini2016-zp,
+  bibtex_show={true},
+   title   = "{Energy-Aware} Aerial Surveillance for a {Long-Endurance}
+              {Solar-Powered} Unmanned Aerial Vehicles",
+   author  = "Hosseini, Saghar and Mesbahi, Mehran",
+   journal = "J. Guid. Control Dyn.",
+   volume  =  39,
+   number  =  9,
+   pages   = "1980--1993",
+   year    =  2016
+ }
+ 
+
+
+ @INPROCEEDINGS{De_Badyn2016-sl,
+  bibtex_show={true},
+   title     = "Growing controllable networks via whiskering and submodular
+                optimization",
+   booktitle = "2016 {IEEE} 55th Conference on Decision and Control ({CDC})",
+   author    = "de Badyn, M H and Mesbahi, M",
+   pages     = "867--872",
+   month     =  dec,
+   year      =  2016
+ }
+ 
+ 
+ @INPROCEEDINGS{Chapman2016-ro,
+    bibtex_show={true},
+   title     = "Multiple time-scales in network-of-networks",
+   booktitle = "American Control Conference",
+   author    = "Chapman, A. and Mesbahi, M.",
+   pages     = "5563--5568",
+   month     =  jul,
+   year      =  2016
+ }
+
+
+ 
+ @ARTICLE{Alaeddini2016-up,
+      bibtex_show={true},
+   title         = "Optimal Control with Limited Sensing via Empirical Gramians
+                    and Piecewise Linear Feedback",
+   author        = "Alaeddini, A. and Morgansen, K. A. and Mesbahi, M.",
+   month         =  nov,
+   year          =  2016,
+   archivePrefix = "arXiv",
+   primaryClass  = "cs.SY",
+   eprint        = "1611.08056"
+ }
+
+ @ARTICLE{Hosseini2016-vo,
+  bibtex_show={true},
+   title    = "{Energy-Aware} Aerial Surveillance for a {Long-Endurance}
+               {Solar-Powered} Unmanned Aerial Vehicles",
+   author   = "Hosseini, Saghar and Mesbahi, Mehran",
+   journal  = "J. Guid. Control Dyn.",
+   volume   =  39,
+   number   =  9,
+   pages    = "1980--1993",
+   year     =  2016,
+   language = "en"
+ }
+
+
+
+ @ARTICLE{Hosseini2016-sr,
+  bibtex_show={true},
+   title    = "Online Distributed Convex Optimization on Dynamic Networks",
+   author   = "Hosseini, Saghar and Chapman, Airlie and Mesbahi, Mehran",
+   journal  = "IEEE Trans. Automat. Contr.",
+   volume   =  61,
+   number   =  11,
+   pages    = "3545--3550",
+   year     =  2016,
+   language = "en"
+ }
+ 
+@INPROCEEDINGS{7844903,
+  bibtex_show={true},
+  author={King Keung Wu and Yam, Yeung and Meng, Helen and Mesbahi, Mehran},
+  booktitle={2016 IEEE International Conference on Systems, Man, and Cybernetics (SMC)}, 
+  title={Kronecker product approximation with multiple factor matrices via the tensor product algorithm}, 
+  year={2016},
+  volume={},
+  number={},
+  pages={004277-004282},
+  doi={10.1109/SMC.2016.7844903}}
+ 
+ <!---2015--->
+ @MISC{Mesbahi2015-ia,
+  bibtex_show={true},
+   title   = "Graphs for Modeling Networked Interactions",
+   author  = "Mesbahi, Mehran and Egerstedt, Magnus",
+   journal = "Encyclopedia of Systems and Control",
+   pages   = "510--514",
+   year    =  2015
+ }
+ 
+ @INPROCEEDINGS{Meng2015-te,
+  bibtex_show={true},
+   title     = "Proximal Alternating Direction Method of Multipliers for
+                distributed optimization on weighted graphs",
+   author    = "Meng, De and Fazel, Maryam and Mesbahi, Mehran",
+   publisher = "IEEE",
+   pages     = "1396--1401",
+   year      =  2015,
+   language  = "en"
+ }
+
+
+  @INPROCEEDINGS{Shao2015-nj,
+   bibtex_show={true},
+   title     = "A data-driven approach for influencing consensus networks",
+   author    = "Shao, Haibin and Pan, Lulu and Mesbahi, Mehran",
+   publisher = "IEEE",
+   pages     = "347--352",
+   year      =  2015,
+   language  = "en"
+ }
+ 
+
+ @INPROCEEDINGS{Shao2015-ye,
+  bibtex_show={true},
+   title     = "The relative tempo of discrete-time consensus networks",
+   booktitle = "Chinese Control Conference, {CCC}",
+   author    = "Shao, Haibin and Mesbahi, Mehran and Xi, Yugeng",
+   volume    = "2015-Septe",
+   pages     = "7362--7367",
+   year      =  2015
+ }
+ 
+
+ @INPROCEEDINGS{Awad2015-uv,
+  bibtex_show={true},
+   title     = "Time-scale separation on networks: Consensus, tracking, and
+                state-dependent interactions",
+   booktitle = "2015 54th {IEEE} Conference on Decision and Control ({CDC})",
+   author    = "Awad, A and Chapman, A and Schoof, E and Narang-Siddarth, A and
+                Mesbahi, M",
+   pages     = "6172--6177",
+   month     =  dec,
+   year      =  2015
+ }
+
+
+ @INPROCEEDINGS{Mesbahi2015-cw,
+  bibtex_show={true},
+   title     = "A robust control approach for the formation flying of multiple
+                spacecraft",
+   booktitle = "European Control Conference, {ECC} 1999 - Conference Proceedings",
+   author    = "Mesbahi, M and Hadaegh, F Y",
+   year      =  2015
+ }
+ 
+ <!---2014--->
+
+
+ @ARTICLE{Lee2014-du,
+  bibtex_show={true},
+   title   = "Feedback control for spacecraft reorientation under attitude
+              constraints via convex potentials",
+   author  = "Lee, U and Mesbahi, M",
+   journal = "IEEE Trans. Aerosp. Electron. Syst.",
+   volume  =  50,
+   number  =  4,
+   pages   = "2578--2592",
+   month   =  oct,
+   year    =  2014
+ }
+ 
+
+  
+ @INPROCEEDINGS{Hosseini2014-co,
+  bibtex_show={true},
+   title     = "Online distributed {ADMM} via dual averaging",
+   author    = "Hosseini, Saghar and Chapman, Airlie and Mesbahi, Mehran",
+   publisher = "IEEE",
+   pages     = "904--909",
+   year      =  2014,
+   language  = "en"
+ }
+
+
+
+ @ARTICLE{Chapman2014-il,
+  bibtex_show={true},
+   title    = "Controllability and Observability of {Network-of-Networks} via
+               Cartesian Products",
+   author   = "Chapman, Airlie and Nabi-Abdolyousefi, Marzieh and Mesbahi,
+               Mehran",
+   journal  = "IEEE Trans. Automat. Contr.",
+   volume   =  59,
+   number   =  10,
+   pages    = "2668--2679",
+   year     =  2014,
+   language = "en"
+ }
+
+
+ @INPROCEEDINGS{Lee2014-ml,
+  bibtex_show={true},
+   title     = "Fast inertia property estimation via convex optimization for the
+                asteroid redirect mission",
+   author    = "Lee, Unsik and Besson, David and Mesbahi, Mehran",
+   publisher = "IEEE",
+   pages     = "3364--3369",
+   year      =  2014,
+   language  = "en"
+ }
+
+
+ @INPROCEEDINGS{Lee2014-af,
+  bibtex_show={true},
+   title     = "Dual quaternion based spacecraft rendezvous with rotationally
+                and translationally constrained field of view constraints",
+   booktitle = "{AIAA/AAS} Astrodynamics Specialist Conference 2014",
+   author    = "Lee, U and Mesbahi, M",
+   year      =  2014
+ }
+ 
+
+   <!---2013--->
+
+
+ @ARTICLE{Nabi-Abdolyousefi2013-pg,
+   bibtex_show={true},
+   title   = "On the controllability properties of circulant networks",
+   author  = "Nabi-Abdolyousefi, M and Mesbahi, M",
+   journal = "IEEE Trans. Automat. Contr.",
+   volume  =  58,
+   number  =  12,
+   year    =  2013
+ }
+ 
+
+  @MISC{Chapman2013-nz,
+    bibtex_show={true},
+   bibtex_show={true},
+   title   = "On strong structural controllability of networked systems: A
+              constrained matching approach",
+   author  = "Chapman, A. and Mesbahi, M.",
+   journal = "American Control Conference",
+   year    =  2013
+ }
+
+
+ @ARTICLE{Dai2013-ti,
+   bibtex_show={true},
+   title    = "Optimal power generation and load management for off-grid hybrid
+               power systems with renewable sources via mixed-integer
+               programming",
+   author   = "Dai, Ran and Mesbahi, Mehran",
+   journal  = "Energy Convers. Manage.",
+   volume   =  73,
+   pages    = "234--244",
+   year     =  2013,
+   language = "en"
+ }
+ 
+
+  @INPROCEEDINGS{Hosseini2013-ny,
+    bibtex_show={true},
+   title     = "Online distributed optimization via dual averaging",
+   booktitle = "52nd {IEEE} Conference on Decision and Control",
+   author    = "Hosseini, S and Chapman, A and Mesbahi, M",
+   pages     = "1484--1489",
+   month     =  dec,
+   year      =  2013
+ }
+  
+ @ARTICLE{Dai2013-in,
+   bibtex_show={true},
+   title     = "Optimal trajectory generation for establishing connectivity in
+                proximity networks",
+   author    = "Dai, R and Maximoff, J and Mesbahi, M",
+   journal   = "IEEE Transactions on",
+   publisher = "ieeexplore.ieee.org",
+   year      =  2013
+ }
+
+
+  <!---2012--->
+
+ @INPROCEEDINGS{Chapman2012-kv,
+   bibtex_show={true},
+   title     = "Advection on networks with an application to decentralized load
+                balancing",
+   booktitle = "{IEEE} International Conference on Intelligent Robots and
+                Systems",
+   author    = "Chapman, A and Schoof, E and Mesbahi, M",
+   year      =  2012
+ }
+ 
+
+ @ARTICLE{Zelazo2012-wo,
+   bibtex_show={true},
+   title   = "An energy management system for off-grid power systems",
+   author  = "Zelazo, D and Dai, R and Mesbahi, M",
+   journal = "Energy Syst.",
+   volume  =  3,
+   number  =  2,
+   year    =  2012
+ }
+ 
+
+@INPROCEEDINGS{Dai2012-of,
+  bibtex_show={true},
+   title     = "Establishing connectivity in proximity networks",
+   booktitle = "2012 American Control Conference ({ACC})",
+   author    = "Dai, R and Maximoff, J and Mesbahi, M",
+   pages     = "4180--4185",
+   month     =  jun,
+   year      =  2012
+ }
+ 
+  @ARTICLE{Rajapakse2012-ni,
+    bibtex_show={true},
+   title   = "What can systems theory of networks offer to biology?",
+   author  = "Rajapakse, I and Groudine, M and Mesbahi, M",
+   journal = "PLoS Comput. Biol.",
+   volume  =  8,
+   number  =  6,
+   year    =  2012
+ }
+
+ @ARTICLE{Wu2012-lh,
+   bibtex_show={true},
+   title   = "Symplectic Transformation Based Analytical and Numerical Methods
+              for Linear Quadratic Control with Hard Terminal Constraints",
+   author  = "Wu, Zhi-Gang and Mesbahi, Mehran",
+   journal = "SIAM J. Control Optim.",
+   volume  =  50,
+   number  =  2,
+   pages   = "652--671",
+   year    =  2012
+ }
+ 
+
+ 
+ @ARTICLE{Zelazo2012-kf,
+   bibtex_show={true},
+   title    = "An energy management system for off-grid power systems",
+   author   = "Zelazo, Daniel and Dai, Ran and Mesbahi, Mehran",
+   journal  = "Energy Syst.",
+   volume   =  3,
+   number   =  2,
+   pages    = "153--179",
+   year     =  2012,
+   language = "en"
+ }
+ 
+
+ @INPROCEEDINGS{Lee2012-gf,
+   bibtex_show={true},
+   title     = "Dual quaternions, rigid body mechanics, and powered-descent
+                guidance",
+   booktitle = "2012 {IEEE} 51st {IEEE} Conference on Decision and Control
+                ({CDC})",
+   author    = "Lee, U and Mesbahi, M",
+   pages     = "3386--3391",
+   month     =  dec,
+   year      =  2012
+ }
+ 
+
+
+ @ARTICLE{Chapman2012-ha,
+   bibtex_show={true},
+   title   = "System theoretic aspects of influenced consensus: Single input
+              case",
+   author  = "Chapman, Airlie and Mesbahi, Mehran",
+   journal = "IEEE Trans. Automat. Contr.",
+   volume  =  57,
+   number  =  6,
+   pages   = "1505--1511",
+   year    =  2012
+ }
+
+  @ARTICLE{Nabi-Abdolyousefi2012-sm,
+    bibtex_show={true},
+   title   = "Sieve method for consensus-type network tomography",
+   author  = "Nabi-Abdolyousefi, M and Mesbahi, M",
+   journal = "IET Control Theory Appl.",
+   volume  =  6,
+   number  =  12,
+   year    =  2012
+ }
+
+  <!---2011--->
+
+ @ARTICLE{Dai2011-vp,
+   bibtex_show={true},
+   title     = "Distributed Orbit Determination via Estimation Consensus",
+   author    = "Dai, R and Lee, U and Mesbahi, M",
+   journal   = "Spaceflight Mechanics",
+   publisher = "researchgate.net",
+   year      =  2011
+ }
+ 
+  
+ @INPROCEEDINGS{Nabi-Abdolyousefi2011-zp,
+   bibtex_show={true},
+   title     = "System theory over random consensus networks: Controllability
+                and optimality properties",
+   author    = "Nabi-Abdolyousefi, Marzieh and Mesbahi, Mehran",
+   publisher = "IEEE",
+   pages     = "2323--2328",
+   year      =  2011,
+   language  = "en"
+ }
+
+
+ @INPROCEEDINGS{Lee2011-vh,
+   bibtex_show={true},
+   title     = "Constrained consensus via logarithmic barrier functions",
+   author    = "Lee, Unsik and Mesbahi, Mehran",
+   publisher = "IEEE",
+   pages     = "3608--3613",
+   year      =  2011,
+   language  = "en"
+ }
+
+
+ @INPROCEEDINGS{Dai2011-kb,
+   bibtex_show={true},
+   title     = "Optimal topology design for dynamic networks",
+   booktitle = "Proceedings of the {IEEE} Conference on Decision and Control",
+   author    = "Dai, R and Mesbahi, M",
+   year      =  2011
+ }
+
+
+  <!---2010--->
+
+  @INPROCEEDINGS{Moshtagh2010-pj,
+    bibtex_show={true},
+   title     = "Topology control of dynamic networks in the presence of local
+                and global constraints",
+   booktitle = "Proceedings - {IEEE} International Conference on Robotics and
+                Automation",
+   author    = "Moshtagh, N and Mehra, R and Mesbahi, M",
+   year      =  2010
+ }
+
+  @INPROCEEDINGS{Chapman2010-vb,
+    bibtex_show={true},
+   title     = "Semi-autonomous networks: Theory and decentralized protocols",
+   booktitle = "Proceedings - {IEEE} International Conference on Robotics and
+                Automation",
+   author    = "Chapman, A and Schoof, E and Mesbahi, M",
+   year      =  2010
+ }
+  @ARTICLE{Kim2010-hw,
+    bibtex_show={true},
+   title   = "On the convex parameterization of constrained spacecraft
+              reorientation",
+   author  = "Kim, Y and Mesbahi, M and Singh, G and Hadaegh, F Y",
+   journal = "IEEE Trans. Aerosp. Electron. Syst.",
+   volume  =  46,
+   number  =  3,
+   year    =  2010
+ }
+
+
+ @BOOK{Mesbahi2010-pq,
+   bibtex_show={true},
+   title     = "Graph Theoretic Methods in Multiagent Networks",
+   author    = "Mesbahi, Mehran and Egerstedt, Magnus",
+   publisher = "Princeton University Press",
+   month     =  jul,
+   year      =  2010,
+   language  = "en",
+   selected = true,
+   url     =  {https://press.princeton.edu/books/hardcover/9780691140612/graph-theoretic-methods-in-multiagent-networks}
+ }
+ 
+  @INPROCEEDINGS{Nabi-Abdolyousefi2010-id,
+    bibtex_show={true},
+   title     = "Network identification via node knock-out",
+   booktitle = "Proceedings of the {IEEE} Conference on Decision and Control",
+   author    = "Nabi-Abdolyousefi, M and Mesbahi, M",
+   year      =  2010
+ }
+ 
+ @INPROCEEDINGS{Zelazo2010-ze,
+   bibtex_show={true},
+   title     = "{H-infinity performance and robust topology design of
+                relative sensing networks}",
+   booktitle = "Proceedings of the 2010 American Control Conference, {ACC} 2010",
+   author    = "Zelazo, D and Mesbahi, M",
+   year      =  2010
+ }
+ 
+ 
+ @ARTICLE{Zelazo2010-uf,
+   bibtex_show={true},
+   title  = "Graph-theoretic Analysis and Synthesis of Relative Sensing Networks",
+   author = "Zelazo, Daniel and Mesbahi, Mehran",
+   volume = "X",
+   number = "XX",
+   pages  = "1--12",
+   year   =  2010
+ }
+ 
+
+ 
+ @MISC{Kim2010-rs,
+   bibtex_show={true},
+   title   = "On the Convex Parameterization of Constrained Spacecraft
+              Reorientation",
+   author  = "Kim, Yoonsoo and Mesbahi, Mehran and Singh, Gurkirpal and Hadaegh,
+              Fred Y",
+   journal = "IEEE Transactions on Aerospace and Electronic Systems",
+   volume  =  46,
+   number  =  3,
+   pages   = "1097--1109",
+   year    =  2010
+ }
+ 
+
+ @MISC{Chapman2010-bq,
+   bibtex_show={true},
+   title   = "Semi-autonomous networks: Theory and decentralized protocols",
+   author  = "Chapman, Airlie and Schoof, Eric and Mesbahi, Mehran",
+   journal = "2010 IEEE International Conference on Robotics and Automation",
+   year    =  2010
+ }
+ 
+
+  <!---2009--->
+
+ @ARTICLE{Das2009-gj,
+   bibtex_show={true},
+   title   = "Distributed Linear Parameter Estimation over Wireless Sensor
+              Networks",
+   author  = "Das, A K and Mesbahi, M",
+   journal = "IEEE Trans. Aerosp. Electron. Syst.",
+   volume  =  45,
+   number  =  4,
+   pages   = "1293--1306",
+   month   =  oct,
+   year    =  2009
+ }
+
+@INPROCEEDINGS{Zelazo2009-ro,
+  bibtex_show={true},
+   title     = "H-infinity performance of relative sensing networks: Analysis
+                and synthesis",
+   booktitle = "{AIAA} Infotech at Aerospace Conference and Exhibit and {AIAA}
+                {Unmanned...Unlimited} Conference",
+   author    = "Zelazo, D and Mesbahi, M",
+   year      =  2009
+ }
+
+  <!---2008--->
+
+ @INPROCEEDINGS{Zelazo2008-br,
+   bibtex_show={true},
+   title     = "Decentralized formation control via the edge Laplacian",
+   booktitle = "2008 American Control Conference",
+   author    = "Zelazo, D and Rahmani, A and Sandhu, J and Mesbahi, M",
+   pages     = "783--788",
+   month     =  jun,
+   year      =  2008
+ }
+ 
+
+  <!---2007--->
+ @INPROCEEDINGS{Zelazo2007-ik,
+   bibtex_show={true},
+   title     = "Agreement via the edge laplacian",
+   author    = "Zelazo, Daniel and {Amirreza Rahmani} and {Mehran Mesbahi}",
+   publisher = "IEEE",
+   pages     = "2309--2314",
+   year      =  2007,
+   language  = "en"
+ }
+
+  @INPROCEEDINGS{Rahmani2007-lh,
+    bibtex_show={true},
+   title     = "Pulling the strings on agreement: Anchoring, controllability,
+                and graph automorphisms",
+   booktitle = "Proceedings of the American Control Conference",
+   author    = "Rahmani, A and Mesbahi, M",
+   year      =  2007
+ }
+ 
+  <!---2006--->
+
+ 
+ @INPROCEEDINGS{Das2006-wu,
+   bibtex_show={true},
+   title     = "Distributed Linear Parameter Estimation in Sensor Networks based
+                on Laplacian Dynamics Consensus Algorithm",
+   author    = "Das, Arindamt and Mesbahi, Mehran",
+   publisher = "IEEE",
+   pages     = "440--449",
+   year      =  2006,
+   language  = "en"
+ }
+
+
+
+ @INPROCEEDINGS{Gonzalez2006-oq,
+  bibtex_show={true},
+   title     = "On the Stability of Distributed Circuit Simulations",
+   author    = "Gonzalez, Carlos and Das, Arindam and Mesbahi, Mehran",
+   publisher = "IEEE",
+   pages     = "95--101",
+   year      =  2006,
+   language  = "en"
+ }
+
+
+
+ @ARTICLE{Kim2006-qg,
+  bibtex_show={true},
+   title    = "On Maximizing the Second Smallest Eigenvalue of a
+               {State-Dependent} Graph Laplacian",
+   author   = "Kim, Y and Mesbahi, M",
+   journal  = "IEEE Trans. Automat. Contr.",
+   volume   =  51,
+   number   =  1,
+   pages    = "116--120",
+   year     =  2006,
+   language = "en"
+ }
+
+
+ 
+ @INPROCEEDINGS{Rahmani2006-qx,
+  bibtex_show={true},
+   title     = "On the controlled agreement problem",
+   author    = "Rahmani, A and Mesbahi, M",
+   publisher = "IEEE",
+   pages     = "6 pp.",
+   year      =  2006,
+   language  = "en"
+ }
+
+ 
+ @ARTICLE{Rahmani2006-lr,
+  bibtex_show={true},
+
+   title   = "Optimal balanced-energy formation flying maneuvers",
+   author  = "Rahmani, A and Mesbahi, M and Hadaegh, F Y",
+   journal = "J. Guid. Control Dyn.",
+   volume  =  29,
+   number  =  6,
+   year    =  2006
+ }
+
+
+  <!---2005--->
+ 
+ @INPROCEEDINGS{Sandhu2005-cm,
+   bibtex_show={true},
+   title     = "Relative Sensing Networks: Observability, Estimation, and the
+                Control Structure",
+   booktitle = "Proceedings of the 44th {IEEE} Conference on Decision and
+                Control",
+   author    = "Sandhu, J and Mesbahi, M and Tsukamaki, T",
+   pages     = "6400--6405",
+   month     =  dec,
+   year      =  2005
+ }
+
+  @INPROCEEDINGS{Sandhu2005-hb,
+    bibtex_show={true},
+   title     = "Relative Sensing Networks: Observability, Estimation, and the
+                Control Structure",
+   booktitle = "Proceedings of the 44th {IEEE} Conference on Decision and
+                Control",
+   author    = "Sandhu, J and Mesbahi, M and Tsukamaki, T",
+   pages     = "6400--6405",
+   month     =  dec,
+   year      =  2005
+ }
+ 
+
+ @INPROCEEDINGS{Sandhu2005-ym,
+   bibtex_show={true},
+   title     = "Cuts and cycles in relative sensing and control of spatially
+                distributed systems",
+   booktitle = "Proceedings of the 2005, American Control Conference, 2005.",
+   author    = "Sandhu, J and Mesbahi, M and Tsukamaki, T",
+   pages     = "73--78 vol. 1",
+   month     =  jun,
+   year      =  2005
+ }
+
+ 
+ @INPROCEEDINGS{Hatano2005-yl,
+   bibtex_show={true},
+   title     = "Agreement in presence of noise: pseudogradients on random
+                geometric networks",
+   booktitle = "Proceedings of the 44th {IEEE} Conference on Decision and
+                Control",
+   author    = "Hatano, Y and Das, A K and Mesbahi, M",
+   pages     = "6382--6387",
+   month     =  dec,
+   year      =  2005
+ }
+ 
+
+ @ARTICLE{Mesbahi2005-is,
+   bibtex_show={true},
+   title   = "On State-dependent dynamic graphs and their controllability
+              properties",
+   author  = "Mesbahi, M",
+   journal = "IEEE Trans. Automat. Contr.",
+   volume  =  50,
+   number  =  3,
+   pages   = "387--392",
+   month   =  mar,
+   year    =  2005
+ }
+ 
+  @INPROCEEDINGS{Das2005-oy,
+    bibtex_show={true},
+   title     = "K-node connected power efficient topologies in networks with
+                sectored antennas",
+   booktitle = "{MILCOM} 2005 - 2005 {IEEE} Military Communications Conference",
+   author    = "Das, A K and Mesbahi, M",
+   volume    =  2005,
+   pages     = "1319--1325 Vol. 2",
+   month     =  oct,
+   year      =  2005
+ }
+  <!---2004--->
+
+
+ @ARTICLE{Yoonsoo_Kim2004-yz,
+   bibtex_show={true},
+   title   = "Quadratically constrained attitude control via semidefinite
+              programming",
+   author  = "{Yoonsoo Kim} and Mesbahi, M",
+   journal = "IEEE Trans. Automat. Contr.",
+   volume  =  49,
+   number  =  5,
+   pages   = "731--735",
+   month   =  may,
+   year    =  2004
+ }
+ 
+  @INPROCEEDINGS{Hatano2004-qu,
+    bibtex_show={true},
+   title     = "Agreement over random networks",
+   booktitle = "Proceedings of the {IEEE} Conference on Decision and Control",
+   author    = "Hatano, Y and Mesbahi, M",
+   volume    =  2,
+   year      =  2004
+ }
+
+ @INPROCEEDINGS{Mesbahi2004-on,
+   bibtex_show={true},
+   title     = "On state-dependent dynamic graphs and their controllability
+                properties",
+   booktitle = "Proceedings of the {IEEE} Conference on Decision and Control",
+   author    = "Mesbahi, M",
+   volume    =  3,
+   year      =  2004
+ }
+ 
+
+  @INPROCEEDINGS{Kim2004-yj,
+    bibtex_show={true},
+   title     = "On the rank minimization problem",
+   booktitle = "Proceedings of the American Control Conference",
+   author    = "Kim, Y and Mesbahi, M",
+   volume    =  3,
+   year      =  2004
+ }
+ 
+
+ @ARTICLE{Kim2004-tg,
+   bibtex_show={true},
+   title   = "Multiple-spacecraft reconfiguration through collision avoidance,
+              bouncing, and stalemate",
+   author  = "Kim, Y and Mesbahi, M and Hadaegh, F Y",
+   journal = "J. Optim. Theory Appl.",
+   volume  =  122,
+   number  =  2,
+   year    =  2004
+ }
+ 
+  <!---2003--->
+ @INPROCEEDINGS{Mesbahi2003-rp,
+   bibtex_show={true},
+   title     = "{State-Dependent} Graphs",
+   booktitle = "Proceedings of the {IEEE} Conference on Decision and Control",
+   author    = "Mesbahi, M",
+   volume    =  3,
+   year      =  2003
+ }
+
+
+ @INPROCEEDINGS{Shao2003-rm,
+   bibtex_show={true},
+   title     = "Planing, switching, and supercavitating flight control",
+   booktitle = "{AIAA} Guidance, Navigation, and Control Conference and Exhibit",
+   author    = "Shao, Y and Mesbahi, M and Balas, G J",
+   year      =  2003
+ }
+ 
+  <!---2002--->
+ @INPROCEEDINGS{Mesbahi2002-wd,
+   bibtex_show={true},
+   title     = "On a dynamic extension of the theory of graphs",
+   booktitle = "Proceedings of the American Control Conference",
+   author    = "Mesbahi, M",
+   volume    =  2,
+   year      =  2002
+ }
+ 
+
+  <!---2001--->
+
+   @INPROCEEDINGS{Mesbahi2001-ow,
+     bibtex_show={true},
+   title     = "Towards an algorithmic theory of robustness",
+   booktitle = "Proceedings of the American Control Conference",
+   author    = "Mesbahi, M",
+   volume    =  5,
+   year      =  2001
+ }
+ 
+
+
+ @ARTICLE{Mesbahi2001-sb,
+   bibtex_show={true},
+   title   = "Robustness analysis via the running time of the interior point
+              methods",
+   author  = "Mesbahi, M",
+   journal = "Syst. Control Lett.",
+   volume  =  44,
+   number  =  5,
+   year    =  2001
+ }
+ 
+ @ARTICLE{Mesbahi2001-rw,
+   bibtex_show={true},
+   title     = "Formation Flying Control of Multiple Spacecraft via Graphs,
+                Matrix Inequalities, and Switching",
+   author    = "Mesbahi, Mehran and Hadaegh, Fred Y",
+   journal   = "J. Guid. Control Dyn.",
+   publisher = "American Institute of Aeronautics and Astronautics",
+   volume    =  24,
+   number    =  2,
+   pages     = "369--377",
+   month     =  mar,
+   year      =  2001
+ }
+ 
+
+  <!---2000--->
+ @ARTICLE{Mesbahi2000-in,
+   bibtex_show={true},
+   title   = "On the Communication Complexity of Lipschitzian Optimization for
+              the Coordinated Model of Computation",
+   author  = "Mesbahi, M and Papavassilopoulos, G P",
+   journal = "J. Complex.",
+   volume  =  16,
+   number  =  2,
+   year    =  2000
+ }
+
+
+ @ARTICLE{Hadaegh2000-iu,
+   bibtex_show={true},
+   title    = "Optimal Control Strategies for Imaging Using Formation Flying
+               Spacecraft",
+   author   = "Hadaegh, Fred Y and Mesbahi, Mehran",
+   journal  = "IFAC Proceedings Volumes",
+   volume   =  33,
+   number   =  4,
+   pages    = "361--366",
+   year     =  2000,
+   language = "en"
+ }
+ 
+
+  <!---1999--->
+ 
+ @ARTICLE{Mesbahi1999-mw,
+   bibtex_show={true},
+   title   = "On the parallel and {VLSI} implementation of the interior point
+              algorithms",
+   author  = "Mesbahi, M and Papavassilopoulos, G P and Prasanna, V K",
+   journal = "International Journal of Modelling and Simulation",
+   volume  =  19,
+   number  =  4,
+   year    =  1999
+ }
+ 
+ 
+ @INPROCEEDINGS{Gurvits1999-vm,
+   bibtex_show={true},
+   title     = "Polynomial-time algorithm for solving certain classes of rank
+                minimization problem",
+   booktitle = "Proceedings of the American Control Conference",
+   author    = "Gurvits, Leonid and Mesbahi, Mehran",
+   volume    =  2,
+   year      =  1999
+ }
+
+
+  <!---1998--->
+
+
+ @MISC{Mesbahi1998-aw,
+   bibtex_show={true},
+   title   = "On the rank minimization problem and its control applications",
+   author  = "Mesbahi, Mehran",
+   journal = "Systems \& Control Letters",
+   volume  =  33,
+   number  =  1,
+   pages   = "31--36",
+   year    =  1998
+ }
+
+
+ @INPROCEEDINGS{Mesbahi1998-no,
+   bibtex_show={true},
+   title     = "On robustness measures and the feasible set of the {LMI} arising
+                in the stability analysis",
+   booktitle = "Proceedings of the American Control Conference",
+   author    = "Mesbahi, M",
+   volume    =  1,
+   year      =  1998
+ }
+
+  <!---1997--->
+  
+ @INPROCEEDINGS{Mesbahi1997-ry,
+   bibtex_show={true},
+   title     = "A complexity theoretic perspective on robustness analysis",
+   booktitle = "1997 Guidance, Navigation, and Control Conference",
+   author    = "Mesbahi, M",
+   year      =  1997
+ }
+ 
+
+ @ARTICLE{Mesbahi1997-vj,
+   bibtex_show={true},
+   title     = "A cone programming approach to the bilinear matrix inequality
+                problem and its geometry",
+   author    = "Mesbahi, Mehran and Papavassilopoulos, George P",
+   journal   = "Math. Program.",
+   publisher = "Springer",
+   volume    =  77,
+   number    =  1,
+   pages     = "247--272",
+   month     =  apr,
+   year      =  1997
+ }
+ 
+
+  <!---1996--->
+   @ARTICLE{Mesbahi1996-ql,
+     bibtex_show={true},
+   title  = "Complementarity problems over matrix cones in systems and control
+             theory",
+   author = "Mesbahi, Mehran",
+   year   =  1996
+ }
+ 
+
+
+ @INPROCEEDINGS{Mesbahi1996-di,
+   bibtex_show={true},
+   title     = "{LMIs}, interior point methods, complexity theory, and
+                robustness analysis",
+   booktitle = "Proceedings of the {IEEE} Conference on Decision and Control",
+   author    = "Mesbahi, Mehran and Papavassilopoulos, George P",
+   volume    =  4,
+   year      =  1996
+ }
+ 
+  <!---1995--->
+ @INPROCEEDINGS{Mesbahi1995-kx,
+   bibtex_show={true},
+   title     = "Matrix cones, complementarity problems, and the bilinear matrix
+                inequality",
+   booktitle = "Proceedings of 1995 34th {IEEE} Conference on Decision and
+                Control",
+   author    = "Mesbahi, M and Papavassilopoulos, G P and Safonov, M G",
+   volume    =  3,
+   pages     = "3102--3107 vol.3",
+   month     =  dec,
+   year      =  1995
+ }
+ 
