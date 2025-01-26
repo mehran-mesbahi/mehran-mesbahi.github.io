@@ -17,6 +17,7 @@ nav: true
 * IEEE Fellow
 * AIAA Fellow 
 * Member of the Washington State Academy of Sciences
+* Advisory Board Member, AIAA Journal of Guidance, Control, and Dynamics
 * Member, Board of Governors of the IEEE Control Systems Society 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder. -->

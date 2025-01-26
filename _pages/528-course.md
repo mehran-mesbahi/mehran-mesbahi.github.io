@@ -129,19 +129,19 @@ table, th, td {
         <tr>
             <th><span style="color: orange;"> Jan 22</span></th>
             <th>2-body problem </th>
-            <th></th>
+            <th><a href="https://www.dropbox.com/scl/fi/i9s6ulalscjdaixbsd00u/mehran-notes-528-W2025-lecture5.pdf?rlkey=237nhuk0hwc8tkirm6z69uwzf&st=k7yoxmso&dl=0">mehran-lecture5</a> (1/25;5:17pm)</th>
             <th></th>
         </tr>
         <tr>
             <th><span style="color: orange;"> Jan 24</span></th>
-            <th> example: landing and reconfiguration problem</th>
-            <th></th>
+            <th> example: simple landing guidance</th>
+            <th><a href="https://www.dropbox.com/scl/fi/lhsyvhkkzyw2n7ikg2bjj/mehran-notes-528-W2025-lecture6.pdf?rlkey=d1e9yf71phpzvdeqfoxu1j4ji&st=evph632v&dl=0">mehran-lecture6</a> (1/25;5:17pm)</th>
             <th>HW#3 assigned; HW#2 due</th>
         </tr>
         <tr>
             <th><span style="color: orange;"> Jan 29</span></th>
-            <th> example: gravity gradient stabilization </th>
-            <th></th>
+            <th> attitude reconfiguration; axisymmetric spacecraft </th>
+            <th><a href="https://www.dropbox.com/scl/fi/ebskhqsd2sa9cwyuloc0l/mehran-notes-528-W2025-lecture7.pdf?rlkey=b499m2ve6mgzcp8dzrn9i3fxh&st=yv9bu8i6&dl=0">mehran-lecture7</a> (1/25;5:17pm)</th>
             <th></th>
         </tr>
         <tr>
