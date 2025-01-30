@@ -146,13 +146,13 @@ table, th, td {
         </tr>
         <tr>
             <th><span style="color: orange;"> Jan 31</span></th>
-            <th> rendezvous and docking </th>
+            <th> gravity gradient stabilization </th>
             <th></th>
             <th>HW#4 assigned; HW#3 due</th>
         </tr>
         <tr>
             <th><span style="color: orange;"> Feb 5</span></th>
-            <th> more on rendezvous and docking </th>
+            <th> rendezvous and docking </th>
             <th></th>
             <th></th>   
         </tr>
