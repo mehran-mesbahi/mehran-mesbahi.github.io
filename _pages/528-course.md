@@ -147,7 +147,7 @@ table, th, td {
         <tr>
             <th><span style="color: orange;"> Jan 31</span></th>
             <th> gravity gradient stabilization </th>
-            <th><a href="https://www.dropbox.com/scl/fi/ne7wimbbr60dmg0y1z1qw/mehran-notes-528-W2025-lecture8.pdf?rlkey=2jdnlx12zri43f8qe1v9fi9l8&st=08wxhppr&dl=0">mehran-lecture8</a> (1/30;11:23pm)</th>
+            <th><a href="https://www.dropbox.com/scl/fi/ne7wimbbr60dmg0y1z1qw/mehran-notes-528-W2025-lecture8.pdf?rlkey=2jdnlx12zri43f8qe1v9fi9l8&st=08wxhppr&dl=0">mehran-lecture8</a> (1/31;11:30am)</th>
             <th>HW#4 assigned; HW#3 due</th>
         </tr> 
         <tr>
