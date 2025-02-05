@@ -153,7 +153,7 @@ table, th, td {
         <tr>
             <th><span style="color: orange;"> Feb 5</span></th>
             <th> rendezvous and docking </th>
-            <th><a href="https://www.dropbox.com/scl/fi/29r9ez8rrhsdaf51pv51e/mehran-notes-528-W2025-lecture9.pdf?rlkey=vo8otvqwai36v7fp9shk2e3ni&st=8p5esj6b&dl=0">mehran-lecture9</a> (2/4;11:39am)</th>
+            <th><a href="https://www.dropbox.com/scl/fi/29r9ez8rrhsdaf51pv51e/mehran-notes-528-W2025-lecture9.pdf?rlkey=vo8otvqwai36v7fp9shk2e3ni&st=8p5esj6b&dl=0">mehran-lecture9</a> (2/5;1:25pm)</th>
             <th></th>   
         </tr>
         <tr>
