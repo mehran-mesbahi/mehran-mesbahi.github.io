@@ -159,7 +159,7 @@ table, th, td {
         <tr>
             <th><span style="color: orange;"> Feb 7</span></th>
             <th> perturbation theory </th>
-            <th></th>
+            <th><a href="https://www.dropbox.com/scl/fi/j0er02kv3tl8iz1necbbr/mehran-notes-528-W2025-lecture10.pdf?rlkey=nah23h7xgzc7jpc8xjee5lu41&st=ete0f6zy&dl=0">mehran-lecture10</a> (2/4;5:05pm)</th>
             <th>HW#5 assigned; HW#4 due </th>
         </tr>
         <tr>
