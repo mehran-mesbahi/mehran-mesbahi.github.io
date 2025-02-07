@@ -241,13 +241,15 @@ During the course of the quarter, I will include some papers below that you can 
     <tbody>
         <tr>
             <th><span style="color: orange;"> Related to Lecture</span></th>
-            <th><span style="color: orange;"> Paper</span></th>
+            <th><span style="color: orange;"> Papers</span></th>
             <th><span style="color: orange;"> Student assigned</span></th>
         </tr>
         <tr>
-            <th>lecture x</th>
-            <th>suggested paper</th>
+            <th>quaternions</th>
+            <th><a href="https://paperpile.com/shared/sFnzi2EcIRsa7kgSKN_bRtw">sample-papers</a> </th>
             <th>initials</th>
+
+https://paperpile.com/shared/sFnzi2EcIRsa7kgSKN_bRtw
         </tr>
     </tbody>
 </table>
