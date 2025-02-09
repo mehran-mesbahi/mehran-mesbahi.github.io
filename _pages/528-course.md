@@ -213,12 +213,12 @@ table, th, td {
         <tr>
             <th><span style="color: orange;"> March 12</span></th>
             <th> Project Presentations </th>
-            <th></th>
+            <th> students presenting on their projects</th>
         </tr>
         <tr>
             <th><span style="color: orange;"> March 14</span></th>
             <th> Project Presentations </th>
-            <th></th>
+            <th>students presenting on their projects</th>
             <th>Project reports due on March 17 at 11:59pm</th>
         </tr>
     </tbody>
