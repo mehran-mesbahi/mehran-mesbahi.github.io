@@ -246,10 +246,18 @@ During the course of the quarter, I will include some papers below that you can 
         </tr>
         <tr>
             <th>quaternions</th>
-            <th><a href="https://paperpile.com/shared/sFnzi2EcIRsa7kgSKN_bRtw">sample-papers</a> </th>
-            <th>initials</th>
-
-https://paperpile.com/shared/sFnzi2EcIRsa7kgSKN_bRtw
+            <th><a href="https://paperpile.com/shared/sng6EhV4tQiyZMPKo3OVR0Q">sample related papers</a> </th>
+            <th>notes</th>
         </tr>
+        <tr>
+            <th>attitude estimation</th>
+            <th><a href="https://paperpile.com/shared/s2ZQsiXnVTJSXMLR4hhAHLA">sample related papers</a> </th>
+            <th>notes</th>
+        </tr>
+        <tr>
+            <th>constellation design</th>
+            <th><a href="https://paperpile.com/shared/s2WrhmtqfRFyMBdPV9sXOTA">sample related papers</a> </th>
+            <th>notes</th>
+        </tr>    
     </tbody>
 </table>
