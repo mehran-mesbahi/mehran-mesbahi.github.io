@@ -245,13 +245,23 @@ During the course of the quarter, I will include some papers below that you can 
             <th><span style="color: orange;"> Student assigned</span></th>
         </tr>
         <tr>
+            <th>landing/guidance</th>
+            <th><a href="https://paperpile.com/shared/sXKDkNvq3SO2guQkwQaGYTQ">sample related papers</a> </th>
+            <th>notes</th>
+        </tr>
+        <tr>
+            <th>halo orbits</th>
+            <th><a href="https://paperpile.com/shared/sfoCilxpdR9mI4vtyxjMvGA">sample related papers</a> </th>
+            <th>notes</th>
+        </tr>
+        <tr>
             <th>quaternions</th>
             <th><a href="https://paperpile.com/shared/sng6EhV4tQiyZMPKo3OVR0Q">sample related papers</a> </th>
             <th>notes</th>
         </tr>
         <tr>
             <th>attitude estimation</th>
-            <th><a href="https://paperpile.com/shared/s2ZQsiXnVTJSXMLR4hhAHLA">sample related papers</a> </th>
+            <th><a href="https://paperpile.com/shared/sLuXAb_J2Tg2VMvKNVNQrNQ">sample related papers</a> </th>
             <th>notes</th>
         </tr>
         <tr>
