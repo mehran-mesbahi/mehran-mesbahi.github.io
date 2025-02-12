@@ -172,7 +172,7 @@ table, th, td {
             <th><span style="color: orange;"> Feb 14</span></th>
             <th> no class</th>
             <th></th>
-            <th>No homework due this week</th>
+            <th>No homework due this week/except project papers</th>
         </tr>
         <tr>
             <th><span style="color: orange;"> Feb 19</span></th>
