@@ -165,7 +165,7 @@ table, th, td {
         <tr>
             <th><span style="color: orange;"> Feb 12</span></th>
             <th>attitude determination </th>
-            <th></th>
+            <th><a href="https://www.dropbox.com/scl/fi/huyllctxarjm3xadilk4s/mehran-notes-528-W2025-lecture11.pdf?rlkey=k6cqyto0hjm0ejv8ju31vdr54&st=ofexiym4&dl=0">mehran-lecture11</a> (2/11;5:21pm)</th>
             <th></th>
         </tr>
         <tr>
