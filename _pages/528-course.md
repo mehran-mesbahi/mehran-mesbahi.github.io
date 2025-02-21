@@ -183,7 +183,7 @@ table, th, td {
         <tr>
             <th><span style="color: orange;"> Feb 21</span></th>
             <th> more on attitude control </th>
-            <th></th>
+            <th><a href="https://www.dropbox.com/scl/fi/ee1y0lkgyjcpjrezezi9i/mehran-notes-528-W2025-lecture13.pdf?rlkey=tyuzvhfzjwjk2gnqqab1j1b81&st=a6q7jsmm&dl=0">mehran-lecture13</a> (2/20;9:50pm)</th>
             <th>HW#6 assigned; HW#5 due</th>
         </tr>
         <tr>
