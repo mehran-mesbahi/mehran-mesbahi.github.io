@@ -188,25 +188,25 @@ table, th, td {
         </tr>
         <tr>
             <th><span style="color: orange;"> Feb 26</span></th>
-            <th>  restricted three-body problem </th>
-            <th></th>
-            <th></th>
+            <th>CMGs</th>
+            <th><a href="https://www.dropbox.com/scl/fi/nqdvf753mako0ayl69hte/mehran-notes-528-W2025-lecture14.pdf?rlkey=1z7sgm88358p2door2b3vxi7q&st=zebnjhau&dl=0">mehran-lecture14</a> (2/26;5:41pm)</th>
+            <th><a href="https://arc.aiaa.org/doi/10.2514/2.4987">paper this lecture is based on</a> (2/26;5:41pm)</th>
         </tr>
         <tr>
             <th><span style="color: orange;"> Feb 28</span></th>
-            <th> more on restricted three-body problem </th>
-            <th></th>
+            <th>restricted three-body problem </th>
+            <th><a href="https://www.dropbox.com/scl/fi/dm7wq8yuxryjtswemm7mz/mehran-notes-528-W2025-lecture15.pdf?rlkey=dmrm0r66hnrfujwhbqtp4uq44&st=huij8q4d&dl=0">mehran-lecture15</a> (2/26;5:41pm)</th>
             <th>HW#7 assigned; HW#6 due</th>
         </tr>
         <tr>
             <th><span style="color: orange;"> March 5</span></th>
-            <th>constellations and GPS</th>
+            <th>more on restricted three-body problem</th>
             <th> </th>
             <th></th>
         </tr>
            <tr>
             <th><span style="color: orange;"> March 7</span></th>
-            <th> space networks </th>
+            <th>constellations, GPS, space networks </th>
             <th> </th>
             <th>HW#7 due</th>
         </tr>
@@ -264,6 +264,11 @@ During the course of the quarter, I will include some papers below that you can 
             <th><a href="https://paperpile.com/shared/sLuXAb_J2Tg2VMvKNVNQrNQ">sample related papers</a> </th>
             <th>notes</th>
         </tr>
+        <tr>
+            <th>RW and CMGs</th>
+            <th><a href="https://paperpile.com/shared/sJATEgqS~TuiJlM0GX7pPFw">sample related papers</a> </th>
+            <th>notes</th>
+        </tr>   
         <tr>
             <th>constellation design</th>
             <th><a href="https://paperpile.com/shared/s2WrhmtqfRFyMBdPV9sXOTA">sample related papers</a> </th>
