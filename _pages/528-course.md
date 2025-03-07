@@ -204,10 +204,10 @@ table, th, td {
             <th><a href="https://www.dropbox.com/scl/fi/hennqmoq7mgo5f2jh6txz/mehran-notes-528-W2025-lecture16.pdf?rlkey=e8fz77jbk6w3jhlzxg8a690pq&st=cwys2sog&dl=0">mehran-lecture16</a> (3/4;11:21pm)</th>
             <th></th>
         </tr>
-           <tr>
+        <tr>
             <th><span style="color: orange;"> March 7</span></th>
             <th>constellations, GPS, space networks </th>
-            <th> </th>
+            <th><a href="https://www.dropbox.com/scl/fi/pkplw4b5m7yvcoydq2wof/mehran-notes-528-W2025-lecture17.pdf?rlkey=6f8tpd3x66tgwdw7ad7z8xnc2&st=4qjvuxyj&dl=0">mehran-lecture17</a> (3/6;11:15pm)</th>
             <th>HW#7 due</th>
         </tr>
         <tr>
