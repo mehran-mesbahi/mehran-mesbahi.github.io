@@ -59,6 +59,8 @@ theory, <span style="color: orange;"> week 6)</span> attitude estimation, <span 
 
 <p> The e-book version of the book can be purchased from <a href="https://link.springer.com/book/10.1007/978-1-4939-0802-8" target="_blank">here</a>, as well as the bookstore and on Amazon.</p>
 
+<p> The current version of my lecture notes in their entirety can be found <a href="https://www.dropbox.com/scl/fi/jquwldbmcmbre2nuyoqn6/mehran-lecture-notes-528-W2025.pdf?rlkey=328o4ycq79c7bquyuowcte5n8&st=ol955bi0&dl=0" target="_blank">here</a>; some variation of the notes for each lecture can be found below.</p>
+
 {% comment %}
 <p> Also see another great textbook <a href="https://link.springer.com/book/10.1007/978-3-319-16646-9" target="_blank">here</a>.</p>
 {% endcomment %}
