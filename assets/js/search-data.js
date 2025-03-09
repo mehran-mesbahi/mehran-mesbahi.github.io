@@ -417,7 +417,7 @@ ninja.data = [{
           window.location.href = "/blog/2015/formatting-and-links/";
         
       },
-    },{id: "news-january-2025-graduate-level-spacecraft-dynamics-and-control-is-offered-aa-528-winter-2025-december-2024-spencer-s-wins-the-2024-cdc-best-student-paper-award-june-2024-spencer-s-paper-on-quotient-geometry-of-policy-optimization-for-lqg-is-accepted-for-both-2024-cdc-and-l-css-congrats-may-2024-aditya-passed-his-ph-d-general-exam-congrats-may-2024-newsha-passed-her-ph-d-final-defense-congrats-may-2024-joseph-and-joalda-join-the-rain-lab-welcome-may-2024-seth-berit-and-josh-pass-their-m-s-thesis-exams-with-flying-colors-congrats-january-2024-abhi-s-paper-customized-real-time-first-order-methods-for-onboard-dual-quaternion-based-6-dof-powered-descent-guidance-wins-the-aiaa-2023-best-paper-award",
+    },{id: "news-january-2025-graduate-level-spacecraft-dynamics-and-control-is-offered-aa-528-winter-2025-current-version-of-lecture-notes-december-2024-spencer-s-wins-the-2024-cdc-best-student-paper-award-june-2024-spencer-s-paper-on-quotient-geometry-of-policy-optimization-for-lqg-is-accepted-for-both-2024-cdc-and-l-css-congrats-may-2024-aditya-passed-his-ph-d-general-exam-congrats-may-2024-newsha-passed-her-ph-d-final-defense-congrats-may-2024-joseph-and-joalda-join-the-rain-lab-welcome-may-2024-seth-berit-and-josh-pass-their-m-s-thesis-exams-with-flying-colors-congrats-january-2024-abhi-s-paper-customized-real-time-first-order-methods-for-onboard-dual-quaternion-based-6-dof-powered-descent-guidance-wins-the-aiaa-2023-best-paper-award",
           title: 'January 2025: Graduate level spacecraft dynamics and control is offered: AA 528 (Winter...',
           description: "",
           section: "News",},{id: "projects-project-1",
