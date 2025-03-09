@@ -1,10 +1,13 @@
 ---
 layout: post
-date: 2025-01-6
+date: 2025-03-9
 inline: true
 ---
 
-- January 2025: Graduate level spacecraft dynamics and control is offered: [<span style="color: orange;"> AA 528 (Winter 2025)</span>](/528-course/); current version of <a href="https://www.dropbox.com/scl/fi/jquwldbmcmbre2nuyoqn6/mehran-lecture-notes-528-W2025.pdf?rlkey=328o4ycq79c7bquyuowcte5n8&st=ol955bi0&dl=0" target="_blank">lecture notes</a>; <br /><br />
+- March 2025: Josh's paper on "Multi Agent Reinforcement Learning for Sequential Satellite Assignment Problems"
+has been recognized for oral presentation (out of 3000 accepted papers!) at the AAAI Conference on Artificial Intelligence <br /><br />
+
+- January 2025: Graduate level spacecraft dynamics and control is offered: [<span style="color: orange;"> AA 528 (Winter 2025)</span>](/528-course/); current version of <a href="https://www.dropbox.com/scl/fi/jquwldbmcmbre2nuyoqn6/mehran-lecture-notes-528-W2025.pdf?rlkey=328o4ycq79c7bquyuowcte5n8&st=ol955bi0&dl=0" target="_blank">my lecture notes</a> <br /><br />
 
 - December 2024: Spencer's wins the 2024 CDC Best Student Paper Award!<br /><br />
 
