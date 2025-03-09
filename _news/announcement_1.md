@@ -4,7 +4,7 @@ date: 2025-01-6
 inline: true
 ---
 
-- January 2025: Graduate level spacecraft dynamics and control is offered: [<span style="color: orange;"> AA 528 (Winter 2025)</span>](/528-course/) <br /><br />
+- January 2025: Graduate level spacecraft dynamics and control is offered: [<span style="color: orange;"> AA 528 (Winter 2025)</span>](/528-course/); current version of <a href="https://www.dropbox.com/scl/fi/jquwldbmcmbre2nuyoqn6/mehran-lecture-notes-528-W2025.pdf?rlkey=328o4ycq79c7bquyuowcte5n8&st=ol955bi0&dl=0" target="_blank">lecture notes</a>; <br /><br />
 
 - December 2024: Spencer's wins the 2024 CDC Best Student Paper Award!<br /><br />
 
