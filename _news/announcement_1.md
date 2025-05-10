@@ -4,7 +4,7 @@ date: 2025-03-9
 inline: true
 ---
 
-- May 2025: Aditya will be defending his dissertation in June! see <a href="https://www.aa.washington.edu/news/article/2025-05-12/perfect-angle-using-sunlight-better-track-space-objects" target="_blank"> announcement </a> <br/><br />
+- May 2025: Aditya will be defending his dissertation in June! see <a href="https://www.aa.washington.edu/news/article/2025-05-12/perfect-angle-using-sunlight-better-track-space-objects"> announcement </a> <br/><br />
 
 - March 2025: Josh's paper on "Multi Agent Reinforcement Learning for Sequential Satellite Assignment Problems"
 has been recognized for oral presentation (out of 3000 accepted papers!) at the AAAI Conference on Artificial Intelligence <br /><br />
