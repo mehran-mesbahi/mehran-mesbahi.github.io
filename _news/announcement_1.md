@@ -4,6 +4,8 @@ date: 2025-03-9
 inline: true
 ---
 
+- May 2025: Rain Lab Alum Shahriar Talebi will join UCLA Department of Mechanical and Aerospace Engineering as a tenure-track Assistant Professor in July ... Congrats Shahriar! see <a href="https://samueli.ucla.edu/people/shahriar-talebi/"> UCLA MAE post </a> <br/><br />
+
 - May 2025: Aditya will be defending his dissertation in June! see <a href="https://www.aa.washington.edu/news/article/2025-05-12/perfect-angle-using-sunlight-better-track-space-objects"> announcement </a> <br/><br />
 
 - March 2025: Josh's paper on "Multi Agent Reinforcement Learning for Sequential Satellite Assignment Problems"
