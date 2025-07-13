@@ -4,6 +4,11 @@ date: 2025-03-9
 inline: true
 ---
 
+- July 2025: Mehran will deliver a plenary talk at the upcoming American Control Conference; <a href="https://acc2026.a2c2.org/program/plenary-speakers"> Plenary Speakers ACC2026</a> <br/><br />
+
+- July 2025: Mehran will deliver a plenary talk at the International Conference on Cognitive InfoCommunications; <a href="https://scitope.com/coginfocom25/?page_id=20"> Plenary Speakers CogInfoCom 2025</a> <br/><br />
+
+
 - May 2025: Rain Lab Alum Shahriar Talebi will join UCLA Department of Mechanical and Aerospace Engineering as a tenure-track Assistant Professor in July ... Congrats Shahriar! see <a href="https://samueli.ucla.edu/people/shahriar-talebi/"> UCLA MAE post </a> <br/><br />
 
 - May 2025: Aditya will be defending his dissertation in June! see <a href="https://www.aa.washington.edu/news/article/2025-05-12/perfect-angle-using-sunlight-better-track-space-objects"> announcement </a> <br/><br />
