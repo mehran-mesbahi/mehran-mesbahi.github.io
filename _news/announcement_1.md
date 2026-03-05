@@ -4,6 +4,8 @@ date: 2025-03-9
 inline: true
 ---
 
+- November 2025: Mehran started serving as the Interim Department Chair <br/><br />
+
 - July 2025: Mehran will deliver a plenary talk at the 2026 American Control Conference; <a href="https://acc2026.a2c2.org/program/plenary-speakers"> Plenary Speakers ACC2026</a> <br/><br />
 
 - September 2025: Mehran is a plenary talk at the International Conference on Cognitive InfoCommunications; <a href="https://scitope.com/coginfocom25/?page_id=20"> Plenary Speakers CogInfoCom 2025</a> <br/><br />
