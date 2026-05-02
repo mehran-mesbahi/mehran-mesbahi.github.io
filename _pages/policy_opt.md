@@ -8,7 +8,7 @@ nav: false
 
 <strong style="color: red;">Constellations and Synchronization</strong>
 
-M. Mesbahi and M. Egerstedt, Graph-theoretic Methods in Multi-agent Networks, Princeton University Press, 2010; <a href="https://press.princeton.edu/books/hardcover/9780691140612/graph-theoretic-methods-in-multiagent-networks/">Princeton</a>/<a href="https://www.amazon.com/Theoretic-Multiagent-Networks-Princeton-Mathematics/dp/0691140618/ref=sr_1_1?crid=3H6VMKIIXJHIS&keywords=graph+theoretic+methods+in+multiagent+networks&qid=1640637374&sprefix=graph+theoretic+%2Caps%2C176&sr=8-1">Amazon</a>
+M. Mesbahi and M. Egerstedt, Graph-theoretic Methods in Multi-agent Networks, Princeton University Press, 2010.
 
 <strong style="color: red;">PL condition</strong>
 
