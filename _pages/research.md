@@ -1,8 +1,8 @@
 ---
 layout: page
-title: projects
+title: research
 permalink: /projects/
-description: Selected research and project topics from past to present
+description: Selected research, notes, and project topics from past to present
 nav: true
 # display_categories: [work, fun]
 horizontal: false
@@ -12,6 +12,23 @@ horizontal: false
 
 My research is at the intersection of control theory, networks, aerospace systems, robotics, optimization, and data science, with a multi-disciplinary twist to such areas as aerospace autonomy and dynamic networks;
 see /writings/
+
+<strong style="color: red;">Topics</strong>
+
+[<span style="color: orange;"> ACC2026 Plenary</span>](/policy_opt/): some related works useful/referenced in the plenary talk
+
+<span style="color: orange;"> Control and Filtering/Policy Optimization</span>: coming soon
+
+<span style="color: orange;"> Autonomy and GNC</span>: coming soon
+
+<span style="color: orange;"> Constellations</span>: coming soon
+
+<span style="color: orange;"> Networks</span>: coming soon 
+
+<span style="color: orange;"> Conflicts and Resolutions</span>: coming soon
+
+<span style="color: orange;"> Reflections</span>: coming soon
+
 
 <strong style="color: red;">Current Projects</strong>
 
