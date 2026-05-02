@@ -19,11 +19,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-I am a Professor of Aeronautics & Astronautics and an Adjunct Professor of Mathematics and Electrical & Computer Engineering at the University of Washington. My research is broadly in the areas of decision-making, control, optimization, networks, and learning, with applications to autonomous
+I am a Professor and the Interim Chair of William E. Boeing Department of Aeronautics & Astronautics and an Adjunct Professor of Mathematics and Electrical & Computer Engineering at the University of Washington. My research is broadly in the areas of decision-making, control, optimization, networks, and learning, with applications to autonomous
 aerospace and robotic systems. Over the years, I have worked on areas such
-as policy optimization, distributed estimation and filtering, network control, formation flight,
-synchronization and distributed task allocation, data-driven control, 
-multiagent robotics, optimized flight vehicles, constrained trajectory planning and control, among many others. 
+as learning-based control, distributed estimation and filtering, space constellations and formations, control theory, formation flight,
+synchronization and distributed task allocation, multiagent robotics, optimized flight vehicles, constrained trajectory planning and control, among many others. 
 
 Although my research has many theoretical and algorithmic facets, it has been extremely rewarding to see it  used on flagship NASA missions, multiagent robotics, constellations, and for planetary and lunar landing. I also take pride in the accomplishments of my students who not only did exceptional while at UW, but also became leaders in academia, industry, and government after graduation. My research group has also been very active leading educational and outreach efforts, including our department <a href="https://www.nanosats.eu/sat/soc-i">cubesat</a>, implementing guidance algorithms developed in our group. Over the years, the group has worked on ground and aerial multi-robotic testbeds, wind tunnel aircraft models for active control, indoor navigation, and utilizing game engine for system design.
 
