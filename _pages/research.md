@@ -15,7 +15,7 @@ see /writings/
 
 <strong style="color: red;">Topics</strong>
 
-[<span style="color: orange;"> ACC2026 Plenary</span>](/policy_opt/): some related works useful/referenced in the plenary talk
+[<span style="color: orange;"> ACC2026 Plenary</span>](/policy_opt/): some related works referenced in the plenary talk
 
 <span style="color: orange;"> Control and Filtering/Policy Optimization</span>: coming soon
 
