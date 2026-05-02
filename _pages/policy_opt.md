@@ -20,9 +20,6 @@ Hamed Karimi, Julie Nutini, and Mark Schmidt. Linear Convergence of Gradient and
 
 Guoyin Li and Ting Kei Pong, Calculus of the Exponent of Kurdyka-Lojasiewicz Inequality and Its Applications to Linear Convergence of First-Order Methods, arXiv. https://doi.org/10.48550/arXiv.1602.02915, 2016.
 
-Shahriar Talebi, Constrained Policy Synthesis: Riemannian Flows, Online Regulation, and Distributed Games, PhD Dissertation, University of Washington, 2023.
-
-
 <strong style="color: red;">Policy Optimization and Filtering</strong>
 
 Shahriar Talebi, Amirhossein Taghvaei, Mehran Mesbahi, Data-driven Optimal Filtering for Linear Systems with Unknown Noise Covariances, <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/dbe8185809cb7032ec7ec6e365e3ed3b-Paper-Conference.pdf" target="_blank"> NeuroIPS 2023</a>
@@ -54,6 +51,8 @@ M. Mesbahi, M. G. Safonov, and G. P. Papavassilopoulos, Bilinearity and compleme
 M. Mesbahi and G. P. Papavassilopoulos, Least elements and minimal rank matrices, in Recent Advances in Complementarity Theory - State of the Art, SIAM, 1997.
 
 <strong style="color: red;">Riemannian Policy Optimization </strong>
+
+Shahriar Talebi, Constrained Policy Synthesis: Riemannian Flows, Online Regulation, and Distributed Games, PhD Dissertation, University of Washington, 2023.
 
 Shahriar Talebi and Mehran Mesbahi, Riemannian Constrained Policy Optimization via Geometric Stability Certificates. IEEE Conference on Decision and Control, 2022.
 
