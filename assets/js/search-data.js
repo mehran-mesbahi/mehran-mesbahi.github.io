@@ -30,9 +30,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/about+/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "Selected research and project topics from past to present",
+        },{id: "nav-research",
+          title: "research",
+          description: "Selected research, notes, and project topics from past to present",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -57,13 +57,6 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/writings/";
-          },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of your cool projects.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
           },
         },{id: "post-a-post-with-image-galleries",
       
