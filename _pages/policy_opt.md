@@ -6,6 +6,9 @@ description: Policy optimization/PL condition/Constellations, ACC 2026 Plenary (
 nav: false
 ---
 
+<strong style="color: red;">ACC 2026 slides</strong>
+
+
 <strong style="color: red;">Constellations and Synchronization</strong>
 
 M. Mesbahi and M. Egerstedt, Graph-theoretic Methods in Multi-agent Networks, Princeton University Press, 2010.
@@ -67,6 +70,16 @@ Shahriar Talebi, Yang Zheng, Spencer Kraisler, Na Li, and Mehran Mesbahi, Policy
 
 Jingjing Bu, Lillian J. Ratliff, and Mehran Mesbahi. 2019. “Global Convergence of Policy Gradient for Sequential Zero-Sum Linear Quadratic Dynamic Games, arXiv. http://arxiv.org/abs/1911.04672.
 
+<strong style="color: red;">Sample Complexity</strong>
+
+Sarah Dean, Horia Mania, Nikolai Matni, Benjamin Recht, Stephen Tu, On the Sample Complexity of the Linear Quadratic Regulator, 2018.
+
+Hesameddin Mohammadi, Armin Zare, Mahdi Soltanolkotabi, Mihailo R. Jovanović, Convergence and sample complexity of gradient methods for the model-free linear quadratic regulator problem, 2021.
+
+Amirreza Neshaei Moghaddam, Alex Olshevsky, Bahman Gharesifard, Sample Complexity of Linear Quadratic Regulator Without Initial Stability, 2025.
+
 <strong style="color: red;">Some newer works related to ACC2026 Plenary</strong>
+
+
 
 
