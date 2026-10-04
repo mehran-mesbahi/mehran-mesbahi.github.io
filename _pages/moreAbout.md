@@ -9,6 +9,7 @@ nav: true
 <span style="color: orange;"> in a nutshell ...</span> 
 
 * Professor of Aeronautics & Astronautics
+* Chair of Aeronautics & Astronautics
 * J. Ray Bowen Endowed Professor in Engineering Education
 * Adjunct Professor of Electrical & Computer Engineering
 * Adjunct Professor of Mathematics

@@ -19,7 +19,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-I am a Professor and the Interim Chair of William E. Boeing Department of Aeronautics & Astronautics and an Adjunct Professor of Mathematics and Electrical & Computer Engineering at the University of Washington. My research is broadly in the areas of decision-making, control, optimization, networks, and learning, with applications to autonomous
+I am a Professor and the Chair of William E. Boeing Department of Aeronautics & Astronautics and an Adjunct Professor of Mathematics and Electrical & Computer Engineering at the University of Washington. My research is broadly in the areas of decision-making, control, optimization, networks, and learning, with applications to autonomous
 aerospace and robotic systems. Over the years, I have worked on areas such
 as learning-based control, distributed estimation and filtering, space constellations and formations, control theory, formation flight,
 synchronization and distributed task allocation, multiagent robotics, optimized flight vehicles, constrained trajectory planning and control, among many others. 
